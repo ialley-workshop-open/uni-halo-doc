@@ -2,11 +2,11 @@
 layout: home
 
 title: uni-halo
-titleTemplate: 一个清新优雅移动端博客程序
+titleTemplate: 一个可多端编译的移动端博客程序
 
 hero:
   name: uni-halo
-  text: 一个清新优雅移动端博客程序
+  text: 一个可多端编译的移动端博客程序（暂未开源）
   tagline: 基于 uniapp + tm-vuetify2.0 + halo api
   image:
     src: /logo.png

@@ -6,21 +6,21 @@
 	<tr>
 		<td>
 			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/zfb.png" width="100%" />
+				<img src="https://uni-halo.925i.cn/qrcode/zfb.png"  />
 				<br/>
 				<font color="AAAAAA">支付宝打赏</font>
 			</center>
 		</td>
 			<td>
 			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/wx.png" width="100%" />
+				<img src="https://uni-halo.925i.cn/qrcode/wx.png"  />
 				<br/>
 				<font color="AAAAAA">微信打赏</font>
 			</center>
 		</td>
 			<td>
 			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/qq.png" width="100%" />
+				<img src="https://uni-halo.925i.cn/qrcode/qq.png"  />
 				<br/>
 				<font color="AAAAAA">QQ打赏</font>
 			</center>

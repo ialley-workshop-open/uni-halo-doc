@@ -31,7 +31,13 @@ export default defineConfig({
       text: '为此页提供修改建议',
       pattern: 'https://gitee.com/ialley-workshop-open/uni-halo-doc/tree/master/:path'
     },
-    socialLinks: [{ icon: 'github', link: 'https://gitee.com/ialley-workshop-open/uni-halo' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://gitee.com/ialley-workshop-open/uni-halo' },
+      {
+        icon: 'discord',
+        link: 'https://b.925i.cn'
+      }
+    ],
     localeLinks: {
       text: '简体中文',
       items: []
@@ -43,7 +49,7 @@ export default defineConfig({
     },
     footer: {
       message: '根据 MIT 许可证发布',
-      copyright: 'Copyright © 2022 小莫唐尼'
+      copyright: 'Copyright © 2022 uni-halo&小莫唐尼'
     },
     nav: [
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
