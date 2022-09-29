@@ -150,6 +150,17 @@ export default defineConfig({
             }
           ]
         }
+      ],
+      '/other/': [
+        {
+          text: '其他',
+          items: [
+            {
+              text: '赞助',
+              link: '/other/donate'
+            }
+          ]
+        }
       ]
     }
   }
