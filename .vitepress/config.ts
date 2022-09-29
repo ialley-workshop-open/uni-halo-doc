@@ -43,7 +43,7 @@ export default defineConfig({
     },
     footer: {
       message: '根据 MIT 许可证发布',
-      copyright: 'Copyright © 2021-2022 小莫唐尼'
+      copyright: 'Copyright © 2022 小莫唐尼'
     },
     nav: [
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
