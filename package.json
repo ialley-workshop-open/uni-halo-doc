@@ -1,0 +1,32 @@
+{
+  "name": "uni-halo-doc",
+  "version": "0.0.1",
+  "description": "uni-halo移动端博客应用说明文档",
+  "author": {
+    "name": "小莫唐尼",
+    "email": "1431128779@qq.com",
+    "url": "https://gitee.com/XiaoMoDonnie"
+  },
+  "license": "MIT",
+  "homepage": "https://gitee.com/ialley-workshop-open/uni-halo-doc",
+  "repository": {
+    "url": "https://gitee.com/ialley-workshop-open/uni-halo-doc.git"
+  },
+  "bugs": {
+    "url": "https://gitee.com/ialley-workshop-open/uni-halo/issues"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "eslint": "^8.23.1",
+    "eslint-config-soybeanjs": "^0.1.0",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.3",
+    "vitepress": "^1.0.0-alpha.15"
+  }
+}
