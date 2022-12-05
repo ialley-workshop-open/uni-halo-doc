@@ -1,6 +1,7 @@
 # 界面预览
 
-精美的 UI，带给用户更友好的体验
+<img style="width:100%" src="./assets/wx_white.png" />
+<div style="width:100%;text-align: center;">精美的 UI，带给用户更友好的体验，扫码体验客户端</div>
 
 ## 部分 UI 界面截图
 

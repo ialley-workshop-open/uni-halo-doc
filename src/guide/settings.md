@@ -41,16 +41,20 @@ export default {
   defaultImageUrl: '默认图片地址', // 默认图片
   defaultAvatarUrl: '默认头像地址', // 默认头像
 
+  loadingGifUrl: '', // 图片加载中的地址
+  loadingErrUrl: '', // 图片加载失败的地址
+  loadingEmptyUrl: '', // 加载图片为空地址
+
   banner: { // 轮播图配置
     type: 'article', //  轮播图数据源 list=下方配置 article=热门文章封面 banner=后台对应的轮播图(未开发)
-    list: ["图片URL地址1", "图片URL地址2", "图片URL地址.."],
+    list: [],
   },
 
   // 微信分享信息
   wxShareConfig: {
-    title: '小程序分享标题', // 分享标题[非必填]
-    desc: '小程序分享描述', // 描述[非必填]
-    imageUrl: '小程序分享时候图片地址', // 分享图片[非必填]
+    title: '', // 小程序分享标题[非必填]
+    desc: '', // 小程序分享描述[非必填]
+    imageUrl: '', // 小程序分享时候图片地址[非必填]
     path: '/pages/start/start', // 分享路径[非必填] - 基本不需要修改
     copyLink: '/pages/start/start', // 复制链接[非必填]  - 基本不需要修改
     query: {}, // 分享参数[非必填]  - 基本不需要填写

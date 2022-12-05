@@ -56,7 +56,9 @@ export default defineConfig({
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
       { text: '规范', link: '/standard/category', activeMatch: '/standard' },
       { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
-      { text: '更新日志', link: '/update/logs', activeMatch: '/update/' },
+      { text: 'UI预览', link: '/preview', activeMatch: '/preview/' },
+      { text: '更新日志', link: '/update/update', activeMatch: '/update/' },
+      { text: '常见问题', link: '/problem/questions', activeMatch: '/questions/' },
       {
         text: '相关链接',
         items: [
@@ -95,10 +97,6 @@ export default defineConfig({
             {
               text: '介绍',
               link: '/guide/introduction'
-            },
-            {
-              text: '预览',
-              link: '/guide/preview'
             },
             {
               text: '开始',
@@ -165,6 +163,21 @@ export default defineConfig({
             {
               text: '图标使用',
               link: '/tutorial/icon'
+            }
+          ]
+        }
+      ],
+      '/update/': [
+        {
+          text: '更新日志',
+          items: [
+            {
+              text: '更新日志说明',
+              link: '/update/update'
+            },
+            {
+              text: 'v1.0.0-beta',
+              link: '/update/v1.0.0-beta'
             }
           ]
         }

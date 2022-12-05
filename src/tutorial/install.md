@@ -12,7 +12,7 @@
 
 - 4、修改相关的配置文件，根目录下的`config/ad.config.js`和`config/halo.config.js`，
   <br/>ad.config.js 是广告配置，当前只添加了信息流广告组件，基本上用不到广告配置，相关的广告申请可以在 [uni-app 广告](https://uniapp.dcloud.net.cn/component/ad.html)了解
-  <br/>halo.config.js 是基础的配置，[具体查看](./settings.md)
+  <br/>halo.config.js 是基础的配置，[具体查看](../guide/settings.md)
 
 - 5、修改一些业务图片默认地址，[点击此处](../assets/sucai.zip)下载素材，上传到您的服务器或者 oss 中，需要能够在公网访问即可，具体的修改位置如下：
 

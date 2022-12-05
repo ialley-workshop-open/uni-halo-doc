@@ -89,7 +89,9 @@
 .VPImage.logo {
 	border-radius: 3px;
 }
-
+.VPHome{
+	/* padding-bottom: 36px!important; */
+}
 .VPHomeHero .image-bg {
 	display: none;
 }
@@ -106,9 +108,10 @@
 	transform: initial;
 }
 .VPHomeHero.VPHero.has-image .text{
-	margin: 6px auto;
+	margin: 6px 0;
 	font-size: 46px;
 	line-height: 1.3;
+	margin-left: 0;
 }
 @media (max-width: 960px) {
 	.VPHomeHero .VPImage.image-src {

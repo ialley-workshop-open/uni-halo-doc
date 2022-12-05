@@ -31,7 +31,7 @@ git clone https://github.com/ialley-workshop-open/uni-halo
 
 ::: warning 注意
 
-最新版本的代码以 gitee 为准。
+最新版本的代码以 Gitee 仓库为准。
 
 :::
 
