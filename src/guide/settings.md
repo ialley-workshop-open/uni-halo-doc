@@ -2,9 +2,9 @@
 
 配置项目的启动运行信息
 
-## 项目配置
+## 应用信息配置
 
-找到项目根目录 config 目录，将`halo.config.template.js`修改为 `halo.config.js` 并设置相关信息
+找到项目根目录 将`config/halo.config.template.js`修改为 `config/halo.config.js` 并设置相关信息
 
 ```javascript
 export default {
@@ -55,6 +55,33 @@ export default {
     copyLink: '/pages/start/start', // 复制链接[非必填]  - 基本不需要修改
     query: {}, // 分享参数[非必填]  - 基本不需要填写
   },
+}
+```
+
+## 广告信息配置
+
+找到项目根目录 `config/ad.config.js` 文件，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
+
+```javascript
+/**
+ * 广告配置
+ */
+export default {
+  adpid: '1524548170', // uni-AD App广告位id，在uni-AD官网申请广告位
+  unitId: '111', // 广告单元id，可在小程序管理后台的流量主模块新建 (非个人资质，小程序后台广告主开通申请)
+  frequency: 8, // 列表中，广告出现的频率（8=每8条数据出现一次广告）
+  // 首页广告
+  home: {
+    use: true,
+  },
+  // 文章列表广告
+  articles: {
+    use: true,
+  },
+  // 文章详情广告
+  articleDetail: {
+    use: true, // 是否启用
+  }
 }
 ```
 

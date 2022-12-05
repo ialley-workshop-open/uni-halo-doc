@@ -4,19 +4,29 @@
 
 ## 环境准备
 
-本地环境需要安装 [Node.js 14.18+](http://nodejs.org/) 和 [微信小程序开发工具（小程序上传测试使用）](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+- [halo1.x](https://halo.run/) 版本的程序 提供的 API 服务
 
-## 工具配置
+## 工具准备
 
-本项目推荐使用 [HBuilder X](https://www.dcloud.io/hbuilderx.html) 进行开发。
+本项目推荐使用以下工具进行开发调试，当然也可以使用其他 IDEA
 
-## 代码获取
+- [HBuilder X](https://www.dcloud.io/hbuilderx.html) 进行开发。
+- [微信小程序开发工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)进行部署（非必要）。
 
-### 从 Gitee 获取代码
+## 源代码获取
+
+### 从 Gitee 获取
 
 ```bash
 # 克隆代码
 git clone https://gitee.com/ialley-workshop-open/uni-halo.git
+```
+
+### 从 Github 获取
+
+```bash
+# 克隆代码
+git clone https://github.com/ialley-workshop-open/uni-halo
 ```
 
 ::: warning 注意
@@ -25,25 +35,12 @@ git clone https://gitee.com/ialley-workshop-open/uni-halo.git
 
 :::
 
-## 安装
-
-### 安装 Node.js
-
-[链接](/tutorial/install.html#安装-node-js)
+## 运行和启动项目
 
 ### 安装项目依赖和运行
 
-- 1、通过 hbuilderx 导入项目；
+- 1、通过 HBuilderX 导入项目；
 - 2、命令行执行 npm i 安装依赖；
-- 3、配置运行信息，找到项目根目录 config 目录，将`halo.config.template.js`修改为 `halo.config.js` 并设置相关信息；
-- 4、点击 hbuilderx 工具 右上角预览、或者点击工具栏 运行-内置浏览器运行；
-- 5、项目跑起来啦~
-- 6、项目发行：
-- 发行小程序：点击工具栏 发行 -> 小程序-微信
-- 发行 APP： 点击工具栏 发行 -> 原生 App-云打包
-
-## 目录说明
-
-```text
-	暂无说明
-```
+- 3、配置运行信息，找到项目根目录 config 目录，将`halo.config.template.js`修改为 `halo.config.js` 并设置相关信息 [halo.config.js 文件说明](./settings.md)；
+- 4、点击 HBuilderX 工具 右上角预览、或者点击工具栏 运行-内置浏览器运行；
+- 5、项目调试：参考 [uni-app 运行和调试](https://uniapp.dcloud.net.cn/tutorial/run-and-debug.html)；

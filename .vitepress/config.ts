@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 import path from 'path';
 
 export default defineConfig({
-  title: 'uni-halo 丨小莫唐尼',
+  title: 'uni-halo',
   lang: 'zh-CN',
   description: '一个优雅、清新、漂亮的移动端博客应用，基于uniapp + halo api接口',
   head: [
@@ -49,12 +49,14 @@ export default defineConfig({
     },
     footer: {
       message: '根据 MIT 许可证发布',
-      copyright: 'Copyright © 2022 uni-halo&小莫唐尼'
+      copyright:
+        'Copyright © 2022 uni-halo丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
     },
     nav: [
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
       { text: '规范', link: '/standard/category', activeMatch: '/standard' },
       { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
+      { text: '更新日志', link: '/update/logs', activeMatch: '/update/' },
       {
         text: '相关链接',
         items: [
@@ -67,13 +69,21 @@ export default defineConfig({
             link: 'https://gitee.com/ialley-workshop-open/uni-halo-doc'
           },
           {
-            text: '更新日志',
-            link: 'https://gitee.com/ialley-workshop-open/uni-halo/blob/master/CHANGELOG.md'
+            text: 'uni-app',
+            link: 'https://uniapp.dcloud.net.cn'
+          },
+          {
+            text: 'Halo官网',
+            link: 'https://halo.run'
+          },
+          {
+            text: '作者主页',
+            link: 'https://www.925i.cn'
           }
         ]
       },
       {
-        text: '赞助',
+        text: '赞助鼓励',
         link: '/other/donate'
       }
     ],
@@ -85,6 +95,10 @@ export default defineConfig({
             {
               text: '介绍',
               link: '/guide/introduction'
+            },
+            {
+              text: '预览',
+              link: '/guide/preview'
             },
             {
               text: '开始',
@@ -105,6 +119,10 @@ export default defineConfig({
             {
               text: '权限',
               link: '/guide/auth'
+            },
+            {
+              text: '发布',
+              link: '/guide/release'
             }
           ]
         }

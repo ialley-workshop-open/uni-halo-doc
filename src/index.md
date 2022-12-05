@@ -1,13 +1,13 @@
 ---
 layout: home
 
-title: uni-halo
+title: uni-halo官方文档
 titleTemplate: 一个可多端编译的移动端博客程序
 
 hero:
   name: uni-halo
-  text: 一个可多端编译的移动端博客程序（暂未开源）
-  tagline: 基于 uniapp + tm-vuetify2.0 + halo api
+  text: 可多端编译的博客程序😜
+  tagline: 基于 uniapp + tm-vuetify2.0 + halo1.0 api
   image:
     src: /logo.png
     alt: uni-halo
@@ -42,3 +42,5 @@ features:
     title: 后台管理功能
     details: 相对完善的后台管理功能，与PC端相差无几
 ---
+
+<!-- <CustomFooter></CustomFooter> -->

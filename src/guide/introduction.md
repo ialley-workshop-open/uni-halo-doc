@@ -2,25 +2,41 @@
 
 ## 简介
 
-[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 uniapp + tm-vuetify2.0 + Halo API（一款现代化的开源博客/CMS 系统 API 开发的多端系统），也可用于学习参考。
+[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.0（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
+::: warning 重要说明
 
-## 文档
+- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
+- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
+- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
 
-- 文档地址为 [uni-halo-doc](https://gitee.com/ialley-workshop-open/uni-halo-doc)，采用 Vitepress 开发。如发现文档有误，欢迎提 pr 帮助我们改进。
+:::
 
-## 需要掌握的基础知识
+## 文档说明
 
-本项目基于 uniapp 开发，建议在开发前先学一下以下内容，提前了解和学习这些知识，会对项目理解非常有帮助:
+- 文档项目源码地址为 [uni-halo-doc](https://gitee.com/ialley-workshop-open/uni-halo-doc)，采用 Vitepress 开发；
+- 如发现文档有误，欢迎提 pr 帮助我们改进。
 
-- [uniapp](https://uniapp.dcloud.net.cn/)
+## 基础知识
+
+本项目基于 UniApp 开发，建议在开发前先学一下以下内容，提前了解和学习这些知识，会对项目理解非常有帮助:
+
+- [UniApp 一个跨端编译技术](https://uniapp.dcloud.net.cn/)
 - [Vue2 文档](https://v2.cn.vuejs.org/)
 - [tm-vuetify2.0 UI](https://jx2d.cn/)
 - [uni-simple-router](https://hhyang.cn/v2/)
 - [luch-request](https://www.quanzhan.co/luch-request/)
 
-## 浏览器支持
+## 项目服务端依赖
 
-本地开发推荐使用`HBuilder X` 内置浏览器
+- [halo 好用又强大的开源建站工具](https://halo.run/)
+- [halo1.0 客户端接口文档地址](https://api.halo.run/content-api.html)
+- [halo1.0 管理端接口文档地址](https://api.halo.run/admin-api.html)
+
+## 多端支持
+
+- 微信小程序
+- 安卓 APP
+- 其他端由于条件有限未测试...
 
 ## 如何加入我们
 
