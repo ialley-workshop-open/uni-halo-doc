@@ -8,7 +8,7 @@
 
 - 2、若是编译为小程序，请提前在 [微信公众平台](https://mp.weixin.qq.com/) 申请好您的小程序账号
 
-- 3、修改项目根目录下的 `manifest.json` 中的相关信息，如 `uni-app 应用标识（AppID）`
+- 3、修改项目根目录下的 `manifest.json` 中的相关信息，如基础配置中的 `uni-app 应用标识（AppID）`、`应用名称`、`应用描述`以及`APP图标配置`等
 
 - 4、修改相关的配置文件，根目录下的`config/ad.config.js`和`config/halo.config.js`，
   <br/>ad.config.js 是广告配置，当前只添加了信息流广告组件，基本上用不到广告配置，相关的广告申请可以在 [uni-app 广告](https://uniapp.dcloud.net.cn/component/ad.html)了解
