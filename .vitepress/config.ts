@@ -63,8 +63,12 @@ export default defineConfig({
         text: '相关链接',
         items: [
           {
-            text: '项目源码',
+            text: 'Gitee',
             link: 'https://gitee.com/ialley-workshop-open/uni-halo'
+          },
+          {
+            text: 'Github',
+            link: 'https://github.com/ialley-workshop-open/uni-halo'
           },
           {
             text: '文档源码',

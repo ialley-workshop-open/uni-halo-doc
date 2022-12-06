@@ -13,7 +13,16 @@ export default {
   uni_halo_logo: 'https://b.925i.cn/uni_halo/uni_halo_logo.png', // uni-halo的logo
 
   title: '', // 博客标题
-  indexImageUrl: '', // 开屏首页图片
+  miniCodeImageUrl: '', // 小程序码地址
+
+  start: { // 首次启动页配置
+    title: 'uni-halo', // 标题
+    bg: '', // 留空则使用默认 开屏首页背景，可以是颜色值或者图片图片地址
+    logo: 'https://b.925i.cn/uni_halo/uni_halo_logo.png', // logo
+    desc1: '全新UI，准备出发', // 描述信息1
+    desc2: '新触动 新感受 新体验', // 描述信息2
+    btnText: '全新触发' // 按钮文字
+  },
 
   author: { // 博主信息 ()
     use: true, // 是否启用这里配置的信息，若设置为false 则启用PC端博客设置的信息
