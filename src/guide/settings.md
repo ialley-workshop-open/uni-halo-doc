@@ -8,15 +8,19 @@
 
 ```javascript
 export default {
-  title: '博客标题', // 博客标题
+  showCopyright: true, // 显示开源版权信息
+  showAbout: true, // 显示关于项目入口
+  uni_halo_logo: 'https://b.925i.cn/uni_halo/uni_halo_logo.png', // uni-halo的logo
+
+  title: '', // 博客标题
   indexImageUrl: '', // 开屏首页图片
 
   author: { // 博主信息 ()
     use: true, // 是否启用这里配置的信息，若设置为false 则启用PC端博客设置的信息
-    name: '博主姓名', //
-    avatar: '博主头像',
-    blog: '博客地址',
-    email: '博主邮箱'
+    name: '', // 博主姓名
+    avatar: '', // 博主头像
+    blog: '', // 博客地址
+    email: '' // 博主邮箱
   },
 
   // 社交信息(将会在`/pagesA/contact/contact`页面中展示)
@@ -45,8 +49,10 @@ export default {
   loadingErrUrl: '', // 图片加载失败的地址
   loadingEmptyUrl: '', // 加载图片为空地址
 
+  waveImageUrl: '', // 关于页面波浪图片
+
   banner: { // 轮播图配置
-    type: 'article', //  轮播图数据源 list=下方配置 article=热门文章封面 banner=后台对应的轮播图(未开发)
+    type: 'article', // 轮播图数据源 list=下方配置 article=热门文章封面
     list: [],
   },
 
@@ -62,17 +68,21 @@ export default {
 }
 ```
 
+::: warning 注意
+**还需要修改`vue.config.js`和`manifest.json`文件下的域名，和`config/halo.config.js`中的`apiUrl`对应**
+:::
+
 ## 广告信息配置
 
-找到项目根目录 `config/ad.config.js` 文件，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
+找到项目根目录 将`config/ad.config.template.js`修改为 `config/ad.config.js` ，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
 
 ```javascript
 /**
  * 广告配置
  */
 export default {
-  adpid: '1524548170', // uni-AD App广告位id，在uni-AD官网申请广告位
-  unitId: '111', // 广告单元id，可在小程序管理后台的流量主模块新建 (非个人资质，小程序后台广告主开通申请)
+  adpid: '', // uni-AD App广告位id，在uni-AD官网申请广告位
+  unitId: '', // 广告单元id，可在小程序管理后台的流量主模块新建 (非个人资质，小程序后台广告主开通申请)
   frequency: 8, // 列表中，广告出现的频率（8=每8条数据出现一次广告）
   // 首页广告
   home: {

@@ -161,6 +161,10 @@ export default defineConfig({
               link: '/tutorial/install'
             },
             {
+              text: '在线更新',
+              link: '/tutorial/update'
+            },
+            {
               text: '图标使用',
               link: '/tutorial/icon'
             }
