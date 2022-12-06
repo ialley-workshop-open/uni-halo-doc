@@ -14,10 +14,20 @@
   <br/>ad.config.js 是广告配置，当前只添加了信息流广告组件，基本上用不到广告配置，相关的广告申请可以在 [uni-app 广告](https://uniapp.dcloud.net.cn/component/ad.html)了解
   <br/>halo.config.js 是基础的配置，[具体查看](../guide/settings.md)
 
-- 5、修改一些业务图片默认地址，[点击此处](../assets/sucai.zip)下载素材，上传到您的服务器或者 oss 中，需要能够在公网访问即可，具体的修改位置如下：
+- 5、修改一些业务图片默认地址，[点击此处](../assets/uni-halo-images.zip)下载素材，上传到您的服务器或者 oss 中，需要能够在公网访问即可，推荐放在 [`halo 的静态存储中`](../problem/questions.md#_3、如何进入halo后台的静态存储上传文件？)，相关的配置在 `config/halo.config.js` 文件里，在素材中有对应名称的素材，具体需要修改的字段如下：
 
 ```javascript
-// 待补充
+export default {
+  uni_halo_logo: '', // uni-halo的logo地址（uni_halo_logo.png）
+
+  miniCodeImageUrl: '', // 小程序码地址（uni_halo_wx_qrcode.jpg）
+
+  loadingGifUrl:'',    // 图片加载中的地址 （uni_halo_img_lazyload.gif）
+  loadingErrUrl: '',   // 图片加载失败的地址（暂未提供素材）
+  loadingEmptyUrl: '', // 加载图片为空地址（暂未提供素材）
+
+  waveImageUrl: '',  // 关于页面波浪图片地址（uni_halo_about_wave.gif）
+}
 ```
 
 ### 编译为微信小程序
