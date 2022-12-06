@@ -50,7 +50,7 @@ export default defineConfig({
     footer: {
       message: '根据 MIT 许可证发布',
       copyright:
-        'Copyright © 2022 uni-halo丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
+        'Copyright © 2022 uni-halo丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
     },
     nav: [
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },

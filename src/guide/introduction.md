@@ -7,9 +7,10 @@
 
 :::
 
-## 简介
+## 项目简介
 
 [uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.0（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
+
 ::: warning 重要说明
 
 - **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
@@ -17,6 +18,10 @@
 - **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
 
 :::
+
+## 开源协议
+
+[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 使用 AGPL-3.0 协议开源，请遵守开源协议。
 
 ## 功能清单
 
