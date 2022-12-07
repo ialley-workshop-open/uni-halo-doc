@@ -1,48 +1,20 @@
 # 赞助打赏
 
-如果您觉得这个项目对您有帮助，可以帮作者买杯饮料鼓励鼓励，感谢您的支持 😘!
+😘 如果您觉得这个项目对您有帮助，可以帮作者买杯饮料鼓励鼓励，感谢您的支持 !
 
 ## 打赏方式
 
-**打赏后请务必在留言中留下您的网站地址、留言内容、打赏信息是否可以公开**
+🤔 有条件的给作者众筹植发，跟作者一样条件不好的，帮作者续杯咖啡也可以哦
 
-<table rules="none" align="center" border="0">
-	<tr>
-		<td>
-			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/zfb.png"  />
-				<br/>
-				<font color="AAAAAA">支付宝打赏</font>
-			</center>
-		</td>
-			<td>
-			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/wx.png"  />
-				<br/>
-				<font color="AAAAAA">微信打赏</font>
-			</center>
-		</td>
-			<td>
-			<center>
-				<img src="https://uni-halo.925i.cn/qrcode/qq.png"  />
-				<br/>
-				<font color="AAAAAA">QQ打赏</font>
-			</center>
-		</td>
-	</tr>
-</table>
+|                      支付宝打赏                       |                       微信打赏                       |                       QQ 打赏                        |
+| :---------------------------------------------------: | :--------------------------------------------------: | :--------------------------------------------------: |
+| ![logo2.png](https://uni-halo.925i.cn/qrcode/zfb.png) | ![logo2.png](https://uni-halo.925i.cn/qrcode/wx.png) | ![logo2.png](https://uni-halo.925i.cn/qrcode/qq.png) |
 
 ## 打赏记录
 
-<table width="100%" rules="none" align="center" border="0">
-	<tr style="width:100%;display:flex;">
-		<td style="flex:1">打赏人昵称</td>
-		<td style="flex:1">打赏人留言</td>
-		<td style="flex:1">打赏人网址</td>
-		<td style="flex:1">打赏金额</td>
-		<td style="flex:1">打赏时间</td>
-	</tr>
-	<tr style="width:100%;display:flex;">
-		<td colspan="5" style="flex:1;text-align: center;border-top:0">暂无打赏赞助记录</td>
-	</tr>
-</table>
+🥳 感谢各位大佬的支持，祝各位老板天天开心
+
+| 打赏人昵称 |      打赏人留言       | 打赏人网址 | 打赏金额 |  打赏时间  |
+| :--------: | :-------------------: | :--------: | :------: | :--------: |
+|   大盆友   | 大佬牛逼 请你喝瓶饮料 |            |   6.66   | 2022-12-07 |
+|    小志    |   老板快弄恋爱日记    |            |  20.00   | 2022-12-07 |

@@ -7,9 +7,18 @@
 
 :::
 
+## 交流反馈
+
+提交 issues：[Github](https://github.com/ialley-workshop-open/uni-halo/issues)丨
+[Gitee](https://gitee.com/ialley-workshop-open/uni-halo/issues)
+<br/>
+
+QQ 群号：632969367
+<br/>快速加群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=cuam7lhrB_vHuvjw2mzUO1sOKdF9KRyM&jump_from=webapi&authKey=d6bJhNaqupTTfoMDWDIeYUTAs44Ax7p64SsM/5NRtFhXE09YexDO15Izuyth6XAi"><img style="border-radius:0;display:inline;" border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="uni-halo交流反馈" title="uni-halo交流反馈"></a>
+
 ## 项目简介
 
-[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.0（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
+[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.x（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
 
 ::: warning 重要说明
 
