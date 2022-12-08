@@ -184,6 +184,10 @@ export default defineConfig({
               link: '/update/update'
             },
             {
+              text: 'v1.0.1-beta',
+              link: '/update/v1.0.1-beta'
+            },
+            {
               text: 'v1.0.0-beta',
               link: '/update/v1.0.0-beta'
             }
