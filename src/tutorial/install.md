@@ -1,50 +1,141 @@
-# 发布部署
+# 配置
 
-该内容会引导您发布和部署本项目。
+配置项目的启动运行信息，**值得注意的是：该配置非常的重要**
 
-## 打包前的准备（重要）
+## 应用信息配置
 
-- 1、准备好 DCloud 的账号，在`HBuilderX`左下角点击登录注册即可，该账号用于获取`3`中的 AppID 做准备
-
-- 2、若是编译为小程序，请提前在 [微信公众平台](https://mp.weixin.qq.com/) 申请好您的小程序账号
-
-- 3、修改项目根目录下的 `manifest.json` 中的相关信息，如基础配置中的 `uni-app 应用标识（AppID）`、`应用名称`、`应用描述`以及`APP图标配置`等
-
-- 4、修改相关的配置文件，根目录下的`config/ad.config.js`和`config/halo.config.js`，
-  <br/>ad.config.js 是广告配置，当前只添加了信息流广告组件，基本上用不到广告配置，相关的广告申请可以在 [uni-app 广告](https://uniapp.dcloud.net.cn/component/ad.html)了解
-  <br/>halo.config.js 是基础的配置，[具体查看](../guide/settings.md)
-
-- 5、修改一些业务图片默认地址，[点击此处](../assets/uni-halo-images.zip)下载素材，上传到您的服务器或者 oss 中，需要能够在公网访问即可，推荐放在 [`halo 的静态存储中`](../problem/questions.md#_3、如何进入halo后台的静态存储上传文件？)，相关的配置在 `config/halo.config.js` 文件里，在素材中有对应名称的素材，具体需要修改的字段如下：
+找到项目根目录 将`config/halo.config.template.js`修改为 `config/halo.config.js` 并设置相关信息
 
 ```javascript
 export default {
-  uni_halo_logo: '', // uni-halo的logo地址（uni_halo_logo.png）
+  showCopyright: true, // 显示开源版权信息
+  showAbout: true, // 显示关于项目入口
+  uni_halo_logo: 'https://b.925i.cn/uni_halo/uni_halo_logo.png', // uni-halo的logo
 
-  miniCodeImageUrl: '', // 小程序码地址（uni_halo_wx_qrcode.jpg）
+  // Api基础域名 [必填] ：你的Halo博客基础域名
+  apiUrl: '',
 
-  loadingGifUrl:'',    // 图片加载中的地址 （uni_halo_img_lazyload.gif）
-  loadingErrUrl: '',   // 图片加载失败的地址（暂未提供素材）
-  loadingEmptyUrl: '', // 加载图片为空地址（暂未提供素材）
+	 // Api认证key [必填]： Halo中-系统-博客设置-切换到高级选项-API设置-Access key
+  apiAuthorization: '',
 
-  waveImageUrl: '',  // 关于页面波浪图片地址（uni_halo_about_wave.gif）
+  // 博客标题 [建议必填]：在某些页面没有设置具体的页面名称时候，使用该值显示
+  title: '',
+
+  // 小程序的太阳码/二维码的图片地址 [建议必填]：主要用于文章详情页面的生成海报的功能
+  miniCodeImageUrl: '',
+
+  // 启动页面的配置（页面地址`/pagesA/start/start`）
+  start: {
+    use: true, // 是否使用首次启动页：用户第一次使用你的应用会显示否则不显示
+    title: 'uni-halo', // 启动页面中的文字标题
+    bg: '', // 留空则使用默认 开屏首页背景，可以是颜色值或者图片图片地址
+    logo: 'https://b.925i.cn/uni_halo/uni_halo_logo.png', // logo
+    desc1: '全新UI，准备出发', // 描述信息1
+    desc2: '新触动 新感受 新体验', // 描述信息2
+    btnText: '全新触发' // 按钮文字
+  },
+
+  author: { // 博主信息
+    use: true, // 是否启用这里配置的信息，若设置为false 则启用PC端博客设置的信息
+    name: '', // 博主姓名
+    avatar: '', // 博主头像
+    blog: '', // 博客地址
+    email: '' // 博主邮箱
+  },
+
+  // 社交信息(将会在`/pagesA/contact/contact`页面中展示)
+  // 具体的某个参数值留空则不展示
+  social: {
+    qq: "", 		 	// qq号
+    wechat: "",   // 微信号
+    weibo: "",    // 微博地址
+    email: "",		// 邮箱地址
+    blog: "",			// 博客地址
+    juejin: "",		// 掘金地址
+    bilibili: "", // b站地址
+    gitee: "",		// gitee地址
+    github: "",		// github地址
+    csdn: ""			// CSDN地址
+  },
+
+  // 默认封面 [建议必填]：文章列表的默认封面图的地址，可以是固定图片也可以是随机图api接口
+  defaultThumbnailUrl: '',
+
+  // 默认图片 [建议必填]：图片加载失败时候的默认图片，可以是固定图片也可以是随机图api接口
+  defaultImageUrl: '',
+
+  // 默认头像 [建议必填]：主要用于评论留言的头像地址，可以是固定图片也可以是随机图api接口
+  defaultAvatarUrl: '',
+
+  // 图片加载中的地址 [建议必填]
+  loadingGifUrl: '',
+
+	 // 图片加载失败的地址 [非必填]：文章详情页面，文章图片加载失败时候的图片
+  loadingErrUrl: '',
+
+  // 加载图片为空地址 [非必填]
+  loadingEmptyUrl: '',
+
+  // 底部导航下的 关于 页面波浪图片 [非必填]
+  waveImageUrl: '',
+
+  // 轮播图配置
+  banner: {
+    // 轮播图数据源，可选源：
+    // list   =下方配置
+    // article=热门文章
+    type: 'article',
+    list: [],
+  },
+
+  // 微信分享信息
+  wxShareConfig: {
+    title: '', // 小程序分享标题[非必填]
+    desc: '', // 小程序分享描述[非必填]
+    imageUrl: '', // 小程序分享时候图片地址[非必填]
+    path: '/pages/start/start', // 分享路径[非必填] - 基本不需要修改
+    copyLink: '/pages/start/start', // 复制链接[非必填]  - 基本不需要修改
+    query: {}, // 分享参数[非必填]  - 基本不需要填写
+  },
 }
 ```
 
-### 编译为微信小程序
-
-说明：需要申请一个微信小程序的账号，并填写 在`manifest.json`中微信小程序配置`微信小程序AppID` 中，也可以按以下操作后，会弹出填写页面，输入即可
-
-- 点击工具栏 发行 -> 小程序-微信 ->输入相关的信息（若已配置好，默认即可）；
-- 若发布时候勾选了`自动上传到微信平台`等待编译成功后即可，若未勾选，则会自动打开微信开发工具需要手动上传部署；
-
-::: tip 重要内容
-
-发布到微信小程序中时，我们需要在 [微信小程序-微信公众平台](https://mp.weixin.qq.com/) 的管理后台配置相关的业务域名，该域名对应在`config/halo.config.js`中涉及到的全部域名地址，否则小程序上线后无法调用，并且在微信小程序中使用到的域名必须是`https`的域名，任何接口地址都一样，包括默认的头像、默认图片等
-
+::: warning 注意
+**还需要修改`vue.config.js`和`manifest.json`文件下的域名，和`config/halo.config.js`中的`apiUrl`对应**
 :::
 
-### 编译为安卓 APP
+## 广告信息配置
 
-说明：此处仅介绍一种打包方式，其他的方式可以查询 [UniApp 官网](https://uniapp.dcloud.net.cn/quickstart-hx.html#%E5%8F%91%E5%B8%83uni-app) 查看其他的打包方式。
+找到项目根目录 将`config/ad.config.template.js`修改为 `config/ad.config.js` ，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
 
-- 点击工具栏 发行 -> 原生 App-云打包 -> 输入相关的信息后提交打包
+```javascript
+export default {
+  adpid: '', // uni-AD App广告位id，在uni-AD官网申请广告位
+  unitId: '', // 广告单元id，可在小程序管理后台的流量主模块新建 (非个人资质，小程序后台广告主开通申请)
+  frequency: 8, // 列表中，广告出现的频率（8=每8条数据出现一次广告）
+  // 首页广告
+  home: {
+    use: true,
+  },
+  // 文章列表广告
+  articles: {
+    use: true,
+  },
+  // 文章详情广告
+  articleDetail: {
+    use: true, // 是否启用
+  }
+}
+```
+
+### 请求配置
+
+项目采用了[luch-request](https://www.quanzhan.co/luch-request/)进行数据请求
+
+#### 全局配置
+
+在项目根目录下`common/http/index.js`中可进行全局请求配置
+
+#### 拦截配置
+
+在项目根目录下`common/http/interceptors.js`中可进行全局请求进行拦截，包括请求前的拦截和响应拦截
