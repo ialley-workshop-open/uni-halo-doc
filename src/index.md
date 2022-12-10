@@ -7,7 +7,7 @@ titleTemplate: 一个可多端编译的移动端博客程序
 hero:
   name: 😜uni-halo
   text: 可多端编译的博客应用
-  tagline: 基于 uni-app + tm-vuetify2.0 + halo1.0 api
+  tagline: 基于 uni-app + tm-vuetify + halo1.x API
   image:
     src: /logo.png
     alt: uni-halo
