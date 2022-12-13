@@ -209,6 +209,10 @@ export default defineConfig({
             {
               text: '赞助',
               link: '/other/donate'
+            },
+            {
+              text: '感谢',
+              link: '/other/thanks'
             }
           ]
         }

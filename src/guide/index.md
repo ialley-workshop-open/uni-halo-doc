@@ -17,7 +17,7 @@ uni-halo 后台文章管理功能模块，暂时不推荐使用，因为文章�
 
 ## 环境准备
 
-- [halo1.x](https://halo.run/) 版本的程序 提供的 API 服务
+- [Halo 1.x](https://halo.run/) 版本的程序 提供的 API 服务
 
 ## 工具准备
 
