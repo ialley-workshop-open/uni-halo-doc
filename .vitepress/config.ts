@@ -63,6 +63,14 @@ export default defineConfig({
         text: '相关链接',
         items: [
           {
+            text: '作者主页',
+            link: 'https://www.925i.cn'
+          },
+          {
+            text: '作者博客',
+            link: 'https://b.925i.cn'
+          },
+          {
             text: 'Gitee',
             link: 'https://gitee.com/ialley-workshop-open/uni-halo'
           },
@@ -71,20 +79,16 @@ export default defineConfig({
             link: 'https://github.com/ialley-workshop-open/uni-halo'
           },
           {
-            text: '文档源码',
-            link: 'https://gitee.com/ialley-workshop-open/uni-halo-doc'
-          },
-          {
             text: 'uni-app',
             link: 'https://uniapp.dcloud.net.cn'
           },
           {
-            text: 'Halo官网',
+            text: 'Halo',
             link: 'https://halo.run'
           },
           {
-            text: '作者主页',
-            link: 'https://www.925i.cn'
+            text: 'mp-html',
+            link: 'https://jin-yufeng.gitee.io/mp-html/#/'
           }
         ]
       },
