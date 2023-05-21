@@ -32,7 +32,10 @@ export default defineConfig({
       pattern: 'https://gitee.com/ialley-workshop-open/uni-halo-doc/tree/master/:path'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://gitee.com/ialley-workshop-open/uni-halo' },
+      {
+        icon: 'github',
+        link: 'https://gitee.com/ialley-workshop-open/uni-halo'
+      },
       {
         icon: 'discord',
         link: 'https://b.925i.cn'
@@ -58,7 +61,11 @@ export default defineConfig({
       { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
       { text: '界面预览', link: '/preview', activeMatch: '/preview/' },
       { text: '更新日志', link: '/update/update', activeMatch: '/update/' },
-      { text: '常见问题', link: '/problem/questions', activeMatch: '/questions/' },
+      {
+        text: '常见问题',
+        link: '/problem/questions',
+        activeMatch: '/questions/'
+      },
       {
         text: '相关链接',
         items: [
@@ -223,4 +230,12 @@ export default defineConfig({
       ]
     }
   }
+
+  // ,vue: {
+  //   template: {
+  //     compilerOptions: {
+  //       isCustomElement: tag => tag.startsWith('Custom')
+  //     }
+  //   }
+  // }
 });

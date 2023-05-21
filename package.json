@@ -25,6 +25,7 @@
     "@types/node": "^18.7.18",
     "eslint": "^8.23.1",
     "eslint-config-soybeanjs": "^0.1.0",
+    "less": "^4.1.3",
     "typescript": "^4.8.3",
     "vite": "^3.1.3",
     "vitepress": "^1.0.0-alpha.15"

@@ -89,13 +89,13 @@
 .VPImage.logo {
 	border-radius: 3px;
 }
-.VPHome{
+.VPHome {
 	/* padding-bottom: 36px!important; */
 }
 .VPHomeHero .image-bg {
 	display: none;
 }
- .VPHomeHero .VPImage.image-src {
+.VPHomeHero .VPImage.image-src {
 	border-radius: 3px;
 	left: initial;
 	right: 0;
@@ -107,7 +107,7 @@
 	justify-content: flex-end;
 	transform: initial;
 }
-.VPHomeHero.VPHero.has-image .text{
+.VPHomeHero.VPHero.has-image .text {
 	margin: 6px 0;
 	font-size: 46px;
 	line-height: 1.3;
@@ -117,6 +117,11 @@
 	.VPHomeHero .VPImage.image-src {
 		left: 50%;
 		right: initial;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
+	}
+}
+@media (min-width: 768px) {
+	.VPHome {
+		padding-bottom: 88px!important;
 	}
 }

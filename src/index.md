@@ -43,4 +43,7 @@ features:
     details: 相对完善的后台管理功能，与PC端相差无几
 ---
 
-<!-- <CustomFooter></CustomFooter> -->
+
+<CustomUsingExamples></CustomUsingExamples>
+
+<CustomFooter></CustomFooter>
