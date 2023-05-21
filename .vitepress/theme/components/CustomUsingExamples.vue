@@ -23,6 +23,10 @@ const usingExamples = ref([
         image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png'
     },
     {
+        name: '小志IT知识库',
+        image: 'https://img.925i.cn/file/afd433249706eae10882f.png'
+    },
+    {
         name: '小陈子的站点',
         image: 'https://img.925i.cn/file/288e41d4abdfd2fc736c8.png'
     },
