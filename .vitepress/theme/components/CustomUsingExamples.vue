@@ -15,24 +15,24 @@
     </div>
 </template>
 
-<script async setup lang="ts">
+<script setup lang="ts">
 import { ref } from 'vue';
 const usingExamples = ref([
     {
         name: '小莫唐尼',
-        image: 'https://img.925i.cn/file/86cb45c9cc0bcba93a1d5.jpg'
+        image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png'
     },
     {
         name: '小陈子的站点',
-        image: 'https://img.925i.cn/file/4e2e302e54a9f84c1d8a1.jpg'
+        image: 'https://img.925i.cn/file/288e41d4abdfd2fc736c8.png'
     },
     {
         name: '鲨鱼辣椒的Blog',
-        image: 'https://img.925i.cn/file/d0751135303ae5402d3b7.jpg'
+        image: 'https://img.925i.cn/file/18f946732b29926e9d2ab.png'
     },
     {
         name: '柳意梧情博客',
-        image: 'https://img.925i.cn/file/b0ac35b3a480cff16b74f.png'
+        image: 'https://img.925i.cn/file/7c7f9e7badc43cea5d976.png'
     }
 ]);
 </script>
@@ -93,7 +93,7 @@ const usingExamples = ref([
             }
             .using_image {
                 width: 100%;
-                margin-bottom: 12px;
+                margin-bottom: 24px;
                 border-radius: 50%;
                 box-sizing: border-box;
                 overflow: hidden;
