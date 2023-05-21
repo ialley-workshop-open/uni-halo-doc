@@ -112,6 +112,10 @@ const usingExamples = ref([
                 text-align: center;
                 line-height: 22px;
                 color: var(--vp-home-hero-name-color);
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
         }
     }
@@ -137,9 +141,20 @@ const usingExamples = ref([
 /* phone */
 @media (max-width: 768px) {
     .using-examples_list {
-        padding: 0 48px;
+        padding: 0 24px;
         &__item {
-            width: 100%;
+            width: 46%;
+
+            .using_image {
+                margin-bottom: 12px;
+            }
+            .using_name {
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 15px;
+            }
         }
     }
 }
@@ -148,7 +163,13 @@ const usingExamples = ref([
     .using-examples_list {
         padding: 0 24px;
         &__item {
-            width: 100%;
+            width: 46%;
+            .using_image {
+                margin-bottom: 12px;
+            }
+            .using_name {
+                font-size: 15px;
+            }
         }
     }
 }
