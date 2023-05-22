@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import path from 'path';
+import mdItCustomAttrs from 'markdown-it-custom-attrs';
 
 export default defineConfig({
   title: 'uni-halo',
@@ -22,7 +23,20 @@ export default defineConfig({
         content: 'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
       }
     ],
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+      }
+    ],
+    [
+      'script',
+      {
+        src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js'
+      }
+    ]
   ],
   srcDir: `${path.resolve(process.cwd())}/src`,
   themeConfig: {
@@ -229,8 +243,7 @@ export default defineConfig({
         }
       ]
     }
-  }
-
+  },
   // ,vue: {
   //   template: {
   //     compilerOptions: {
@@ -238,4 +251,12 @@ export default defineConfig({
   //     }
   //   }
   // }
+  markdown: {
+    config: md => {
+      // use more markdown-it plugins!
+      md.use(mdItCustomAttrs, 'image', {
+        'data-fancybox': 'gallery'
+      });
+    }
+  }
 });

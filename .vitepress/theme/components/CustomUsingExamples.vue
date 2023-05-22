@@ -8,7 +8,7 @@
             <li class="using-examples_list__item" v-for="(item,index) in usingExamples" :key="index" :title="item.name">
                 <a :href="item.link" target="_blank">
                     <div class="using_image">
-                        <img :src="item.image" :alt="item.name">
+                        <img :src="item.image" :alt="item.name" data-fancybox="gallery">
                     </div>
                     <div class="using_name">{{item.name}}</div>
                     <div class="using_nickname">（站长：{{item.nickname}}）</div>
