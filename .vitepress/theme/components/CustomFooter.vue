@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding-top: 46px;
+    padding-top: 36px;
     gap: 16px 0;
 }
 .name {

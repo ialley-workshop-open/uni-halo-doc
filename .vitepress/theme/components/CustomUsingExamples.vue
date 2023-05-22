@@ -2,14 +2,17 @@
     <div class="using-examples">
         <div class="using-examples_head">
             <h1 class="using-examples_head__title">使用案例</h1>
-            <p class="using-examples_head__subtitle">以下使用案例排名不分前后</p>
+            <p class="using-examples_head__subtitle">得益于免费开源，以下站长都在使用</p>
         </div>
         <ul class="using-examples_list">
             <li class="using-examples_list__item" v-for="(item,index) in usingExamples" :key="index" :title="item.name">
-                <div class="using_image">
-                    <img :src="item.image" :alt="item.name">
-                </div>
-                <div class="using_name">{{item.name}}</div>
+                <a :href="item.link" target="_blank">
+                    <div class="using_image">
+                        <img :src="item.image" :alt="item.name">
+                    </div>
+                    <div class="using_name">{{item.name}}</div>
+                    <div class="using_nickname">（站长：{{item.nickname}}）</div>
+                </a>
             </li>
         </ul>
     </div>
@@ -20,23 +23,33 @@ import { ref } from 'vue';
 const usingExamples = ref([
     {
         name: '小莫唐尼',
-        image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png'
+        image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png',
+        link: 'javascript:void(0);',
+        nickname: '小莫唐尼'
     },
     {
         name: '小志IT知识库',
-        image: 'https://img.925i.cn/file/afd433249706eae10882f.png'
+        image: 'https://img.925i.cn/file/afd433249706eae10882f.png',
+        link: 'javascript:void(0);',
+        nickname: '小志'
     },
     {
         name: '小陈子的站点',
-        image: 'https://img.925i.cn/file/288e41d4abdfd2fc736c8.png'
+        image: 'https://img.925i.cn/file/288e41d4abdfd2fc736c8.png',
+        link: 'javascript:void(0);',
+        nickname: '小陈子'
     },
     {
         name: '鲨鱼辣椒的Blog',
-        image: 'https://img.925i.cn/file/18f946732b29926e9d2ab.png'
+        image: 'https://img.925i.cn/file/18f946732b29926e9d2ab.png',
+        link: 'javascript:void(0);',
+        nickname: '鲨鱼辣椒'
     },
     {
         name: '柳意梧情博客',
-        image: 'https://img.925i.cn/file/7c7f9e7badc43cea5d976.png'
+        image: 'https://img.925i.cn/file/7c7f9e7badc43cea5d976.png',
+        link: 'javascript:void(0);',
+        nickname: 'liuyiwuqing'
     }
 ]);
 </script>
@@ -51,7 +64,7 @@ const usingExamples = ref([
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding-top: 56px;
+    padding-top: 70px;
     margin-bottom: 26px;
     &_head {
         display: flex;
@@ -81,23 +94,24 @@ const usingExamples = ref([
         justify-content: center;
         gap: 16px;
         &__item {
-            width: 23.9%;
+            // width: 23.9%;
+            width: 18.8%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--vp-c-bg-soft);
             background-color: var(--vp-c-bg-soft);
-            transition: all 0.5s ease-in-out;
+            transition: transform 0.3s ease-in-out;
             box-sizing: border-box;
             padding: 24px;
             border-radius: 12px;
             &:hover {
-                transform: translateY(-3px);
+                transform: translateY(-4px);
             }
             .using_image {
                 width: 100%;
-                margin-bottom: 24px;
+                margin-bottom: 16px;
                 border-radius: 50%;
                 box-sizing: border-box;
                 overflow: hidden;
@@ -107,11 +121,22 @@ const usingExamples = ref([
                 }
             }
             .using_name {
-                font-size: 20px;
-                font-weight: 600;
+                font-size: 18px;
                 text-align: center;
                 line-height: 22px;
-                color: var(--vp-home-hero-name-color);
+                // color: var(--vp-home-hero-name-color);
+                color: var(--vp-c-text-2);
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .using_nickname {
+                margin-top: 4px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 22px;
+                color: var(--vp-c-text-2);
                 width: 100%;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -126,7 +151,7 @@ const usingExamples = ref([
     .using-examples_list {
         padding: 0 24px;
         &__item {
-            width: 30%;
+            width: 23.9%;
         }
     }
 }
