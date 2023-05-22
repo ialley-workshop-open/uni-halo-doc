@@ -2,12 +2,12 @@
 layout: home
 
 title: uni-halo官方文档
-titleTemplate: 一个可多端编译的移动端博客程序
+titleTemplate: 一个免费开源可多端编译的移动端博客源码丨微信小程序丨APP应用丨Halo微信小程序丨uni-halo
 
 hero:
   name: 😜uni-halo
-  text: 可多端编译的博客应用
-  tagline: 基于 uni-app + tm-vuetify + Halo 1.x API
+  text: 免费开源可多端编译的博客
+  tagline: 吾：视尔唯一·心之所向·素履而往丨基于 Halo1.x API
   image:
     src: /logo.png
     alt: uni-halo

@@ -15,6 +15,9 @@
 
 QQ 群号：632969367
 <br/>快速加群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=cuam7lhrB_vHuvjw2mzUO1sOKdF9KRyM&jump_from=webapi&authKey=d6bJhNaqupTTfoMDWDIeYUTAs44Ax7p64SsM/5NRtFhXE09YexDO15Izuyth6XAi"><img style="border-radius:0;display:inline;" border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="uni-halo交流反馈" title="uni-halo交流反馈"></a>
+<br/>
+
+![扫码加群（官方交流群）](https://img.925i.cn/file/b83b9e79695779c4344f3.png)
 
 ## 项目简介
 
