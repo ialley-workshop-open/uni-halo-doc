@@ -73,7 +73,7 @@ export default defineConfig({
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
       { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
       { text: '贡献', link: '/standard/category', activeMatch: '/standard' },
-      { text: '界面预览', link: '/preview', activeMatch: '/preview/' },
+      { text: '预览', link: '/preview/video', activeMatch: '/preview/' },
       { text: '更新日志', link: '/update/update', activeMatch: '/update/' },
       {
         text: '常见问题',
@@ -238,6 +238,21 @@ export default defineConfig({
             {
               text: '感谢',
               link: '/other/thanks'
+            }
+          ]
+        }
+      ],
+      '/preview/': [
+        {
+          text: '预览',
+          items: [
+            {
+              text: '视频介绍',
+              link: '/preview/video'
+            },
+            {
+              text: '界面预览',
+              link: '/preview/images'
             }
           ]
         }
