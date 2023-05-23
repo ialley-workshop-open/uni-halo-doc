@@ -36,6 +36,19 @@ export default defineConfig({
       {
         src: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js'
       }
+    ],
+    [
+      'script',
+      {},
+      `
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?6f486d3fdf5617866c907b540abfc368";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();
+			`
     ]
   ],
   srcDir: `${path.resolve(process.cwd())}/src`,
@@ -65,15 +78,15 @@ export default defineConfig({
       indexName: 'ialley-workshop'
     },
     footer: {
-      message: '源码根据 AGPL-3.0 协议开源·请遵循协议',
+      message: '根据 AGPL-3.0 协议开源·请遵循协议',
       copyright:
-        'Copyright © 2022 uni-halo丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
+        'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
     },
     nav: [
       { text: '指引', link: '/guide/', activeMatch: '/guide/' },
       { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
       { text: '贡献', link: '/standard/category', activeMatch: '/standard' },
-      { text: '预览', link: '/preview/video', activeMatch: '/preview/' },
+      { text: '预览', link: '/preview/images', activeMatch: '/preview/' },
       { text: '更新日志', link: '/update/update', activeMatch: '/update/' },
       {
         text: '常见问题',
@@ -247,16 +260,21 @@ export default defineConfig({
           text: '预览',
           items: [
             {
-              text: '视频介绍',
-              link: '/preview/video'
-            },
-            {
               text: '界面预览',
               link: '/preview/images'
+            },
+            {
+              text: '视频介绍',
+              link: '/preview/video'
             }
           ]
         }
       ]
+    },
+    outlineTitle: '内容目录',
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
     }
   },
   // ,vue: {
