@@ -1,8 +1,8 @@
 # 修改配置
 
-配置项目的启动运行信息，**值得注意的是：该配置非常的重要**
+配置项目的启动运行信息，该配置非常的重要
 
-## 留言板设置
+## 一、留言板设置
 
 留言板是一个比较特殊的配置，需要您手动在 PC 端的博客中获取页面的 `data-sheetid`，具体的操作如下：
 <br/>
@@ -16,7 +16,7 @@
 
 ![../assets/find_leaving_sheetid.png](../assets/find_leaving_sheetid.png)
 
-## 应用信息配置
+## 二、博客信息配置
 
 找到项目根目录 将`config/halo.config.template.js`修改为 `config/halo.config.js` 并设置相关信息
 
@@ -151,18 +151,14 @@ export default {
     title: '', // 小程序分享标题[非必填]
     desc: '', // 小程序分享描述[非必填]
     imageUrl: '', // 小程序分享时候图片地址[非必填]
-    path: '/pages/start/start', // 分享路径[非必填] - 基本不需要修改
-    copyLink: '/pages/start/start', // 复制链接[非必填]  - 基本不需要修改
+    path: '/pages/index/index', // 分享路径[非必填] - 基本不需要修改
+    copyLink: '/pages/index/index', // 复制链接[非必填]  - 基本不需要修改
     query: {}, // 分享参数[非必填]  - 基本不需要填写
   },
 }
 ```
 
-::: warning 注意
-**还需要修改`vue.config.js`和`manifest.json`文件下的域名，和`config/halo.config.js`中的`apiUrl`对应**
-:::
-
-## 广告信息配置
+## 三、广告配置
 
 找到项目根目录 将`config/ad.config.template.js`修改为 `config/ad.config.js` ，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
 
@@ -186,7 +182,28 @@ export default {
 }
 ```
 
-## 恋爱日记配置
+## 四、恋爱日记配置
+
+##### 1. 删除功能
+
+::: tip 提示
+如果不需要恋爱日记功能，则不需要修改这些配置，并且可以在 [二、博客信息配置](#二、博客信息配置) 中的 `quickNav` 将恋爱日记的代码注释掉或者删除。
+:::
+
+```javascript
+// 删除的代码
+{
+ icon: 'halocoloricon-attent',
+ text: '恋爱日记',
+ iconSize: 60,
+ color: 'blue',
+ type: 'page',
+  path: '/pagesA/love/love'
+},
+
+```
+
+##### 2. 开始配置
 
 找到项目根目录 将`config/love.config.template.js`修改为 `config/love.config.js` ，如果不需要恋爱日记，可以在`config/halo.config.js`中的`quickNav`中注释掉，
 具体配置，自行查看文件内容，对应的图片可以在下方的默认配置中下载到本地上传到你的服务器后替换

@@ -233,8 +233,8 @@ export default defineConfig({
               link: '/payload/introduction'
             },
             {
-              text: '快速上手',
-              link: '/payload/quick-start'
+              text: '准备工作',
+              link: '/payload/preparation'
             },
             {
               text: '修改配置',
