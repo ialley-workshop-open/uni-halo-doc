@@ -120,10 +120,23 @@ export default defineConfig({
         'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>'
     },
     nav: [
-      { text: '指引', link: '/guide/', activeMatch: '/guide/' },
-      { text: '教程', link: '/tutorial/install', activeMatch: '/tutorial/' },
-      { text: '贡献', link: '/standard/category', activeMatch: '/standard' },
-      { text: '预览', link: '/preview/images', activeMatch: '/preview/' },
+      { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
+      {
+        text: '设计指南',
+        link: '/desgin/introduction',
+        activeMatch: '/desgin/'
+      },
+      {
+        text: '部署指南',
+        link: '/payload/introduction',
+        activeMatch: '/payload/'
+      },
+      {
+        text: '贡献指南',
+        link: '/contributor/category',
+        activeMatch: '/contributor/'
+      },
+      { text: '功能预览', link: '/preview/images', activeMatch: '/preview/' },
       { text: '更新日志', link: '/update/update', activeMatch: '/update/' },
       {
         text: '常见问题',
@@ -164,88 +177,111 @@ export default defineConfig({
         ]
       },
       {
-        text: '赞助鼓励',
+        text: '赞助作者',
         link: '/other/donate'
       }
     ],
     sidebar: {
-      '/guide/': [
+      '/dev/': [
         {
-          text: '指引',
+          text: '开发指南',
           items: [
             {
-              text: '介绍',
-              link: '/guide/introduction'
+              text: '快速上手',
+              link: '/dev/quick-start'
             },
             {
-              text: '开始',
-              link: '/guide/'
+              text: '配置文件',
+              link: '/dev/config'
             },
             {
-              text: '配置',
-              link: '/guide/settings'
+              text: '路由配置',
+              link: '/dev/router'
             },
             {
-              text: '路由',
-              link: '/guide/router'
+              text: '菜单配置',
+              link: '/dev/menu'
             },
             {
-              text: '菜单',
-              link: '/guide/menu'
+              text: '权限配置',
+              link: '/dev/auth'
             },
             {
-              text: '权限',
-              link: '/guide/auth'
-            },
-            {
-              text: '发布',
-              link: '/guide/release'
+              text: '扩展图标',
+              link: '/dev/icon'
             }
           ]
         }
       ],
-      '/tutorial/': [
+      '/desgin/': [
         {
-          text: '教程',
+          text: '设计指南',
           items: [
             {
-              text: '安装教程',
-              link: '/tutorial/install'
-            },
-            {
-              text: '配置更新',
-              link: '/tutorial/update'
-            },
-            {
-              text: '图标使用',
-              link: '/tutorial/icon'
+              text: '关于项目',
+              link: '/desgin/introduction'
             }
           ]
         }
       ],
-      '/standard/': [
+      '/payload/': [
         {
-          text: '贡献',
+          text: '部署指南',
+          items: [
+            {
+              text: '部署须知',
+              link: '/payload/introduction'
+            },
+            {
+              text: '快速上手',
+              link: '/payload/quick-start'
+            },
+            {
+              text: '修改配置',
+              link: '/payload/config'
+            },
+            {
+              text: '启动项目',
+              link: '/payload/run'
+            },
+            {
+              text: '应用发布（小程序）',
+              link: '/payload/wx-release'
+            },
+            {
+              text: '应用发布（APP）',
+              link: '/payload/app-release'
+            },
+            {
+              text: '应用更新',
+              link: '/payload/app-update'
+            }
+          ]
+        }
+      ],
+      '/contributor/': [
+        {
+          text: '贡献指南',
           items: [
             {
               text: '目录规范',
-              link: '/standard/category'
+              link: '/contributor/category'
             },
             {
               text: '命名规范',
-              link: '/standard/name'
+              link: '/contributor/name'
             },
             {
               text: 'css规范',
-              link: '/standard/css'
+              link: '/contributor/css'
             },
             {
               text: 'js规范',
-              link: '/standard/js'
+              link: '/contributor/js'
             },
             {
               text: 'vue规范',
-              link: '/standard/vue'
+              link: '/contributor/vue'
             }
           ]
         }
@@ -286,7 +322,7 @@ export default defineConfig({
               link: '/other/donate'
             },
             {
-              text: '感谢',
+              text: '致谢',
               link: '/other/thanks'
             }
           ]
