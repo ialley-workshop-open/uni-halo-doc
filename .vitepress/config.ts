@@ -123,7 +123,7 @@ export default defineConfig({
       { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
       {
         text: '设计指南',
-        link: '/desgin/introduction',
+        link: '/desgin/index',
         activeMatch: '/desgin/'
       },
       {
@@ -133,7 +133,7 @@ export default defineConfig({
       },
       {
         text: '贡献指南',
-        link: '/contributor/category',
+        link: '/contributor/index',
         activeMatch: '/contributor/'
       },
       { text: '功能预览', link: '/preview/images', activeMatch: '/preview/' },
@@ -191,6 +191,10 @@ export default defineConfig({
               link: '/dev/quick-start'
             },
             {
+              text: '目录说明',
+              link: '/dev/floder'
+            },
+            {
               text: '配置文件',
               link: '/dev/config'
             },
@@ -218,8 +222,16 @@ export default defineConfig({
           text: '设计指南',
           items: [
             {
+              text: '设计指南',
+              link: '/desgin/index'
+            },
+            {
               text: '关于项目',
               link: '/desgin/introduction'
+            },
+            {
+              text: '相关技术',
+              link: '/desgin/technology'
             }
           ]
         }
@@ -237,12 +249,12 @@ export default defineConfig({
               link: '/payload/preparation'
             },
             {
-              text: '修改配置',
-              link: '/payload/config'
-            },
-            {
               text: '启动项目',
               link: '/payload/run'
+            },
+            {
+              text: '修改配置',
+              link: '/payload/config'
             },
             {
               text: '应用发布（小程序）',
@@ -264,24 +276,20 @@ export default defineConfig({
           text: '贡献指南',
           items: [
             {
-              text: '目录规范',
-              link: '/contributor/category'
+              text: '贡献指南',
+              link: '/contributor/index'
             },
             {
               text: '命名规范',
               link: '/contributor/name'
             },
             {
-              text: 'css规范',
-              link: '/contributor/css'
-            },
-            {
-              text: 'js规范',
+              text: 'js书写规范',
               link: '/contributor/js'
             },
             {
-              text: 'vue规范',
-              link: '/contributor/vue'
+              text: 'css书写规范',
+              link: '/contributor/css'
             }
           ]
         }

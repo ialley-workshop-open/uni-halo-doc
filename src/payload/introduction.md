@@ -1,38 +1,26 @@
-# 部署指南
+# 部署须知
 
-部署前的准备工作，请您必须阅读和理解以下内容
+部署前的准备工作，请您必须阅读和理解以下内容，这里的说明非常重要，请您务必阅读
 
-## 一、部署 Halo 1.x 博客
+## 前置要求
 
-`Halo` 是强大易用的开源建站工具（cms）
+- Halo 博客程序（PC 端的博客系统），且必须要 Halo 1.x 版本：主要用于提供 uni-halo 的数据接口；
 
-`uni-halo` 项目依赖于 `Halo 1.x`版本程序的项目 API 接口，如果您没有使用 `Halo 1.x` 或者使用的是其他的博客程序，您无需再继续往下看，或者您也可以尝试使用该程序部署一个自己的博客。
+- DCloud 账号开发者账号：用于 `uni-halo` 的源码编译；
 
-Halo 官网地址：[https://halo.run/](https://halo.run/)
+- 微信小程序账号：用于小程序上线发布；
 
-Halo 1.x 部署：[https://docs.halo.run/1.6/](https://docs.halo.run/1.6/)
+- 一个已经通过备案的域名 + ssl 证书：由于小程序上线使用的 api 接口必须是 已经备案和 https 的，所以该条件也是必须的。
 
-::: warning 重要的事情说三遍
+::: warning 注意阅读
 
-uni-halo 只适用于 Halo 1.x 部署的博客程序
-<br/>
-uni-halo 只适用于 Halo 1.x 部署的博客程序
-<br/>
-uni-halo 只适用于 Halo 1.x 部署的博客程序
+本程序强制依赖于 Halo 内容管理系统，如果您的 PC 端博客没有使用该开源程序搭建，那么 uni-halo 不适合您使用。
+
 :::
 
-## 二、下载 uni-halo 源码
+## 作者建议
 
-下载 `uni-halo` 源码，推荐使用 Gitee 下载，因为 Gitee 始终为最新版本的代码，而 Github 会定时同步。
+::: warning 重要提示
 
-Gitee 下载：[https://gitee.com/ialley-workshop-open/uni-halo](https://gitee.com/ialley-workshop-open/uni-halo)
-
-```bash
-git clone https://gitee.com/ialley-workshop-open/uni-halo.git
-```
-
-Github 下载：[https://github.com/ialley-workshop-open/uni-halo](https://github.com/ialley-workshop-open/uni-halo)
-
-```bash
-git clone https://github.com/ialley-workshop-open/uni-halo.git
-```
+uni-halo 后台文章管理功能模块，暂时不推荐使用，因为文章编辑功能和 PC 端的功能没办法同步，在 uni-halo 中对文章进行编辑后，可能会丢失 PC 端编辑的样式！
+:::

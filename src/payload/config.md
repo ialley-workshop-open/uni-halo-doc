@@ -18,7 +18,7 @@
 
 ## 二、博客信息配置
 
-找到项目根目录 将`config/halo.config.template.js`修改为 `config/halo.config.js` 并设置相关信息
+按字段描述配置对应的信息即可，若有不明白的可以 [添加 QQ 群](/desgin/introduction.html#交流反馈) 进行咨询
 
 ```javascript
 export default {
@@ -160,7 +160,7 @@ export default {
 
 ## 三、广告配置
 
-找到项目根目录 将`config/ad.config.template.js`修改为 `config/ad.config.js` ，如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
+如果没有广告或者不熟悉，请把`true`都设置为 `false` 即可，目前广告暂未完善
 
 ```javascript
 export default {
@@ -193,11 +193,11 @@ export default {
 ```javascript
 // 删除的代码
 {
- icon: 'halocoloricon-attent',
- text: '恋爱日记',
- iconSize: 60,
- color: 'blue',
- type: 'page',
+ 	icon: 'halocoloricon-attent',
+ 	text: '恋爱日记',
+ 	iconSize: 60,
+ 	color: 'blue',
+ 	type: 'page',
   path: '/pagesA/love/love'
 },
 
@@ -205,7 +205,7 @@ export default {
 
 ##### 2. 开始配置
 
-找到项目根目录 将`config/love.config.template.js`修改为 `config/love.config.js` ，如果不需要恋爱日记，可以在`config/halo.config.js`中的`quickNav`中注释掉，
+如果不需要恋爱日记，可以在`config/halo.config.js`中的`quickNav`中注释掉，
 具体配置，自行查看文件内容，对应的图片可以在下方的默认配置中下载到本地上传到你的服务器后替换
 
 ```javascript
