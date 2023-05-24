@@ -54,6 +54,6 @@ git clone https://github.com/ialley-workshop-open/uni-halo
 
 - 1、通过 HBuilderX 导入项目；
 - 2、命令行执行 npm i 安装依赖；
-- 3、配置运行信息，找到项目根目录 config 目录，将`halo.config.template.js`修改为 `halo.config.js` 并设置相关信息 [halo.config.js 文件说明](./settings.md)；
+- 3、配置运行信息，找到项目根目录 config 目录，将`halo.config.template.js`修改为 `halo.config.js` 并设置相关信息 [halo.config.js 文件说明](/payload/config.html)；
 - 4、点击 HBuilderX 工具 右上角预览、或者点击工具栏 运行-内置浏览器运行；
 - 5、项目调试：参考 [uni-app 运行和调试](https://uniapp.dcloud.net.cn/tutorial/run-and-debug.html)；
