@@ -1,60 +1,79 @@
 # 发布部署
 
-该内容会引导您发布和部署本项目。
+该内容会引导您发布和部署微信小程序。
 
-## 打包前的准备（重要）
+## 打包步骤
 
-- 1、准备好 DCloud 的账号，在`HBuilderX`左下角点击登录注册即可，该账号用于获取`3`中的 AppID 做准备
+开始之前，您必须已经完成 `部署指南` 前面的步骤，否则以下步骤可能无法继续进行。
 
-- 2、若是编译为小程序，请提前在 [微信公众平台](https://mp.weixin.qq.com/) 申请好您的小程序账号
+:::warning 再次提示
+同时再次说明，您填写在 `halo.config.js` 中的 `apiUrl` 字段的值，必须是携带 `https` 协议的，这很重要，因为微信小程序上线发布必须是该协议，且必须是已经通过国内备案！
+:::
 
-- 3、修改项目根目录下的 `manifest.json` 中的相关信息，如基础配置中的 `uni-app 应用标识（AppID）`、`应用名称`、`应用描述`以及`APP图标配置`等
+### 第 1 步、修改配置
 
-- 4、修改相关的配置文件，根目录下的`config/ad.config.js`和`config/halo.config.js`，
-  <br/>ad.config.js 是广告配置，当前只添加了信息流广告组件，基本上用不到广告配置，相关的广告申请可以在 [uni-app 广告](https://uniapp.dcloud.net.cn/component/ad.html)了解
-  <br/>halo.config.js 是基础的配置，[具体查看](./settings.md)
+- 1. 重新获取应用 `uni-app应用标识（AppId）`，项目根目录下找到 `manifest.json` 点击 `基础配置` 找到 `uni-app应用标识（AppId）` 右侧的 `重新获取` 按钮并点击重新获取即可， 如图所示：
 
-- 5、修改一些业务图片默认地址，<a href="https://wwqj.lanzoum.com/i2USg0jcy3qf"  target="_blank" title="点击下载素材">点击下载素材</a> 上传到您的服务器或者 oss 中，需要能够在公网访问即可，推荐放在 [`halo 的静态存储中`](../problem/questions.md#_3、如何进入halo后台的静态存储上传文件？)，相关的配置在 `config/halo.config.js` 文件里，在素材中有对应名称的素材，具体需要修改的字段如下：
+![https://img.925i.cn/file/91da5f8b16c19a24bc524.png](https://img.925i.cn/file/91da5f8b16c19a24bc524.png)
 
-```javascript
-export default {
-  uni_halo_logo: '', // uni-halo的logo地址（uni_halo_logo.png）
+- 2. 登录注册好的微信小程序后台 [`微信公众平台`](https://mp.weixin.qq.com/)
 
-  miniCodeImageUrl: '', // 小程序太阳码/二维码图片地址（uni_halo_wx_qrcode.jpg）
-  aboutProfileImageUrl: '', // 关于页面中的资料卡背景图 （uni_halo_profile_bg.jpg）
+找到左侧菜单 `设置-帐号信息`下的 `AppID(小程序ID)` 复制该值，如图所示：
 
-  loadingGifUrl:'',    // 图片加载中的地址 （uni_halo_img_lazyload.gif）
-  loadingErrUrl: '',   // 图片加载失败的地址（暂未提供素材）
-  loadingEmptyUrl: '', // 加载图片为空地址（暂未提供素材）
+![https://img.925i.cn/file/b0bebb03a839adb53d1e5.png](https://img.925i.cn/file/b0bebb03a839adb53d1e5.png)
 
-  waveImageUrl: '',  // 关于页面波浪图片地址（uni_halo_about_wave.gif）
-}
-```
+- 3. 回到 `HBuilder X` 开发工具中，在 `uni-halo` 项目根目录下找到 `manifest.json` ，点击 `微信小程序配置` 找到 `微信小程序AppID` 输入框，粘贴刚才复制的内容，如图所示：
 
-### 1、编译为微信小程序
+![https://img.925i.cn/file/de0bf50c9958c39ce6845.png](https://img.925i.cn/file/de0bf50c9958c39ce6845.png)
 
-说明：需要申请一个微信小程序的账号，并填写 在`manifest.json`中微信小程序配置`微信小程序AppID` 中，也可以按以下操作后，会弹出填写页面，输入即可
+- 4. 配置微信小程序的业务域名，也就是 api 接口白名单，
 
-- 点击工具栏 发行 -> 小程序-微信 ->输入相关的信息（若已配置好，默认即可）；
-- 若发布时候勾选了`自动上传到微信平台`等待编译成功后即可，若未勾选，则会自动打开微信开发工具需要手动上传部署；
+登录微信小程序后台，找到 `开发管理-开发设置` 如图所示：
 
-::: tip 重要内容
+![https://img.925i.cn/file/db81a7b8cfaa4ee669cf8.png](https://img.925i.cn/file/db81a7b8cfaa4ee669cf8.png)
 
-发布到微信小程序中时，我们需要在 [微信小程序-微信公众平台](https://mp.weixin.qq.com/) 的管理后台配置相关的业务域名，该域名对应在`config/halo.config.js`中涉及到的全部域名地址，否则小程序上线后无法调用，并且在微信小程序中使用到的域名必须是`https`的域名，任何接口地址都一样，包括默认的头像、默认图片等
+向下滚动，找到 `服务器域名` 点击右侧修改按钮，将您的域名（也就是在 [博客信息配置](/payload/config.html#二、博客信息配置) 中的 `apiUrl` 字段的值分别写入 `request合法域名` `uploadFile合法域名` 和 `downloadFile合法域名` 列表中，点击保存即可，如图所示：
+
+![https://img.925i.cn/file/de06474bb735a49b59205.png](https://img.925i.cn/file/de06474bb735a49b59205.png)
+
+### 第 2 步、编译并发布
+
+- 1. 在 `HBuilder X` 开发工具右键 `uni-halo` 项目名称，选择 `发行 -> 小程序-微信（仅适用于uniapp）`，如图所示：
+
+![https://img.925i.cn/file/ecd65ee279f052f854b7b.png](https://img.925i.cn/file/ecd65ee279f052f854b7b.png)
+
+- 2. 在弹出的发行信息框中，确认您的小程序信息，如果没有其他设置，直接点击发行即可。
+
+说明：若不想再次打开 `微信小程序开发工具` 去预览和上传，可以直接在此弹窗中勾选 `自动上传到微信平台（不会打开微信开发工具）`选项
+
+![https://img.925i.cn/file/a4405f8c6c71de8a90fdd.png](https://img.925i.cn/file/a4405f8c6c71de8a90fdd.png)
+
+- 3. 若未勾选 `自动上传到微信平台（不会打开微信开发工具）`，则在编译完成后会自动打开 `微信小程序开发工具` ，在打开的微信开发工具中，点击工具栏 `上传` 弹出信息填写框并填写基础信息，信息填写完成，点击绿色的 `上传`按钮等待上传完成即可，如图所示：
+
+![https://img.925i.cn/file/a6823d73e515927de41ac.png](https://img.925i.cn/file/a6823d73e515927de41ac.png)
+
+### 第 3 步、提交审核
+
+- 1. 代码上传完成后，进入微信小程序的管理后台，找到菜单并点击 `版本管理` ，找到 `开发版本` 右侧的提交审核按钮
+
+![https://img.925i.cn/file/c9ac7848a554d1a9a3579.png](https://img.925i.cn/file/c9ac7848a554d1a9a3579.png)
+
+- 2. 确认提交审核并填写相关的审核信息，以下不再进行赘述和提供填写图例，只需要按照下一步进行操作即可，如图：
+
+![https://img.925i.cn/file/827620f5cb9700a6337f6.png](https://img.925i.cn/file/827620f5cb9700a6337f6.png)
+
+::: tip 踩坑提示
+
+为了能够更容易通过审核，作者建议：
+
+- 1. 在填写审核信息的时候，若您的小程序资质是 `个人资质` 尽可能将您的描述信息写为个人类型的内容，如参考作者的小程序描述：**这里是我的个人日记小程序，用于记录个人的工作和生活。**
+
+- 2. 上传截图的时候，请不要截图有关于社交部分的内容，比如：留言板、评论区等
+
+- 3. 文章内容可以先将带有分享性质的文章先进行下架，保留一些个人的日志文章等等
 
 :::
 
-### 2、编译为安卓 APP
+## 完结提示
 
-更新：（**若需要在线更新服务，请先看这条**）更新是指，当前的 APP 发布后，用户可以在线升级，具体操作方式请查看[版本更新说明](../tutorial/update.md)
-<br/>说明：此处仅推荐说明一种打包方式， 官方所有打包方式请参考[UniApp 官网](https://uniapp.dcloud.net.cn/tutorial/app-base.html) 。
-
-- 点击工具栏 发行 -> 原生 App-云打包 -> 输入相关的信息后提交打包
-- 打包完成后，在 HBuilder X 的控制台会有一个安装包打包成功后的输出目录
-
-::: tip 说明
-
-- 如果想将 APP 上架到各个应用商店提供下载，请自行百度实现！
-- 打包为 app 时候，可以按需要选择 HBuilder X 的`测试证书`或者`自有证书`，[自有证书生成]()请参考 uni-app 官方说明。
-
-:::
+以上就是发布为微信小程序的全部内容，如果您有什么疑问在此文档上无法解决的，可以通过添加 [官方 QQ 群](/desgin/introduction.html#交流反馈) 进行交流。

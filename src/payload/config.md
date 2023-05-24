@@ -205,8 +205,7 @@ export default {
 
 ##### 2. 开始配置
 
-如果不需要恋爱日记，可以在`config/halo.config.js`中的`quickNav`中注释掉，
-具体配置，自行查看文件内容，对应的图片可以在下方的默认配置中下载到本地上传到你的服务器后替换
+如果不需要恋爱日记，可以在`config/halo.config.js`中的`quickNav`中注释掉，具体配置，自行查看文件内容，对应的图片可以在下方的默认配置中下载到本地上传到你的服务器后替换
 
 ```javascript
 export default {
@@ -354,5 +353,24 @@ export default {
       }
     ]
   }
+};
+```
+
+## 五、静态图片配置（补充）
+
+修改一些业务图片默认地址，<a href="https://wwqj.lanzoum.com/i2USg0jcy3qf"  target="_blank" title="点击下载素材">点击下载素材</a>（素材也可以在 [`QQ群`](/desgin/introduction.html#交流反馈) 内文件下载） 上传到您的服务器或者 oss 中，需要能够在公网访问即可，推荐放在 [`halo 的静态存储中`](../problem/questions.md#_3、如何进入halo后台的静态存储上传文件？)，相关的配置在 `config/halo.config.js` 文件里，在素材中有对应名称的素材，具体需要修改的字段如下：
+
+```javascript
+export default {
+  uni_halo_logo: '', // uni-halo的logo地址（uni_halo_logo.png）
+
+  miniCodeImageUrl: '', // 小程序太阳码/二维码图片地址（uni_halo_wx_qrcode.jpg）
+  aboutProfileImageUrl: '', // 关于页面中的资料卡背景图 （uni_halo_profile_bg.jpg）
+
+  loadingGifUrl: '', // 图片加载中的地址 （uni_halo_img_lazyload.gif）
+  loadingErrUrl: '', // 图片加载失败的地址（暂未提供素材）
+  loadingEmptyUrl: '', // 加载图片为空地址（暂未提供素材）
+
+  waveImageUrl: '' // 关于页面波浪图片地址（uni_halo_about_wave.gif）
 };
 ```
