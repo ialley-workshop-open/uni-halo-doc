@@ -124,7 +124,7 @@ export default defineConfig({
     footer: {
       message: '根据 AGPL-3.0 协议开源·请遵循协议',
       copyright:
-        'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/land/K5cHoyhHua9HOUCN"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
+        'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
     },
     nav: [
       { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
