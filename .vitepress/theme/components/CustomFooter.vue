@@ -6,6 +6,7 @@
         <div class="img-list">
             <img class="qrcode" src="https://img.925i.cn/file/a0c1a95b49b5db7f78248.png" data-fancybox="gallery"/>
             <img class="qrcode" src="https://img.925i.cn/file/b83b9e79695779c4344f3.png" data-fancybox="gallery"/>
+            <img class="qrcode" src="https://img.925i.cn/file/a30bc81fbb998c68728cd.png" data-fancybox="gallery"/>
         </div>
     </div>
 </template>

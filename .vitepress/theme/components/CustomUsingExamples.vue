@@ -50,6 +50,12 @@ const usingExamples = ref([
         image: 'https://img.925i.cn/file/7c7f9e7badc43cea5d976.png',
         link: 'javascript:void(0);',
         nickname: 'liuyiwuqing'
+    },
+    {
+        name: '芈亓的Blog',
+        image: 'https://img.925i.cn/file/8c3613566a8ef1f301320.png',
+        link: 'javascript:void(0);',
+        nickname: '芈亓'
     }
 ]);
 </script>
