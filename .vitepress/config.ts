@@ -323,20 +323,24 @@ export default defineConfig({
               link: '/update/update'
             },
             {
-              text: 'v1.0.3-beta',
-              link: '/update/v1.0.3-beta'
+              text: 'v1.0.4-230608',
+              link: '/update/v1.0.4-230608'
             },
             {
-              text: 'v1.0.2-beta',
-              link: '/update/v1.0.2-beta'
+              text: 'v1.0.3-221212',
+              link: '/update/v1.0.3-221212'
             },
             {
-              text: 'v1.0.1-beta',
-              link: '/update/v1.0.1-beta'
+              text: 'v1.0.2-221210',
+              link: '/update/v1.0.2-221210'
             },
             {
-              text: 'v1.0.0-beta',
-              link: '/update/v1.0.0-beta'
+              text: 'v1.0.1-221209',
+              link: '/update/v1.0.1-221209'
+            },
+            {
+              text: 'v1.0.0-221207',
+              link: '/update/v1.0.0-221207'
             }
           ]
         }

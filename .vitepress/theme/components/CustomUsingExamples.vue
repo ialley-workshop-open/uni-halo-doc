@@ -24,7 +24,7 @@ const usingExamples = ref([
     {
         name: '小莫唐尼',
         image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png',
-        link: 'javascript:void(0);',
+        link: 'https://b.925i.cn/',
         nickname: '小莫唐尼'
     },
     {
@@ -100,8 +100,8 @@ const usingExamples = ref([
         justify-content: center;
         gap: 16px;
         &__item {
-            // width: 23.9%;
-            width: 18.8%;
+            width: 23.8%;
+            // width: 18.8%;
             display: flex;
             flex-direction: column;
             align-items: center;
