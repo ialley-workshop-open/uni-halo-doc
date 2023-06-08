@@ -14,10 +14,10 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /payload/preparation
     - theme: alt
       text: 介绍
-      link: /guide/introduction
+      link: /desgin/introduction
     - theme: alt
       text: 在 Gitee 上查看
       link: https://gitee.com/ialley-workshop-open/uni-halo
