@@ -4,7 +4,7 @@
 
 ## 前置要求
 
-- Halo 博客程序（PC 端的博客系统），且必须要 Halo 1.x 版本：主要用于提供 uni-halo 的数据接口；
+- [Halo](https://docs.halo.run/1.6/) 博客程序（PC 端的博客系统），且必须要 Halo 1.x 版本：主要用于提供 uni-halo 的数据接口；
 
 - DCloud 账号开发者账号：用于 `uni-halo` 的源码编译；
 
