@@ -5,14 +5,16 @@ import mdItCustomAttrs from 'markdown-it-custom-attrs';
 export default defineConfig({
   title: 'uni-halo',
   lang: 'zh-CN',
-  description: '一个优雅、清新、漂亮的移动端博客应用，基于uniapp + halo api接口',
+  description:
+    '一个优雅、清新、漂亮的移动端博客应用，基于 uni-app + halo1.x API 实现一款现代化的开源博客 / CMS 系统API开发的多端应用。uni-halo小程序、uni-halo微信小程序、uni-halo博客小程序、halo小程序、halo博客小程序、halo微信小程序。',
   head: [
     ['meta', { name: 'author', content: '小莫唐尼' }],
     [
       'meta',
       {
         name: 'keywords',
-        content: 'uniapp, 小莫唐尼, halo, vue, uni-halo, uni-halo docs, uni-halo小程序'
+        content:
+          'uniapp, 小莫唐尼, halo, vue, uni-halo, uni-halo docs, uni-halo小程序, uni-app,halo开源博客,多端应用,uni-halo小程序,uni-halo微信小程序,uni-halo博客小程序,halo小程序,halo博客小程序,halo微信小程序。'
       }
     ],
     ['link', { rel: 'icon', type: 'image', href: '/logo.png' }],
