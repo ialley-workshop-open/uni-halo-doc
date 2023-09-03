@@ -7,12 +7,13 @@ import CustomFooter from './components/CustomFooter.vue'
 import CustomUsingExamples from './components/CustomUsingExamples.vue'
 import CustomLayout from "./components/CustomLayout.vue";
 import CustomBilibiliVideo from "./components/CustomBilibiliVideo.vue";
+import CustomIframe from "./components/CustomIframe.vue";
 
 export default {...DefaultTheme,
 	Layout:CustomLayout,
   enhanceApp({ app }) {
     app.component('CustomFooter', CustomFooter)
 		app.component("CustomUsingExamples",CustomUsingExamples)
-		app.component("CustomBilibiliVideo",CustomBilibiliVideo)
+		app.component("CustomIframe",CustomIframe)
   }
 };
