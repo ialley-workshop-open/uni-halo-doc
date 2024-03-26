@@ -30,8 +30,8 @@
 
 		<template #layout-top>
 			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='dialogShow = false'>
-				<div class='ad'>
-					<div class='ad-item pink'>
+				<div class='custom-ad'>
+					<div class='custom-ad-item pink'>
 						<img alt='uni-halo 小程序版本演示' class='ad-cover' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
 						<div class='ad-text'>
 							<p><strong style='font-size: 18px'>《图图小绘》</strong>- 微信小程序打造个性化的利器！</p>
@@ -40,7 +40,7 @@
 						</div>
 					</div>
 
-					<div class='ad-item '>
+					<div class='custom-ad-item '>
 						<img alt='爱品优省' class='ad-cover' data-fancybox='gallery' src='https://img.925i.cn/file/ecd1275e96a09a0dea0d6.png' />
 						<div class='ad-text'>
 							<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>
@@ -227,7 +227,7 @@ function handleConfirm(dialogInfo: any) {
 	}
 }
 
-.ad {
+.custom-ad {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
