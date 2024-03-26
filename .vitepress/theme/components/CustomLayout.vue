@@ -42,7 +42,7 @@
 						</div>
 
 						<div class='recommend-app-item '>
-							<img alt='爱品优省' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/ecd1275e96a09a0dea0d6.png' />
+							<img alt='爱品优省' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/3e02d347bf447c1fe3e2f.png' />
 							<div class='recommend-app-text'>
 								<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>
 								<p> 提供各类会员季卡、月卡、周卡等购买优惠。</p>
