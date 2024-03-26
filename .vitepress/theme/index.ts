@@ -6,8 +6,9 @@ import "./custom.css";
 import CustomFooter from './components/CustomFooter.vue'
 import CustomUsingExamples from './components/CustomUsingExamples.vue'
 import CustomLayout from "./components/CustomLayout.vue";
-import CustomBilibiliVideo from "./components/CustomBilibiliVideo.vue";
+// import CustomBilibiliVideo from "./components/CustomBilibiliVideo.vue";
 import CustomIframe from "./components/CustomIframe.vue";
+import CustomDialog from "./components/CustomDialog.vue";
 
 export default {...DefaultTheme,
 	Layout:CustomLayout,
@@ -15,5 +16,6 @@ export default {...DefaultTheme,
     app.component('CustomFooter', CustomFooter)
 		app.component("CustomUsingExamples",CustomUsingExamples)
 		app.component("CustomIframe",CustomIframe)
+		app.component("CustomDialog",CustomDialog)
   }
 };
