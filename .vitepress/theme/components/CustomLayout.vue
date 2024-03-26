@@ -30,25 +30,27 @@
 
 		<template #layout-top>
 			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='dialogShow = false'>
-				<div class='custom-ad'>
-					<div class='custom-ad-item pink'>
-						<img alt='uni-halo 小程序版本演示' class='ad-cover' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
-						<div class='ad-text'>
-							<p><strong style='font-size: 18px'>《图图小绘》</strong>- 微信小程序打造个性化的利器！</p>
-							<p> 提供了丰富多样的壁纸、头像和表情包资源免费下载。</p>
-							<p> 还精心提供聊天、朋友圈以及个性签名等类型文案！</p>
+				<template #body>
+					<div class='recommend-app'>
+						<div class='recommend-app-item pink'>
+							<img alt='uni-halo 小程序版本演示' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
+							<div class='recommend-app-text'>
+								<p><strong style='font-size: 18px'>《图图小绘》</strong>- 微信小程序打造个性化的利器！</p>
+								<p> 提供了丰富多样的壁纸、头像和表情包资源免费下载。</p>
+								<p> 还精心提供聊天、朋友圈以及个性签名等类型文案！</p>
+							</div>
 						</div>
-					</div>
 
-					<div class='custom-ad-item '>
-						<img alt='爱品优省' class='ad-cover' data-fancybox='gallery' src='https://img.925i.cn/file/ecd1275e96a09a0dea0d6.png' />
-						<div class='ad-text'>
-							<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>
-							<p> 提供各类会员季卡、月卡、周卡等购买优惠。</p>
-							<p> 从本站扫码进入购买，获取更多优惠！</p>
+						<div class='recommend-app-item '>
+							<img alt='爱品优省' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/ecd1275e96a09a0dea0d6.png' />
+							<div class='recommend-app-text'>
+								<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>
+								<p> 提供各类会员季卡、月卡、周卡等购买优惠。</p>
+								<p> 从本站扫码进入购买，获取更多优惠！</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				</template>
 				<template #footer>
 					<XiaoButton size='mini' title='一天内不再提示' @click='handleConfirm'></XiaoButton>
 					<XiaoButton :use-animation='true' size='mini' title='知道啦，我会记得关注滴' type='primary' @click='dialogShow = false'></XiaoButton>
@@ -227,7 +229,7 @@ function handleConfirm(dialogInfo: any) {
 	}
 }
 
-.custom-ad {
+.recommend-app {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;

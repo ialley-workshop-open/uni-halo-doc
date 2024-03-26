@@ -6,7 +6,7 @@
 			<span class='close' title='关闭' @click='handleConfirm'>+</span>
 		</div>
 		<div class='custom-dialog-body'>
-			<slot></slot>
+			<slot name='body'></slot>
 		</div>
 		<div class='custom-dialog-footer center'>
 			<slot name='footer'>
