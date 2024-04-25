@@ -12,9 +12,9 @@
 					<img alt='图图小绘（微信小程序）' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
 				</div>
 				<img alt='图图小绘（微信小程序）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/d316c4724f2dd3cac685c.jpg' />
-				<p class='item-desc' style='margin-top: 24px;margin-bottom: -6px;'>爱品优省·各类会员优惠充值</p>
-				<img alt='爱品优省·各类会员优惠充值' class='ad-image border no-padding' data-fancybox='gallery'
-						 src='https://img.925i.cn/file/7a409af95461124c9c5db.png' />
+<!--				<p class='item-desc' style='margin-top: 24px;margin-bottom: -6px;'>爱品优省·各类会员优惠充值</p>-->
+<!--				<img alt='爱品优省·各类会员优惠充值' class='ad-image border no-padding' data-fancybox='gallery'-->
+<!--						 src='https://img.925i.cn/file/7a409af95461124c9c5db.png' />-->
 			</div>
 		</template>
 		<template #not-found>
@@ -41,14 +41,14 @@
 							</div>
 						</div>
 
-						<div class='recommend-app-item '>
-							<img alt='爱品优省' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/3e02d347bf447c1fe3e2f.png' />
-							<div class='recommend-app-text'>
-								<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>
-								<p> 提供各类会员季卡、月卡、周卡等购买优惠。</p>
-								<p> 从本站扫码进入购买，获取更多优惠！</p>
-							</div>
-						</div>
+<!--						<div class='recommend-app-item '>-->
+<!--							<img alt='爱品优省' class='recommend-app-cover' data-fancybox='gallery' src='https://img.925i.cn/file/3e02d347bf447c1fe3e2f.png' />-->
+<!--							<div class='recommend-app-text'>-->
+<!--								<p><strong style='font-size: 18px'>《爱品优省》</strong>- 微信公众号优惠充值平台！</p>-->
+<!--								<p> 提供各类会员季卡、月卡、周卡等购买优惠。</p>-->
+<!--								<p> 从本站扫码进入购买，获取更多优惠！</p>-->
+<!--							</div>-->
+<!--						</div>-->
 					</div>
 				</template>
 				<template #footer>

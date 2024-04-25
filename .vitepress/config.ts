@@ -71,7 +71,18 @@ export default defineConfig({
 				h.onload=function(){new c[b]["Monitor"]().init({id:"K5cUWbRPcIDRH8No",sendSuspicious:true,sendSpaPv:true});};
 				f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");
 			`
-    ]
+    ],
+		[
+			'script',
+			{},
+			`
+			  (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "lfzkgpgvjk");
+			`
+		]
   ],
   srcDir: `${path.resolve(process.cwd())}/src`,
   themeConfig: {
@@ -142,12 +153,11 @@ export default defineConfig({
         'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
     },
     nav: [
+			{
+				text: 'Halo Pro',
+				link: 'https://uhalo.925i.cn/',
+			},
       { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
-      {
-        text: '设计指南',
-        link: '/desgin/index',
-        activeMatch: '/desgin/'
-      },
       {
         text: '部署指南',
         link: '/payload/introduction',
