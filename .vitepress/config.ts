@@ -155,8 +155,8 @@ export default defineConfig({
 		},
 		nav: [
 			{
-				text: 'Halo Pro',
-				link: 'https://uhalo.925i.cn/'
+				text: 'UHalo PRO',
+				link: 'https://www.uhalo.pro/'
 			},
 			{
 				text: '2.0版本',
@@ -184,7 +184,7 @@ export default defineConfig({
 				text: '相关链接',
 				items: [
 					{
-						text: 'UHalo Pro',
+						text: 'UHalo PRO',
 						link: 'https://www.uhalo.pro/'
 					},
 					{
