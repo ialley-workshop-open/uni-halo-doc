@@ -187,12 +187,8 @@ export default defineConfig({
 						link: 'https://www.uhalo.pro/'
 					},
 					{
-						text: 'uni-halo 2.x',
-						link: 'https://uni-halo.925i.cn/v2'
-					},
-					{
-						text: 'uni-halo 1.x',
-						link: 'https://uni-halo.925i.cn/v1'
+						text: 'uni-halo 1.0',
+						link: 'https://uni-halo.925i.cn/v1/'
 					},
 					{
 						text: '作者主页',
