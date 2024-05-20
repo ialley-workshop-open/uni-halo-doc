@@ -24,15 +24,19 @@ npm install
 
 以下为需要重命名的文件，文件路径在：`config/` 下：
 
-[**1、博客信息配置**](/payload/config.html#二、博客信息配置)
+[**1、Token配置**](/payload/config.html#一、Token配置)
+
+`token.config.template.js` 修改为 `token.config.js`
+
+[**2、博客信息配置**](/payload/config.html#二、博客信息配置)
 
 `halo.config.template.js` 修改为 `halo.config.js`
 
-[**2、广告配置**](/payload/config.html#三、广告配置)
+[**3、广告配置**](/payload/config.html#三、广告配置)
 
 `ad.config.template.js` 修改为 `ad.config.js`
 
-[**3、恋爱日记配置**](/payload/config.html#四、恋爱日记配置)
+[**4、恋爱日记配置**](/payload/config.html#四、恋爱日记配置)
 
 `love.config.template.js` 修改为 `love.config.js`
 

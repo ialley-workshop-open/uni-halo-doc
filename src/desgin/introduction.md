@@ -1,23 +1,19 @@
 # 关于项目
 
-在开发本项目时候，本人也是一个新手小白，编码水平还有待提升，如有什么不妥的地方，欢迎各位大佬指正！
-
-同时，本项目有依然存在较多的缺点以及不完善的地方，其实我自己也发现了，但是既然是想要完善得更好，那就把代码开源出来，如果大佬们有什么好的意见和建议、或者是能够提交 PR 对本项目进行完善的，都非常的欢迎！
+`beta-v2.0` 版本在开发测试中，如有什么不妥的地方，欢迎各位大佬体验和指正！
 
 ## 项目简介
 
-[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.x（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
+[uni-halo](ttps://gitee.com/ialley-workshop-open/uni-halo) 是一个基于 halo1.x/halo2.x（一款现代化的开源博客/CMS 系统 API） 作为后端服务开发的移动端系统，也可用于学习参考。
 <br/><br/>
 功能包括：前台博客系统 和 后台管理系统，同时满足浏览和管理两端合一的需求，真正实现一个应用实现博客浏览和后台管理。
 ::: warning 重要说明
 
-- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
-- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
-- **注意：uni-halo 当前版本 对应的是 halo1.0（<a href="https://docs.halo.run/1.5" target="_blank" title="1.5">1.5</a>-<a href="https://docs.halo.run/1.6" target="_blank" title="1.6">1.61</a>） 版本的程序接口！**
+- **注意：uni-halo 当前版本 对应的是 halo2.x（<a href="https://docs.halo.run/" target="_blank" title="Halo 2.x">Halo 2.x</a>） 版本的程序接口！**
 
 :::
 
-## 项目亮点
+## 项目支持
 
 - 微信小程序
 - 安卓 APP
@@ -28,30 +24,17 @@
 ### 用户部分
 
 - [√] 文章分类
-- [√] 文章详情&海报分享
-- [√] 文章归档
+- [√] 文章详情
+- [√] 文章海报分享
 - [√] 文章列表和搜索
 - [√] 数据统计展示
 - [√] 图库
 - [√] 友链
-- [√] 留言板
-- [√] 个人日记
+- [√] 恋爱日记
 
 ### 管理部分
 
-- [√] 个人信息修改
-- [√] 个人密码修改
-- [√] 日记管理
-- [√] 文章管理
-- [√] 分类管理
-- [√] 标签管理
-- [√] 附件管理
-- [√] 友链管理
-- [√] 图库管理
-- [√] 评论管理
-- [√] 日志管理
-- [x] 菜单设置
-- [x] 系统设置
+暂不支持
 
 ## 交流反馈
 
