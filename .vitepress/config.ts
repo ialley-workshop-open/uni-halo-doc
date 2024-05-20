@@ -157,6 +157,10 @@ export default defineConfig({
 				text: 'Halo Pro',
 				link: 'https://uhalo.925i.cn/',
 			},
+			{
+				text: '2.0版本',
+				link: 'https://uni-halo.925i.cn/',
+			},
       { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
       {
         text: '部署指南',
@@ -178,6 +182,14 @@ export default defineConfig({
       {
         text: '相关链接',
         items: [
+					{
+						text: 'UHalo Pro',
+						link: 'https://www.uhalo.pro/',
+					},
+					{
+						text: 'uni-halo 2.0',
+						link: 'https://uni-halo.925i.cn/',
+					},
           {
             text: '作者主页',
             link: 'https://www.925i.cn'
