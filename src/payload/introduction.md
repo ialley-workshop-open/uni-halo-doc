@@ -27,6 +27,11 @@
 - [链接管理插件](https://www.halo.run/store/apps/app-hfbQg)
 - [图库管理插件](https://www.halo.run/store/apps/app-BmQJW)
 
+## 关于评论
+
+由于小程序暂无登录功能，所以评论功能需要在后台设置启用评论功能，并且取消勾选 `仅允许注册用户评论` 选项，如图：
+![https://img.925i.cn/file/dfea2699452768438903a.png](https://img.925i.cn/file/dfea2699452768438903a.png)
+
 ::: warning 注意阅读
 
 本程序强制依赖于 `Halo` 内容管理系统，如果您的 PC 端博客没有使用该程序搭建，那么 uni-halo 不适合您使用。

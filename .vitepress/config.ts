@@ -184,7 +184,7 @@ export default defineConfig({
 				items: [
 					{
 						text: 'UHalo PRO',
-						link: 'https://www.uhalo.pro/'
+						link: 'https://uhalo.925i.cn/'
 					},
 					{
 						text: 'uni-halo 1.0',
@@ -304,14 +304,14 @@ export default defineConfig({
 							text: '应用发布（小程序）',
 							link: '/payload/wx-release'
 						},
-						{
-							text: '应用发布（APP）',
-							link: '/payload/app-release'
-						},
-						{
-							text: '应用更新',
-							link: '/payload/app-update'
-						}
+						// {
+						// 	text: '应用发布（APP）',
+						// 	link: '/payload/app-release'
+						// },
+						// {
+						// 	text: '应用更新',
+						// 	link: '/payload/app-update'
+						// }
 					]
 				}
 			],
