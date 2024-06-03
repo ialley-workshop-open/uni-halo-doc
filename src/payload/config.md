@@ -4,7 +4,13 @@
 
 ## 一、Token配置
 
-因为Halo 2.x 部分接口需要依赖Token才能进行访问，所以需要您在后台配置token，具体操作如下：
+- [评论插件](https://www.halo.run/store/apps/app-YXyaD)
+- [搜索插件](https://www.halo.run/store/apps/app-DlacW)
+- [链接管理插件](https://www.halo.run/store/apps/app-hfbQg)
+- [图库管理插件](https://www.halo.run/store/apps/app-BmQJW)
+- [瞬间插件](https://www.halo.run/store/apps/app-SnwWD)
+
+主要是配置所需要依赖的插件权限，以及因为 `Halo 2.x` 部分接口需要依赖Token才能进行访问， 所以需要您在后台配置token，具体操作如下：
 <br/>
 
 #### 1、登录后台，点击左下角的用户头像，进入个人中心 选择 `我的-个人令牌`，新建令牌，如图

@@ -26,6 +26,8 @@
 - [搜索插件](https://www.halo.run/store/apps/app-DlacW)
 - [链接管理插件](https://www.halo.run/store/apps/app-hfbQg)
 - [图库管理插件](https://www.halo.run/store/apps/app-BmQJW)
+- [瞬间插件](https://www.halo.run/store/apps/app-SnwWD)
+
 
 ## 关于评论
 
