@@ -69,6 +69,12 @@ const usingExamples = ref([
 		image: "https://img.925i.cn/file/a133a7a80bea4fcc980d0.png",
 		link: "javascript:void(0);",
 		nickname: "皮皮猪",
+	},
+	{
+		name: "听闻のBlog",
+		image: "https://img.925i.cn/file/60a5f58845e8bb8f2532e.png",
+		link: "javascript:void(0);",
+		nickname: "听闻",
 	}
 ]);
 </script>
