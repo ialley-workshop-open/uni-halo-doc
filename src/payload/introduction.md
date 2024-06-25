@@ -2,9 +2,20 @@
 
 部署前的准备工作，请您必须阅读和理解以下内容，这里的说明非常重要，请您务必阅读
 
+
+::: warning 重要说明
+
+- `uni-halo` 当前已经支持通过  配套插件 [`UniHalo配置插件`](https://github.com/ialley-workshop-open/plugin-uni-halo) 进行配置，[点击此处](/payload/plugin-config.html) 跳转到插件配置指南。
+- 注意：当前支持通过插件配置的分支为 `v2.0-beta` 分支，其他分支均不支持。
+- 使用插件配置后，以下的配置说明仅作为参考，具体配置请参考插件配置指南。
+
+:::
+
+---
+
 ::: warning 版本说明
 
-`uni-halo` 当前支持的 Halo 版本为 2.x，仓库分支 请选择 `beta-v2.0` 分支。
+`uni-halo` 当前支持的 Halo 版本为 2.x，仓库分支 请选择 `v2.0-beta` 分支。
 
 :::
 

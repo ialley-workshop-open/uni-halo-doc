@@ -297,13 +297,17 @@ export default defineConfig({
 							link: '/payload/run'
 						},
 						{
+							text: '插件配置',
+							link: '/payload/plugin-config'
+						},
+						{
 							text: '修改配置',
 							link: '/payload/config'
 						},
 						{
 							text: '应用发布（小程序）',
 							link: '/payload/wx-release'
-						},
+						}
 						// {
 						// 	text: '应用发布（APP）',
 						// 	link: '/payload/app-release'
