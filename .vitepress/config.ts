@@ -183,27 +183,35 @@ export default defineConfig({
 				text: '相关链接',
 				items: [
 					{
-						text: 'UHalo PRO',
+						text: 'UHalo PRO （开发中）',
 						link: 'https://uhalo.925i.cn/'
 					},
 					{
-						text: 'uni-halo 1.0',
+						text: 'uni-halo 2.0 配置插件',
+						link: 'https://github.com/ialley-workshop-open/plugin-uni-halo'
+					},
+					{
+						text: 'uni-halo 1.0 旧版',
 						link: 'https://uni-halo.925i.cn/v1/'
 					},
 					{
-						text: '作者主页',
+						text: '巷子工坊（官网）',
+						link: 'https://ialley.uhalo.pro'
+					},
+					{
+						text: '个人主页（作者）',
 						link: 'https://www.925i.cn'
 					},
 					{
-						text: '作者博客',
+						text: '个人博客（作者）',
 						link: 'https://b.925i.cn'
 					},
 					{
-						text: 'Gitee',
+						text: '源码仓库（gitee）',
 						link: 'https://gitee.com/ialley-workshop-open/uni-halo'
 					},
 					{
-						text: 'Github',
+						text: '源码仓库（github）',
 						link: 'https://github.com/ialley-workshop-open/uni-halo'
 					},
 					{
