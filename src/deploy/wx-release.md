@@ -44,7 +44,7 @@
 
 ![https://img.925i.cn/file/db81a7b8cfaa4ee669cf8.png](https://img.925i.cn/file/db81a7b8cfaa4ee669cf8.png)
 
-向下滚动，找到 `服务器域名` 点击右侧修改按钮，将您的域名（也就是在 [博客信息配置](/payload/config.html#二、博客信息配置) 中的 `BASE_API` 字段的值分别写入 `request合法域名` `uploadFile合法域名` 和 `downloadFile合法域名` 列表中，点击保存即可，如图所示：
+向下滚动，找到 `服务器域名` 点击右侧修改按钮，将您的域名（也就是在 [博客信息配置](/deploy/config.html#二、博客信息配置) 中的 `BASE_API` 字段的值分别写入 `request合法域名` `uploadFile合法域名` 和 `downloadFile合法域名` 列表中，点击保存即可，如图所示：
 
 ![https://img.925i.cn/file/de06474bb735a49b59205.png](https://img.925i.cn/file/de06474bb735a49b59205.png)
 
@@ -85,7 +85,3 @@
 - 3. 文章内容可以先将带有分享性质的文章先进行下架，保留一些个人的日志文章等等
 
 :::
-
-## 完结提示
-
-以上就是发布为微信小程序的全部内容，如果您有什么疑问在此文档上无法解决的，可以通过添加 [官方 QQ 群](/desgin/introduction.html#交流反馈) 进行交流。

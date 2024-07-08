@@ -42,7 +42,7 @@
 
 ![https://img.925i.cn/file/217b892717f7fd55b8358.png](https://img.925i.cn/file/217b892717f7fd55b8358.png)
 
-- 2. 在弹出的发行信息框中，选择您的打包的应用类型，安卓还是 ios，并选择填写相关的证书信息，[证书说明](/payload/app-release.html#第-2-步、准备证书)，如图所示：
+- 2. 在弹出的发行信息框中，选择您的打包的应用类型，安卓还是 ios，并选择填写相关的证书信息，[证书说明](/deploy/app-release.html#第-2-步、准备证书)，如图所示：
 
 ![https://img.925i.cn/file/704b01cfbd3f112d50a3e.png](https://img.925i.cn/file/704b01cfbd3f112d50a3e.png)
 
@@ -52,10 +52,6 @@
 
 ### 第 4 步、应用更新（可不使用）
 
-更新是指，当前的 APP 发布后，用户可以在线升级，具体操作方式请查看[版本更新说明](/payload/app-update.html)
+更新是指，当前的 APP 发布后，用户可以在线升级，具体操作方式请查看[版本更新说明](/deploy/app-update.html)
 
 待补充...
-
-## 完结提示
-
-以上就是发布为 APP 的全部内容，如果您有什么疑问在此文档上无法解决的，可以通过添加 [官方 QQ 群](/desgin/introduction.html#交流反馈) 进行交流。
