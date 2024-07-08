@@ -61,19 +61,3 @@ _**注意：部署完成后，您的博客访问的地址就是 `uni-halo` 所�
 Halo 官网地址：[https://halo.run/](https://halo.run/)
 
 Halo 2.x 部署：[https://docs.halo.run/](https://docs.halo.run/)
-
-## 五、下载源码
-
-**_注意：请使用 `main` 或者 `v2.0-beta` 分支。_**
-
-gitee 下载：[https://gitee.com/ialley-workshop-open/uni-halo](https://gitee.com/ialley-workshop-open/uni-halo)
-
-```bash
-git clone https://gitee.com/ialley-workshop-open/uni-halo.git
-```
-
-github 下载：[https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0](https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0)
-
-```bash
-git clone https://github.com/ialley-workshop-open/uni-halo.git
-```

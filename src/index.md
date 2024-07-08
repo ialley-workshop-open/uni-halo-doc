@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /payload/preparation
+      link: /deploy/intro
     - theme: alt
       text: 介绍
       link: /design/intro
