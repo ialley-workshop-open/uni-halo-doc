@@ -17,10 +17,10 @@ hero:
       link: /payload/preparation
     - theme: alt
       text: 介绍
-      link: /desgin/introduction
+      link: /design/intro
     - theme: alt
-      text: 在 Gitee 上查看
-      link: https://gitee.com/ialley-workshop-open/uni-halo
+      text: 在 github 上查看
+      link: https://github.com/ialley-workshop-open/uni-halo
 
 features:
   - icon: 🆕

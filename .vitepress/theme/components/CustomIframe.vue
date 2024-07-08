@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const props = defineProps(["src"]);
-const src = ref(props?.src || "https://b.925i.cn");
+const src = ref(props?.src || "https://www.xiaoxiaomo.cn");
 </script>
 
 <style scoped lang="less">

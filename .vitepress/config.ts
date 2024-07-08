@@ -89,16 +89,16 @@ export default defineConfig({
 		logo: '/logo.png',
 		editLink: {
 			text: '为此页提供修改建议',
-			pattern: 'https://gitee.com/ialley-workshop-open/uni-halo-doc/tree/master/:path'
+			pattern: 'https://github.com/ialley-workshop-open/uni-halo-doc/tree/main/:path'
 		},
 		socialLinks: [
 			{
 				icon: 'github',
-				link: 'https://gitee.com/ialley-workshop-open/uni-halo'
+				link: 'https://github.com/ialley-workshop-open/uni-halo'
 			},
 			{
 				icon: 'discord',
-				link: 'https://b.925i.cn'
+				link: 'https://www.xiaoxiaomo.cn'
 			}
 		],
 		search: {
@@ -150,30 +150,27 @@ export default defineConfig({
 		footer: {
 			message: '根据 AGPL-3.0 协议开源·请遵循协议',
 			copyright:
-				'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://b.925i.cn" target="_blank" title="小莫唐尼博客">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
+				'Copyright © 2022 <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://www.xiaoxiaomo.cn/" target="_blank" title="小莫唐尼个人主页">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
 		},
 		nav: [
 			{
 				text: 'UHalo PRO',
-				link: 'https://uhalo.925i.cn/'
+				link: 'https://www.uhalo.pro/'
 			},
 			{
-				text: '1.0版本',
+				text: 'v1.0',
 				link: 'https://uni-halo.925i.cn/v1'
 			},
-			// { text: '开发指南', link: '/dev/quick-start', activeMatch: '/dev/' },
+			{
+				text: '设计指南',
+				link: '/design/intro',
+				activeMatch: '/design/'
+			},
 			{
 				text: '部署指南',
-				link: '/payload/introduction',
-				activeMatch: '/payload/'
+				link: '/deploy/intro',
+				activeMatch: '/deploy/'
 			},
-			// {
-			//   text: '贡献指南',
-			//   link: '/contributor/index',
-			//   activeMatch: '/contributor/'
-			// },
-			{ text: '功能预览', link: '/preview/images', activeMatch: '/preview/' },
-			{ text: '更新日志', link: '/update/update', activeMatch: '/update/' },
 			{
 				text: '常见问题',
 				link: '/problem/questions',
@@ -183,48 +180,36 @@ export default defineConfig({
 				text: '相关链接',
 				items: [
 					{
-						text: 'UHalo PRO （开发中）',
-						link: 'https://uhalo.925i.cn/'
+						text: 'UHalo PRO',
+						link: 'https://www.uhalo.pro/'
 					},
 					{
-						text: 'uni-halo 2.0 配置插件',
+						text: '作者主页',
+						link: 'https://www.xiaoxiaomo.cn/'
+					},
+					{
+						text: '作者博客',
+						link: 'https://blog.925i.cn'
+					},
+					{
+						text: '巷子工坊',
+						link: 'https://ialley.uhalo.pro/'
+					},
+					{
+						text: '配置插件',
 						link: 'https://github.com/ialley-workshop-open/plugin-uni-halo'
 					},
 					{
-						text: 'uni-halo 1.0 旧版',
-						link: 'https://uni-halo.925i.cn/v1/'
-					},
-					{
-						text: '巷子工坊（官网）',
-						link: 'https://ialley.uhalo.pro'
-					},
-					{
-						text: '个人主页（作者）',
-						link: 'https://www.925i.cn'
-					},
-					{
-						text: '个人博客（作者）',
-						link: 'https://b.925i.cn'
-					},
-					{
-						text: '源码仓库（gitee）',
-						link: 'https://gitee.com/ialley-workshop-open/uni-halo'
-					},
-					{
-						text: '源码仓库（github）',
+						text: '源码仓库',
 						link: 'https://github.com/ialley-workshop-open/uni-halo'
 					},
 					{
-						text: 'uni-app',
-						link: 'https://uniapp.dcloud.net.cn'
+						text: '应用市场',
+						link: 'https://www.halo.run/store/apps/app-ryemX'
 					},
 					{
 						text: 'Halo',
 						link: 'https://halo.run'
-					},
-					{
-						text: 'mp-html',
-						link: 'https://jin-yufeng.gitee.io/mp-html/#/'
 					}
 				]
 			},
@@ -234,95 +219,64 @@ export default defineConfig({
 			}
 		],
 		sidebar: {
-			'/dev/': [
-				{
-					text: '开发指南',
-					items: [
-						{
-							text: '快速上手',
-							link: '/dev/quick-start'
-						},
-						{
-							text: '目录说明',
-							link: '/dev/floder'
-						},
-						{
-							text: '配置文件',
-							link: '/dev/config'
-						},
-						{
-							text: '路由配置',
-							link: '/dev/router'
-						},
-						{
-							text: '菜单配置',
-							link: '/dev/menu'
-						},
-						{
-							text: '权限配置',
-							link: '/dev/auth'
-						},
-						{
-							text: '扩展图标',
-							link: '/dev/icon'
-						}
-					]
-				}
-			],
-			'/desgin/': [
+			'/design/': [
 				{
 					text: '设计指南',
 					items: [
 						{
-							text: '设计指南',
-							link: '/desgin/index'
+							text: '项目介绍',
+							link: '/design/intro'
 						},
 						{
-							text: '关于项目',
-							link: '/desgin/introduction'
+							text: '目录说明',
+							link: '/design/folder'
 						},
 						{
 							text: '相关技术',
-							link: '/desgin/technology'
+							link: '/design/technology'
+						},
+						{
+							text: '界面预览',
+							link: '/design/pages'
+						},
+						{
+							text: '视频介绍',
+							link: '/design/video'
 						}
 					]
 				}
 			],
-			'/payload/': [
+			'/deploy/': [
 				{
 					text: '部署指南',
 					items: [
 						{
 							text: '部署须知',
-							link: '/payload/introduction'
+							link: '/deploy/intro'
 						},
 						{
 							text: '准备工作',
-							link: '/payload/preparation'
+							link: '/deploy/preparation'
 						},
 						{
-							text: '启动项目',
-							link: '/payload/run'
+							text: '运行项目',
+							link: '/deploy/run'
 						},
 						{
 							text: '插件配置',
-							link: '/payload/plugin-config'
+							link: '/deploy/config'
 						},
 						{
-							text: '修改配置',
-							link: '/payload/config'
-						},
-						{
-							text: '应用发布（小程序）',
-							link: '/payload/wx-release'
+							text: '发布小程序',
+							link: '/deploy/wx-release'
 						}
 						// {
 						// 	text: '应用发布（APP）',
-						// 	link: '/payload/app-release'
+						// 	link: '/deploy/app-release'
 						// },
 						// {
 						// 	text: '应用更新',
-						// 	link: '/payload/app-update'
+						// 	link: '/deploy/app-update'
 						// }
 					]
 				}
@@ -334,53 +288,6 @@ export default defineConfig({
 						{
 							text: '贡献指南',
 							link: '/contributor/index'
-						},
-						{
-							text: '命名规范',
-							link: '/contributor/name'
-						},
-						{
-							text: 'js书写规范',
-							link: '/contributor/js'
-						},
-						{
-							text: 'css书写规范',
-							link: '/contributor/css'
-						}
-					]
-				}
-			],
-			'/update/': [
-				{
-					text: '更新日志',
-					items: [
-						{
-							text: '更新日志说明',
-							link: '/update/update'
-						},
-						{
-							text: 'v2.0.0-240520',
-							link: '/update/v2.0.0-240520'
-						},
-						{
-							text: 'v1.0.4-230608',
-							link: '/update/v1.0.4-230608'
-						},
-						{
-							text: 'v1.0.3-221212',
-							link: '/update/v1.0.3-221212'
-						},
-						{
-							text: 'v1.0.2-221210',
-							link: '/update/v1.0.2-221210'
-						},
-						{
-							text: 'v1.0.1-221209',
-							link: '/update/v1.0.1-221209'
-						},
-						{
-							text: 'v1.0.0-221207',
-							link: '/update/v1.0.0-221207'
 						}
 					]
 				}
@@ -399,22 +306,8 @@ export default defineConfig({
 						}
 					]
 				}
-			],
-			'/preview/': [
-				{
-					text: '预览',
-					items: [
-						{
-							text: '界面预览',
-							link: '/preview/images'
-						},
-						{
-							text: '视频介绍',
-							link: '/preview/video'
-						}
-					]
-				}
 			]
+
 		},
 		outlineTitle: '内容目录',
 		docFooter: {

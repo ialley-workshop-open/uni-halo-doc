@@ -8,8 +8,9 @@
 
 关于安装 `nodejs` 和 `nvm` 的安装，这里就不再赘述了，相关的安装教程可以在百度可以搜索到。
 
-- [nodejs 官网](https://nodejs.org/zh-cn)
-- [nvm 官网](https://github.com/coreybutler/nvm-windows/releases)
+- 推荐node版本：`14/16/18`
+- node官网地址：[https://nodejs.org/zh-cn](https://nodejs.org/zh-cn)
+- nvm 下载地址：[https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases)
 
 ## 二、账号准备
 
@@ -55,36 +56,23 @@
 
 `Halo` 是强大易用的开源建站工具（cms），如果您没有使用，同时也想使用该小程序的话，欢迎您根据 `Halo` 官方教程安装体验。
 
+_**注意：部署完成后，您的博客访问的地址就是 `uni-halo` 所需要的接口地址。**_
+
 Halo 官网地址：[https://halo.run/](https://halo.run/)
 
 Halo 2.x 部署：[https://docs.halo.run/](https://docs.halo.run/)
 
-::: warning 重要的事情说三遍
+## 五、下载源码
 
-uni-halo 只适用于 Halo 2.x 部署的博客程序
-<br/>
-uni-halo 只适用于 Halo 2.x 部署的博客程序
-<br/>
-uni-halo 只适用于 Halo 2.x 部署的博客程序
-:::
+**_注意：请使用 `main` 或者 `v2.0-beta` 分支。_**
 
-## 五、源码准备
-
-::: warning 版本说明
-
-`uni-halo` 当前支持的 Halo 版本为 2.x，仓库分支 请选择 `beta-v2.0` 分支。
-
-:::
-
-下载 `uni-halo` 源码，推荐使用 Gitee 下载，因为 Gitee 始终为最新版本的代码，而 Github 会定时同步。
-
-Gitee 下载：[https://gitee.com/ialley-workshop-open/uni-halo](https://gitee.com/ialley-workshop-open/uni-halo)
+gitee 下载：[https://gitee.com/ialley-workshop-open/uni-halo](https://gitee.com/ialley-workshop-open/uni-halo)
 
 ```bash
 git clone https://gitee.com/ialley-workshop-open/uni-halo.git
 ```
 
-Github 下载：[https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0](https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0)
+github 下载：[https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0](https://github.com/ialley-workshop-open/uni-halo/tree/beta-v2.0)
 
 ```bash
 git clone https://github.com/ialley-workshop-open/uni-halo.git
