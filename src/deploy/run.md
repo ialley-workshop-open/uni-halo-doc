@@ -27,7 +27,7 @@ git clone https://github.com/ialley-workshop-open/uni-halo.git
 
 在 `HBuilder X` 工具左侧项目中选择并右键 `uni-halo` 文件夹，选择 `使用命令行窗口打开所在目录`，如下图所示：
 
-接着，在命令行窗口输入：`npm install` 安装项目所需要的依赖，如下图所示：
+接着，在命令行窗口输入：`npm install` 安装项目所需要的依赖（如果刚安装npm，在运行时可能会提示npm命令不存在，重启一下电脑即可），如下图所示：
 
 ```bash
 npm install
