@@ -99,27 +99,55 @@ export default HaloTokenConfig;
 
 ## 2. 插件配置
 
-插件信息
+### 2.1 插件信息
+
 ![预览](https://blog.925i.cn/upload/uni-halo-p-1.png)
 
-基本配置
+### 2.2 基本配置
+
 ![基本配置](https://blog.925i.cn/upload/uni-halo-p-2.png)
 
-应用配置
+### 2.3 应用配置
+
 ![应用配置](https://blog.925i.cn/upload/uni-halo-p-3.png)
 
-页面配置
+### 2.4 页面配置
+
 ![页面配置](https://blog.925i.cn/upload/uni-halo-p-4.png)
 
-我的配置
+### 2.5 我的配置
+
 ![我的配置](https://blog.925i.cn/upload/uni-halo-p-5.png)
 
-图片配置
+### 2.6 图片配置
+
 ![图片配置](https://blog.925i.cn/upload/uni-halo-p-6.png)
 
-恋爱配置
+### 2.7 恋爱配置
+
+这里是恋爱页面相关的配置，如果已经开通恋爱功能，可以在这里配置恋爱页面相关的内容。
+
+#### 2.7.1 预览
+
 ![恋爱配置](https://blog.925i.cn/upload/uni-halo-p-7.png)
 
-插件配置
+#### 2.7.2 获取相册标识
+
+获取恋爱相册的步骤如下：
+
+1. 登录后台，按下键盘上的 `F12` 键，打开控制台
+2. 在控制台找到 `网络` 选项
+3. 点击左侧菜单的 `图库`
+4. 找到 `网络` 请求中的 `photogroups` 请求，点击它查看预览
+5. 找到 `预览` 结果中你需要的分组的 `metadata.name` 的值，复制它并粘贴到组件的恋爱日记分组标识中。
+
+相关截图如下:
+
+![获取恋爱相册](https://img.925i.cn/file/8727f06e0091cdd590583.png)
+
+![配置恋爱相册标识](https://img.925i.cn/file/182602e202e0d450a726c.png)
+
+### 2.8 插件配置
+
 ![插件配置](https://blog.925i.cn/upload/uni-halo-p-8.png)
 
