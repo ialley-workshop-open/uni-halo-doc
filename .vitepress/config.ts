@@ -267,6 +267,10 @@ export default defineConfig({
 							link: '/deploy/config'
 						},
 						{
+							text: '调试预览',
+							link: '/deploy/preview'
+						},
+						{
 							text: '发布小程序',
 							link: '/deploy/wx-release'
 						}
