@@ -6,7 +6,7 @@
 
 由于微信小程序的限制，您必须将您的域名添加到微信小程序的域名白名单中，否则无法正常访问，一般配置如下内容：
 
-- 接口请求地址：一般为你的博客域名（也就是 `config/halo.config.js` 中的 `BASE_API` 字段的值）
+- 接口请求地址：一般为你的博客域名（也就是 `config/token.config.js` 中的 `BASE_API` 字段的值）
 - 图片、文件、视频等静态资源下载地址；
 - uniapp 官方统计地址：`https://tongji.dcloud.io`
 
