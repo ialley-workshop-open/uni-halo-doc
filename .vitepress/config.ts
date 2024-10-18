@@ -177,6 +177,11 @@ export default defineConfig({
 				activeMatch: '/questions/'
 			},
 			{
+				text: '友情链接',
+				link: '/links/friend-links',
+				activeMatch: '/friend-links/'
+			},
+			{
 				text: '相关链接',
 				items: [
 					{

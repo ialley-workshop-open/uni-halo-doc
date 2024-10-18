@@ -9,6 +9,7 @@ import CustomLayout from "./components/CustomLayout.vue";
 // import CustomBilibiliVideo from "./components/CustomBilibiliVideo.vue";
 import CustomIframe from "./components/CustomIframe.vue";
 import CustomDialog from "./components/CustomDialog.vue";
+import CustomFriendLinks from "./components/CustomFriendLinks.vue";
 
 export default {...DefaultTheme,
 	Layout:CustomLayout,
@@ -17,5 +18,6 @@ export default {...DefaultTheme,
 		app.component("CustomUsingExamples",CustomUsingExamples)
 		app.component("CustomIframe",CustomIframe)
 		app.component("CustomDialog",CustomDialog)
+		app.component("CustomFriendLinks",CustomFriendLinks)
   }
 };
