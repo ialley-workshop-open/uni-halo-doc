@@ -16,6 +16,7 @@
 - 站点名称：小莫唐尼
 - 站点类型：技术丨生活（任选一）
 - 站点头像：https://blog.925i.cn/upload/avatar.jpg
+- 站点截图：https://blog.925i.cn/uplaod/xiao_screenshot.png
 - 站点链接：https://blog.925i.cn/
 - 站点描述：一个爱凑热闹，喜欢捣鼓前端的博主。
 
@@ -24,6 +25,7 @@
 - 站点名称：UniHalo
 - 站点类型：技术
 - 站点头像：https://uni-halo.925i.cn/logo.png
+- 站点截图：https://uni-halo.925i.cn/screenshot.png
 - 站点链接：https://uni-halo.925i.cn/
 - 站点描述：开源免费 Halo 博客小程序，支持多端编译。
 

@@ -8,11 +8,13 @@
 			<div v-if='donate.length!==0' class='links'>
 				<div class='link-card' v-for='(item,index) in donate' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
-						<div class='link-card-cover' :style='{"--bg-color":item.bg,"--scale":item.scale}'>
-							<img class='link-card-cover_image cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
+						<div class='link-card-cover'>
+							<img class='link-card-cover_image cover_image' :src='item.screenshot' :alt='item.name' data-fancybox='gallery' />
 						</div>
 						<div class='link-card-info'>
-							<h4 class='link-card-info_name'>{{ item.name }}</h4>
+							<div class='link-card-info_name'>
+								<img :src='item.image' :alt='item.name' data-fancybox='gallery'><span>{{ item.name }}</span>
+							</div>
 							<p class='link-card-info_desc clamp'>{{ item.desc }}</p>
 						</div>
 					</a>
@@ -30,11 +32,13 @@
 			<div v-if='recommends.length!==0' class='links'>
 				<div class='link-card' v-for='(item,index) in recommends' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
-						<div class='link-card-cover' :style='{"--bg-color":item.bg,"--scale":item.scale}'>
-							<img class='link-card-cover_image cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
+						<div class='link-card-cover'>
+							<img class='link-card-cover_image cover_image' :src='item.screenshot' :alt='item.name' data-fancybox='gallery' />
 						</div>
 						<div class='link-card-info'>
-							<h4 class='link-card-info_name'>{{ item.name }}</h4>
+							<div class='link-card-info_name'>
+								<img :src='item.image' :alt='item.name' data-fancybox='gallery'><span>{{ item.name }}</span>
+							</div>
 							<p class='link-card-info_desc clamp'>{{ item.desc }}</p>
 						</div>
 					</a>
@@ -46,8 +50,8 @@
 
 	<div class='others'>
 		<div class='head'>
-			<h3 class='title'>🥳 友情链接（{{ others.length }}）</h3>
-			<p class='sub-title'>本站点的其他友情链接</p>
+			<h3 class='title'>🥳 其他友链（{{ others.length }}）</h3>
+			<p class='sub-title'>技术、博客、生活等其他站点</p>
 		</div>
 		<div class='body'>
 			<div v-if='others.length!==0' class='links'>
@@ -77,9 +81,8 @@ const donate = ref([
 		image: 'https://www.xgrsir.com/upload/xgrsir.ico',
 		link: 'https://xgrsir.com/',
 		desc: '人生如逆旅，我亦是行人。',
-		scale: 1,
-		bg: 'rgba(23,174,249, 0.75)',
-		spend:"16.80 - QQ红包 - 20241018"
+		spend: '16.80 - QQ红包 - 20241018',
+		screenshot: 'https://blog.925i.cn/upload/xgrsir_screenshot.png'
 	}
 ]);
 
@@ -89,33 +92,28 @@ const recommends = ref([
 		image: 'https://blog.925i.cn/upload/avatar.jpg',
 		link: 'https://blog.925i.cn/',
 		desc: '一个爱凑热闹，喜欢捣鼓前端的博主。',
-		scale: 1.1,
-		bg: '',
-
+		screenshot: 'https://blog.925i.cn/upload/xiao_screenshot.png'
 	},
 	{
 		name: '木因博客',
 		image: 'https://blog.muyin.site/upload/liuyiwuqing.png',
 		link: 'https://blog.muyin.site/',
 		desc: '心在哪里收获就在哪里。',
-		scale: 1,
-		bg: 'rgba(23,174,249, 0.15)'
+		screenshot: 'https://blog.925i.cn/upload/muyin_screenshot.png'
 	},
 	{
 		name: 'UniHalo',
 		image: 'https://uni-halo.925i.cn/logo.png',
 		link: 'https://blog.925i.cn/',
 		desc: '开源免费 Halo 博客小程序，支持多端编译。',
-		scale: 1.2,
-		bg: 'rgba(23,174,249, 0.15)'
+		screenshot: 'https://uni-halo.925i.cn/screenshot.png'
 	},
 	{
 		name: 'Halo',
 		image: 'https://www.halo.run/upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png',
 		link: 'https://www.halo.run/',
 		desc: '强大易用的开源建站工具。',
-		scale: 1.1,
-		bg: ''
+		screenshot: 'https://blog.925i.cn/upload/halo_screenshot.png'
 	}
 ]);
 
@@ -124,7 +122,15 @@ const others = ref([
 		name: '秋叶资源',
 		image: 'http://touch.qybhl.top/i/2024/08/19/66c2cb8f03040.png',
 		link: 'https://www.qybhl.com',
-		desc: '专注免费资源分享，将免费资源进行到底。'
+		desc: '专注免费资源分享，将免费资源进行到底。',
+		screenshot: 'https://blog.925i.cn/upload/qybhl_screenshot.png'
+	},
+	{
+		name: 'Taupis的随笔',
+		image: 'https://taupis.com/upload/123.png',
+		link: 'https://taupis.com',
+		desc: '知足常乐，南风不竞。',
+		screenshot: 'https://blog.925i.cn/upload/taupis_screenshot.png'
 	}
 ]);
 
@@ -145,7 +151,7 @@ const others = ref([
 }
 
 .cover_image {
-	transform: scale(var(--scale)) !important;
+	border-radius: 0;
 
 	&:hover {
 		transform: scale(1.1) !important;
@@ -169,7 +175,7 @@ const others = ref([
 	flex-direction: column;
 	align-items: start;
 	box-sizing: border-box;
-	margin: 0 auto 26px;
+	margin: 0 auto 12px;
 
 	.head {
 		width: 100%;
@@ -188,6 +194,7 @@ const others = ref([
 			margin-top: 12px;
 			color: var(--vp-c-text-2);
 			font-size: 16px;
+			padding-left: 6px;
 		}
 	}
 
@@ -203,7 +210,7 @@ const others = ref([
 
 		.link-card {
 			box-sizing: border-box;
-			width: 25%;
+			width: 33.33%;
 			padding: 6px;
 			transition: transform 0.2s ease-in-out;
 
@@ -216,10 +223,10 @@ const others = ref([
 				height: 100%;
 				display: flex;
 				flex-direction: column;
-				border-radius: 12px;
+				border-radius: 6px;
 				box-sizing: border-box;
 				background-color: var(--vp-c-bg-soft);
-				border: 1px solid rgba(255, 255, 255, 0.075);
+				border: 1px solid rgba(255, 255, 255, 0.095);
 				overflow: hidden;
 				text-decoration-color: var(--vp-c-text-2);
 			}
@@ -227,7 +234,7 @@ const others = ref([
 			&-cover {
 				flex-shrink: 0;
 				width: 100%;
-				height: 120px;
+				height: 110px;
 				overflow: hidden;
 				background-color: var(--bg-color);
 
@@ -242,7 +249,7 @@ const others = ref([
 			&-info {
 				flex-grow: 1;
 				width: 100%;
-				height: 90px;
+				height: 94px;
 				overflow: hidden;
 				display: flex;
 				flex-direction: column;
@@ -250,14 +257,26 @@ const others = ref([
 				padding: 12px;
 
 				&_name {
-					font-size: 16px;
+					display: flex;
+					align-items: center;
+					gap: 0 6px;
 					text-align: left;
 					// color: var(--vp-home-hero-name-color);
 					color: var(--vp-c-text-2);
 					width: 100%;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					white-space: nowrap;
+
+					> img {
+						width: 24px;
+						height: 24px;
+						border-radius: 50%;
+					}
+
+					> span {
+						font-size: 16px;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
 				}
 
 				&_desc {
@@ -279,7 +298,7 @@ const others = ref([
 	flex-direction: column;
 	align-items: start;
 	box-sizing: border-box;
-	margin: 0 auto 26px;
+	margin: 0 auto 12px;
 
 	.head {
 		width: 100%;
@@ -298,6 +317,7 @@ const others = ref([
 			margin-top: 12px;
 			color: var(--vp-c-text-2);
 			font-size: 16px;
+			padding-left: 6px;
 		}
 	}
 
@@ -337,6 +357,7 @@ const others = ref([
 				padding: 12px;
 				gap: 0 12px;
 				text-decoration-color: var(--vp-c-text-2);
+				box-shadow: 0px 2px 12px var(--vp-c-bg-soft);
 			}
 
 			&-cover {
@@ -350,8 +371,9 @@ const others = ref([
 					height: 60px;
 					border-radius: 50%;
 					transition: all 0.2s ease-in-out;
-					object-fit: cover;
+					object-fit: contain;
 					border: 1px solid rgba(255, 255, 255, 0.075);
+					background-color: var(--vp-c-bg-soft);
 				}
 			}
 
