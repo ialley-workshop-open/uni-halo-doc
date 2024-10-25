@@ -83,6 +83,14 @@ const donate = ref([
 		desc: '人生如逆旅，我亦是行人。',
 		spend: '16.80 - QQ红包 - 20241018',
 		screenshot: 'https://blog.925i.cn/upload/xgrsir_screenshot.png'
+	},
+	{
+		name: 'xiaohao',
+		image: 'https://lk.ynxh.top/i/2024/10/25/671b10898e6b7.png',
+		link: 'https://ynxh.top/',
+		desc: 'xiaohao成长日记。',
+		spend: '50.00 - 微信打赏 - 20241025',
+		screenshot: 'https://lk.ynxh.top/i/2024/10/25/671b148f6e50d.png'
 	}
 ]);
 
