@@ -8,9 +8,9 @@
 
 - 1. 在`UniHalo配置`插件后台开启审核模式；
 
-- 2. 将 `uni-halo` 项目中的 `config/unihalo.mock.json` 拷贝出来（拷贝后删除项目中`unihalo.mock.json`文件）进行修改并上传到您的服务器中，必须可以进行访问；
+- 2. 将 `uni-halo` 项目中的 `config/unihalo.mock.json` 拷贝出来（拷贝后删除项目中`unihalo.mock.json`文件）进行修改并上传到您的服务器中，需要在浏览器地址栏可以访问；
 
-- 3. 关于 `uni-halo` 项目中的 `config/unihalo.config.json` 中详细说明 [点击查看](#审核模拟数据说明)
+- 3. 关于 `uni-halo` 项目中的 `config/unihalo.mock.json` 中详细说明 [点击查看](#审核模拟数据说明)
 
 :::
 
