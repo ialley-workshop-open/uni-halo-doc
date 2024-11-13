@@ -75,72 +75,21 @@
 <script setup lang='ts'>
 import { ref } from 'vue';
 
-const donate = ref([
-	{
-		name: '南枝已谢',
-		image: 'https://www.xgrsir.com/upload/xgrsir.ico',
-		link: 'https://xgrsir.com/',
-		desc: '人生如逆旅，我亦是行人。',
-		spend: '16.80 - QQ红包 - 20241018',
-		screenshot: 'https://blog.925i.cn/upload/xgrsir_screenshot.png'
-	},
-	{
-		name: 'xiaohao',
-		image: 'https://lk.ynxh.top/i/2024/10/25/671b10898e6b7.png',
-		link: 'https://ynxh.top/',
-		desc: 'xiaohao成长日记。',
-		spend: '50.00 - 微信打赏 - 20241025',
-		screenshot: 'https://lk.ynxh.top/i/2024/10/25/671b148f6e50d.png'
-	}
-]);
+const donate = ref([]);
+const recommends = ref([]);
+const others = ref([]);
 
-const recommends = ref([
-	{
-		name: '小莫唐尼',
-		image: 'https://blog.925i.cn/upload/avatar.jpg',
-		link: 'https://blog.925i.cn/',
-		desc: '一个爱凑热闹，喜欢捣鼓前端的博主。',
-		screenshot: 'https://blog.925i.cn/upload/xiao_screenshot.png'
-	},
-	{
-		name: '木因博客',
-		image: 'https://blog.muyin.site/upload/liuyiwuqing.png',
-		link: 'https://blog.muyin.site/',
-		desc: '心在哪里收获就在哪里。',
-		screenshot: 'https://blog.925i.cn/upload/muyin_screenshot.png'
-	},
-	{
-		name: 'UniHalo',
-		image: 'https://uni-halo.925i.cn/logo.png',
-		link: 'https://blog.925i.cn/',
-		desc: '开源免费 Halo 博客小程序，支持多端编译。',
-		screenshot: 'https://uni-halo.925i.cn/screenshot.png'
-	},
-	{
-		name: 'Halo',
-		image: 'https://www.halo.run/upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png',
-		link: 'https://www.halo.run/',
-		desc: '强大易用的开源建站工具。',
-		screenshot: 'https://blog.925i.cn/upload/halo_screenshot.png'
-	}
-]);
+const getFriendLinks = () => {
+	fetch('/data/links.json').then(res => res.json()).then(res => {
+		donate.value = res.donate;
+		recommends.value = res.recommends;
+		others.value = res.others;
+	}).catch(err => {
+		console.error('日志：获取友链失败，', err);
+	});
+};
 
-const others = ref([
-	{
-		name: '秋叶资源',
-		image: 'http://touch.qybhl.top/i/2024/08/19/66c2cb8f03040.png',
-		link: 'https://www.qybhl.com',
-		desc: '专注免费资源分享，将免费资源进行到底。',
-		screenshot: 'https://blog.925i.cn/upload/qybhl_screenshot.png'
-	},
-	{
-		name: 'Taupis的随笔',
-		image: 'https://taupis.com/upload/123.png',
-		link: 'https://taupis.com',
-		desc: '知足常乐，南风不竞。',
-		screenshot: 'https://blog.925i.cn/upload/taupis_screenshot.png'
-	}
-]);
+getFriendLinks();
 
 </script>
 
