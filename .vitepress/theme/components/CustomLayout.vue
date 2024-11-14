@@ -6,14 +6,14 @@
 				<p class='item-desc'>uni-halo 小程序版本演示</p>
 				<img alt='小莫唐尼（小程序体验）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/a0c1a95b49b5db7f78248.png' />
 				<img alt='官方交流群（QQ）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/b83b9e79695779c4344f3.png' />
-				<p class='item-title' style='margin-top: 24px;'>图图小绘</p>
-				<p class='item-desc' style='margin-bottom: -6px;'>一个文案图库表情包小程序</p>
+				<p class='item-title' style='margin-top: 24px;'>图图小绘（壁纸表情小程序）</p>
+				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个文案图库表情包小程序</p>
 				<div v-if='false' class='ad-image border'>
 					<img alt='图图小绘（微信小程序）' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
 				</div>
 				<img alt='图图小绘（微信小程序）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/d316c4724f2dd3cac685c.jpg' />
-				<p class='item-title' style='margin-top: 24px;'>秒懂文案馆</p>
-				<p class='item-desc' style='margin-bottom: -6px;'>一个内容丰富的微信公众号</p>
+				<p class='item-title' style='margin-top: 24px;'>秒懂文案馆（微信公众号）</p>
+				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个内容丰富的微信公众号</p>
 				<img alt='秒懂文案馆（微信公众号）' class='ad-image border no-padding' data-fancybox='gallery'
 						 src='/mdwag.png' />
 			</div>
@@ -33,7 +33,7 @@
 			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='dialogShow = false'>
 				<template #body>
 					<div class='recommend-app'>
-						<div class='recommend-app-item pink'>
+						<div v-if='false' class='recommend-app-item pink'>
 							<img alt='uni-halo 小程序版本演示' class='recommend-app-cover' data-fancybox='gallery'
 									 src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
 							<div class='recommend-app-text'>
@@ -49,14 +49,38 @@
 								<p> 分享文案、头像、壁纸、表情包等内容。</p>
 							</div>
 						</div>
+						<template v-if='ads.dialog.length!==0'>
+							<a v-for='(ad,index) in ads.dialog' :key='index' :href='ad.link' :title='ad.title' target='_blank'>
+								<div class='recommend-app-item ad'>
+									<img :alt='ad.title' class='recommend-app-cover ad' :src='ad.cover' />
+									<div class='recommend-app-text ad'>
+										<p class='hot'><strong style='font-size: 18px'>{{ ad.title }}</strong></p>
+										<p v-html='ad.description'></p>
+									</div>
+								</div>
+							</a>
+						</template>
 					</div>
 				</template>
 				<template #footer>
-					<XiaoButton size='mini' title='一天内不再提示' @click='handleConfirm'></XiaoButton>
+					<XiaoButton size='mini' :title='useShowOnce?"本次访问不再提示":"一天内不再显示"' @click='handleConfirm'></XiaoButton>
 					<XiaoButton :use-animation='true' size='mini' title='知道啦，我会记得关注滴' type='primary' @click='dialogShow = false'></XiaoButton>
 				</template>
 			</CustomDialog>
 		</template>
+
+		<template #sidebar-nav-after>
+			<div v-if='ads.asideNavAfter.length!==0' class='recommend-container sidebar-nav-ads'>
+				<p class='item-title'>站长推荐：腾讯云特惠热卖产品</p>
+				<template v-for='ad in ads.asideNavAfter'>
+					<a :href='ad.link' :title='ad.title' target='_blank'>
+						<img :alt='ad.title' class='ad-image border no-padding'
+								 :src='ad.cover' />
+					</a>
+				</template>
+			</div>
+		</template>
+
 	</Layout>
 </template>
 
@@ -83,6 +107,8 @@ function handleComputedDiffHour(time1: any, time2: any) {
 
 const DIALOG_KEY: string = 'dialog_wx_show';
 
+const useShowOnce = ref<boolean>(true);
+
 const checkShow = () => {
 	let dialogInfo = localStorage.getItem(DIALOG_KEY);
 	if (dialogInfo) {
@@ -93,9 +119,21 @@ const checkShow = () => {
 		dialogShow.value = true;
 	}
 };
+const checkShowOnce = () => {
+	let dialogInfo = sessionStorage.getItem(DIALOG_KEY);
+	if (dialogInfo) {
+		dialogShow.value = false;
+	} else {
+		dialogShow.value = true;
+	}
+};
 
 onMounted(() => {
-	setTimeout(checkShow, 500);
+	if (useShowOnce.value) {
+		setTimeout(checkShowOnce, 500);
+	} else {
+		setTimeout(checkShow, 500);
+	}
 });
 
 function handleSaveDialogInfo(dialogInfo: any) {
@@ -103,18 +141,76 @@ function handleSaveDialogInfo(dialogInfo: any) {
 	localStorage.setItem(DIALOG_KEY, JSON.stringify(dialogInfo));
 }
 
+function handleSaveDialogInfoOnce(dialogInfo: any) {
+	dialogInfo = dialogInfo || { time: new Date().getTime() };
+	sessionStorage.setItem(DIALOG_KEY, JSON.stringify(dialogInfo));
+}
+
 function handleConfirm(dialogInfo: any) {
-	handleSaveDialogInfo(dialogInfo);
+	if (useShowOnce.value) {
+		handleSaveDialogInfoOnce(dialogInfo);
+	} else {
+		handleSaveDialogInfo(dialogInfo);
+	}
 	dialogShow.value = false;
 }
 
+const ads = ref({
+	dialog: [],
+	asideNavAfter: []
+});
+
+function getAds() {
+	fetch('https://uni-halo.925i.cn/ads.json').then(res => res.json()).then(res => {
+		ads.value = res;
+	}).catch(err => console.log(err));
+}
+
+getAds();
 </script>
 
 
 <style lang='less' scoped>
+.sidebar-nav-ads {
+	display: flex;
+	flex-direction: column;
+
+	.item-title {
+		padding-left: 0;
+	}
+
+	.item-title::before {
+		display: none;
+	}
+}
+
+.hot {
+	color: #FF4C07;
+	padding-left: 22px;
+	position: relative;
+	&:before {
+		content: '';
+		width: 26px;
+		height: 26px;
+		background-image: url("/icons/hot.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-55%);
+		animation: hot 2s linear infinite;
+	}
+}
+
+@keyframes hot {
+	0%{}
+	50%{}
+	100%{}
+}
+
 .recommend-container {
 	/* padding: 16px; */
-	padding-left: 16px;
 	font-size: 14px;
 }
 

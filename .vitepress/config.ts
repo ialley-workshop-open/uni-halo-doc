@@ -315,8 +315,29 @@ export default defineConfig({
 						}
 					]
 				}
+			],
+			'/links': [
+				{
+					text: '友情链接',
+					items: [
+						{
+							text: '友情链接',
+							link: '/links/friend-links'
+						}
+					]
+				}
+			],
+			'/problem': [
+				{
+					text: '常见问题',
+					items: [
+						{
+							text: '常见问题',
+							link: '/problem/questions'
+						}
+					]
+				}
 			]
-
 		},
 		outlineTitle: '内容目录',
 		docFooter: {
