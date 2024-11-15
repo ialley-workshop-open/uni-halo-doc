@@ -1,0 +1,32 @@
+{
+	"dialog":[
+		{
+			"cover":"/ads/txy/ycp_500_500.png",
+			"title":"【腾讯云】云产品特惠热卖中",
+			"description":"云服务器、云数据库、COS、CDN、短信等云产品特惠热卖中</br> 限时特惠： 轻量 2核2G4M 3年/560元、最低至 1年/99元 </br> 免费领取：活动页面免费领取 1888元-11000元 代金劵礼包 </br> <span style='color:#3B91EA;text-decoration: underline;'>活动时间和数量有限，点击跳转活动页面查看更多活动！</span>",
+			"link":"https://curl.qcloud.com/fLnhq0RD",
+			"from":"腾讯云"
+		}
+	],
+	"asideNavAfter":[
+		{
+			"cover":"/ads/txy/ycp_560_300.png",
+			"title":"【腾讯云】云服务器、云数据库、COS、CDN、短信等云产品特惠热卖中",
+			"description":"【腾讯云】云服务器、云数据库、COS、CDN、短信等云产品特惠热卖中",
+			"link":"https://curl.qcloud.com/fLnhq0RD",
+			"from":"腾讯云"
+		}, {
+			"cover":"/ads/txy/pt_go_518_292.png",
+			"title":"【腾讯云】百款折扣商品任意拼，双人成团，PK有大礼，2核2G云服务器低至 68元/年",
+			"description":"【腾讯云】百款折扣商品任意拼，双人成团，PK有大礼，2核2G云服务器低至 68元/年",
+			"link":"https://curl.qcloud.com/yotXicNI",
+			"from":"腾讯云"
+		}, {
+			"cover":"/ads/txy/szr_560_300.png",
+			"title":"【腾讯云】腾讯云数智人专享折扣！新用户3折，新老同享7折！助力内容创作、企业降本增效！",
+			"description":"【腾讯云】腾讯云数智人专享折扣！新用户3折，新老同享7折！助力内容创作、企业降本增效！",
+			"link":"https://curl.qcloud.com/VK05vysd",
+			"from":"腾讯云"
+		}
+	]
+}

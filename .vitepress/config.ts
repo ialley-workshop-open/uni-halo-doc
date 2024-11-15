@@ -158,8 +158,9 @@ export default defineConfig({
 				link: 'https://www.uhalo.pro/'
 			},
 			{
-				text: 'v1.0',
-				link: 'https://uni-halo.925i.cn/v1'
+				text: '团队',
+				link: '/team/team',
+				activeMatch: '/team/'
 			},
 			{
 				text: '设计指南',
@@ -187,6 +188,10 @@ export default defineConfig({
 					{
 						text: 'UHalo PRO',
 						link: 'https://www.uhalo.pro/'
+					},
+					{
+						text: 'v1.0 版本',
+						link: 'https://uni-halo.925i.cn/v1'
 					},
 					{
 						text: '作者主页',

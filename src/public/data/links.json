@@ -14,7 +14,7 @@
 			"link": "https://ynxh.top/",
 			"desc": "xiaohao成长日记。",
 			"spend": "50.00 - 微信打赏 - 20241025",
-			"screenshot": "https://lk.ynxh.top/i/2024/10/25/671b148f6e50d.png"
+			"screenshot": "https://blog.925i.cn/upload/ynxh_screenshot.png"
 		}
 	],
 	"recommends": [
@@ -38,16 +38,16 @@
 			"link": "https://blog.925i.cn/",
 			"desc": "开源免费 Halo 博客小程序，支持多端编译。",
 			"screenshot": "https://uni-halo.925i.cn/screenshot.png"
-		},
+		}
+	],
+	"others": [
 		{
 			"name": "Halo",
 			"image": "https://www.halo.run/upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png",
 			"link": "https://www.halo.run/",
 			"desc": "强大易用的开源建站工具。",
 			"screenshot": "https://blog.925i.cn/upload/halo_screenshot.png"
-		}
-	],
-	"others": [
+		},
 		{
 			"name": "秋叶资源",
 			"image": "http://touch.qybhl.top/i/2024/08/19/66c2cb8f03040.png",

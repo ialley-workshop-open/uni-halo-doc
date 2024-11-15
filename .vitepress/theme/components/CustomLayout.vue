@@ -161,7 +161,7 @@ const ads = ref({
 });
 
 function getAds() {
-	fetch('https://uni-halo.925i.cn/ads.json').then(res => res.json()).then(res => {
+	fetch('https://uni-halo.925i.cn/data/ads.json').then(res => res.json()).then(res => {
 		ads.value = res;
 	}).catch(err => console.log(err));
 }

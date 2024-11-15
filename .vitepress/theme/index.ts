@@ -10,6 +10,7 @@ import CustomLayout from "./components/CustomLayout.vue";
 import CustomIframe from "./components/CustomIframe.vue";
 import CustomDialog from "./components/CustomDialog.vue";
 import CustomFriendLinks from "./components/CustomFriendLinks.vue";
+import CustomTeams from "./components/CustomTeams.vue";
 
 export default {...DefaultTheme,
 	Layout:CustomLayout,
@@ -19,5 +20,6 @@ export default {...DefaultTheme,
 		app.component("CustomIframe",CustomIframe)
 		app.component("CustomDialog",CustomDialog)
 		app.component("CustomFriendLinks",CustomFriendLinks)
+		app.component("CustomTeams",CustomTeams)
   }
 };

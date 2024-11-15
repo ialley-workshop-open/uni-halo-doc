@@ -80,7 +80,7 @@ const recommends = ref([]);
 const others = ref([]);
 
 const getFriendLinks = () => {
-	fetch('https://uni-halo.925i.cn/links.json').then(res => res.json()).then(res => {
+	fetch('https://uni-halo.925i.cn/data/links.json').then(res => res.json()).then(res => {
 		donate.value = res.donate;
 		recommends.value = res.recommends;
 		others.value = res.others;
