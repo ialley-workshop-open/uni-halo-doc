@@ -67,6 +67,7 @@
 					<XiaoButton :use-animation='true' size='mini' title='知道啦，我会记得关注滴' type='primary' @click='dialogShow = false'></XiaoButton>
 				</template>
 			</CustomDialog>
+			<CustomAppPreview></CustomAppPreview>
 		</template>
 
 		<template #sidebar-nav-after>
@@ -89,6 +90,7 @@ import { onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import XiaoButton from './ui/XiaoButton.vue';
+import CustomAppPreview from './CustomAppPreview.vue';
 
 const { Layout } = DefaultTheme;
 const data = useData();
@@ -188,6 +190,7 @@ getAds();
 	color: #FF4C07;
 	padding-left: 22px;
 	position: relative;
+
 	&:before {
 		content: '';
 		width: 26px;
@@ -204,9 +207,12 @@ getAds();
 }
 
 @keyframes hot {
-	0%{}
-	50%{}
-	100%{}
+	0% {
+	}
+	50% {
+	}
+	100% {
+	}
 }
 
 .recommend-container {
