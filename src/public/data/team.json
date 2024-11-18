@@ -25,6 +25,18 @@
 			"desc": "负责 uni-halo 的开发，维护与升级，文档维护等工作<br><br>拥有丰富的前端开发经验。"
 		},
 		{
+			"avatar": "https://blog.925i.cn/upload/avatar_77.jpg",
+			"name": "77",
+			"title": "广东 · 深圳",
+			"links": [
+				{
+					"icon": "github",
+					"link": "javascript:void(0)"
+				}
+			],
+			"desc": "专注C语言嵌入式开发 </br></br>熟练掌握C语言，在嵌入式开发领域已颇具心得与潜力。"
+		},
+		{
 			"avatar": "https://avatars.githubusercontent.com/u/37505366?v=4",
 			"name": "qiuqiu",
 			"title": "广东 · 深圳",
@@ -54,7 +66,7 @@
 					"link": "https://blog.muyin.site"
 				}
 			],
-			"desc": "Halo 社区插件开发者。"
+			"desc": "Halo 社区插件开发者 </br></br> 参与 uni-halo 和 un-halo插件的开发。"
 		}
 	]
 }
