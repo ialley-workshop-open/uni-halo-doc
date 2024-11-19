@@ -36,8 +36,8 @@ const data = ref<DataType>({
 	show: true
 });
 
-const handleConfirm = () => {
-	emit('on-close', true);
+const handleConfirm = (e:any) => {
+	emit('on-close', e);
 };
 
 </script>

@@ -30,7 +30,7 @@
 		</template>
 
 		<template #layout-top>
-			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='dialogShow = false'>
+			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='handleClose'>
 				<template #body>
 					<div class='recommend-app'>
 						<div v-if='false' class='recommend-app-item pink'>
@@ -64,7 +64,7 @@
 				</template>
 				<template #footer>
 					<XiaoButton size='mini' :title='useShowOnce?"本次访问不再提示":"一天内不再显示"' @click='handleConfirm'></XiaoButton>
-					<XiaoButton :use-animation='true' size='mini' title='知道啦，我会记得关注滴' type='primary' @click='dialogShow = false'></XiaoButton>
+					<XiaoButton :use-animation='true' size='mini' title='知道啦，我会记得关注滴' type='primary' @click='handleClose'></XiaoButton>
 				</template>
 			</CustomDialog>
 			<CustomAppPreview></CustomAppPreview>
@@ -108,6 +108,7 @@ function handleComputedDiffHour(time1: any, time2: any) {
 }
 
 const DIALOG_KEY: string = 'dialog_wx_show';
+const CONFETTI_GLOBAL_KEY: string = 'CONFETTI_GLOBAL_VISIBLE';
 
 const useShowOnce = ref<boolean>(true);
 
@@ -136,7 +137,43 @@ onMounted(() => {
 	} else {
 		setTimeout(checkShow, 500);
 	}
+	handleShowGlobalConfetti();
 });
+
+function handleShowConfetti(event: any) {
+	// @ts-ignore
+	confetti({
+		zIndex: 9999, particleCount: 50,
+		origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
+	});
+}
+
+function handleShowGlobalConfetti() {
+	if (sessionStorage.getItem(CONFETTI_GLOBAL_KEY)) return;
+	sessionStorage.setItem(CONFETTI_GLOBAL_KEY, 'visible');
+	let duration = 5 * 1000;
+	let animationEnd = Date.now() + duration;
+	let defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
+
+	function randomInRange(min: number, max: number) {
+		return Math.random() * (max - min) + min;
+	}
+
+	let interval = setInterval(function() {
+		let timeLeft = animationEnd - Date.now();
+
+		if (timeLeft <= 0) {
+			return clearInterval(interval);
+		}
+
+		let particleCount = 50 * (timeLeft / duration);
+		// @ts-ignore
+		confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+		// @ts-ignore
+		confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+	}, 250);
+}
+
 
 function handleSaveDialogInfo(dialogInfo: any) {
 	dialogInfo = dialogInfo || { time: new Date().getTime() };
@@ -148,13 +185,23 @@ function handleSaveDialogInfoOnce(dialogInfo: any) {
 	sessionStorage.setItem(DIALOG_KEY, JSON.stringify(dialogInfo));
 }
 
-function handleConfirm(dialogInfo: any) {
+function handleConfirm(e: any, dialogInfo: unknown) {
 	if (useShowOnce.value) {
 		handleSaveDialogInfoOnce(dialogInfo);
 	} else {
 		handleSaveDialogInfo(dialogInfo);
 	}
-	dialogShow.value = false;
+	handleShowConfetti(e);
+	setTimeout(() => {
+		dialogShow.value = false;
+	}, 100);
+}
+
+function handleClose(e: any) {
+	handleShowConfetti(e);
+	setTimeout(() => {
+		dialogShow.value = false;
+	}, 100);
 }
 
 const ads = ref({
@@ -165,6 +212,8 @@ const ads = ref({
 function getAds() {
 	fetch('https://uni-halo.925i.cn/data/ads.json').then(res => res.json()).then(res => {
 		ads.value = res;
+		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() <= new Date().getTime());
+		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() <= new Date().getTime());
 	}).catch(err => console.log(err));
 }
 

@@ -1,5 +1,5 @@
 <template>
-	<div class='toggle-visible-btn' @click='visible = !visible'>{{ visible ? '收起预览' : '在线预览' }}</div>
+	<div class='toggle-visible-btn' @click='handleToggleVisible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
 		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.925i.cn/uni-halo' frameborder='0'></iframe>
 	</div>
@@ -9,21 +9,45 @@
 import { computed, ref } from 'vue';
 
 const visible = ref(false);
-const animation = ref<'right'|'bottom'>('right');
+const isInitVisible = ref(true);
+const animation = ref<'right' | 'bottom'>('right');
 const computedAniPosition = computed(() => {
-
 	if (animation.value === 'bottom') {
 		return `bottom animation-bottom`;
 	}
 	if (animation.value === 'right') {
 		return `right animation-right`;
 	}
-
 });
+
+
+function handleToggleVisible(event: any) {
+	visible.value = !visible.value;
+	handleShowConfetti(event);
+}
+
+function handleShowConfetti(event: any) {
+	if (!isInitVisible.value) return;
+	// @ts-ignore
+	confetti({
+		zIndex: 9999,
+		particleCount: 100,
+		angle: 180,
+		spread: 75,
+		origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
+	});
+	setTimeout(() => {
+		isInitVisible.value = false;
+	}, isInitVisible.value ? 500 : 0);
+}
 
 </script>
 
 <style scoped>
+#customConfetti {
+	visibility: hidden;
+}
+
 .toggle-visible-btn {
 	position: fixed;
 	right: 0px;
