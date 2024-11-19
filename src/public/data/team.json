@@ -67,6 +67,18 @@
 				}
 			],
 			"desc": "Halo 社区插件开发者 </br></br> 参与 uni-halo 和 un-halo插件的开发。"
+		},
+		{
+			"avatar": "https://avatars.githubusercontent.com/u/37939296?v=4",
+			"name": "听闻",
+			"title": "开发者",
+			"links": [
+				{
+					"icon": "github",
+					"link": "https://github.com/Xiaotingwen"
+				}
+			],
+			"desc": "个人站长 </br></br> 参与 uni-halo-doc 文档维护。"
 		}
 	]
 }
