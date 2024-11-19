@@ -212,8 +212,8 @@ const ads = ref({
 function getAds() {
 	fetch('https://uni-halo.925i.cn/data/ads.json').then(res => res.json()).then(res => {
 		ads.value = res;
-		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() <= new Date().getTime());
-		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() <= new Date().getTime());
+		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
+		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
 	}).catch(err => console.log(err));
 }
 
