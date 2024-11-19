@@ -10,9 +10,9 @@
 		},
 		{
 			"name": "xiaohao",
-			"image": "https://lk.ynxh.top/i/2024/10/25/671b10898e6b7.png",
+			"image": "https://ynxh.top/upload/xiaohao/6FFA33D3-4D53-43D5-9625-256F1D36FBFF_1_105_c.jpeg",
 			"link": "https://ynxh.top/",
-			"desc": "xiaohao成长日记。",
+			"desc": "Xiaohao成长日记。",
 			"spend": "50.00 - 微信打赏 - 20241025",
 			"screenshot": "https://blog.925i.cn/upload/ynxh_screenshot.png"
 		}
@@ -47,6 +47,26 @@
 			"link": "https://www.halo.run/",
 			"desc": "强大易用的开源建站工具。",
 			"screenshot": "https://blog.925i.cn/upload/halo_screenshot.png"
+		},	{
+			"name": "uni-app",
+			"image": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/uni.png",
+			"link": "https://uniapp.dcloud.net.cn/",
+			"desc": "一个使用 Vue.js 开发所有前端应用的框架。",
+			"screenshot": ""
+		},
+		{
+			"name": "tm-vuetify",
+			"image": "https://jx2d.cn/images/logo_min.png",
+			"link": "https://jx2d.cn/",
+			"desc": "UniApp 跨端UI组件库。",
+			"screenshot": ""
+		},
+		{
+			"name": "mp-html",
+			"image": "https://github.com/jin-yufeng/mp-html/blob/master/docs/assets/logo/logo.png?raw=true",
+			"link": "https://github.com/jin-yufeng/mp-html",
+			"desc": "一个强大的小程序富文本组件。",
+			"screenshot": ""
 		},
 		{
 			"name": "秋叶资源",

@@ -42,7 +42,7 @@
 								<p> 精心分享聊天、朋友圈以及个性签名等类型文案！</p>
 							</div>
 						</div>
-						<div class='recommend-app-item '>
+						<div class='recommend-app-item pink'>
 							<img alt='秒懂文案馆' class='recommend-app-cover' data-fancybox='gallery' src='/mdwag_qrcode.jpg' />
 							<div class='recommend-app-text'>
 								<p><strong style='font-size: 18px'>《秒懂文案馆》</strong>- 微信公众号文案！</p>
@@ -138,6 +138,13 @@ onMounted(() => {
 		setTimeout(checkShow, 500);
 	}
 	handleShowGlobalConfetti();
+
+	// 	设置网页底部的年份
+	const currentYear = new Date().getFullYear();
+	const siteEndYear = document.getElementById('siteEndYear');
+	if (siteEndYear) {
+		siteEndYear.textContent = currentYear.toString();
+	}
 });
 
 function handleShowConfetti(event: any) {
@@ -398,9 +405,7 @@ getAds();
 			transform: translateY(-2px);
 
 			&.pink {
-				//background-color: rgba(255, 128, 171, 1);
-				//background-color: rgba(254, 0, 85, 0.5);
-				background-color: rgba(7, 192, 96, 1);
+				background-color: rgba(7, 192, 96, 0.75);
 				border-color: #ffffff;
 				color: #fff;
 			}
