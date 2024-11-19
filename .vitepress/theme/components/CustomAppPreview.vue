@@ -1,7 +1,7 @@
 <template>
 	<div class='toggle-visible-btn' @click='visible = !visible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
-		<iframe sandbox='allow-scripts' class='app-iframe' src='https://blog.925i.cn/uni-halo' frameborder='0'></iframe>
+		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.925i.cn/uni-halo' frameborder='0'></iframe>
 	</div>
 </template>
 
