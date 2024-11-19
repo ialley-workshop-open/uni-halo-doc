@@ -44,7 +44,7 @@ function shuffleArray(array) {
 				<span style='font-size: 26px'>核心团队</span>
 			</template>
 			<template #lead>
-				核心开发研发团队，排名不分先后
+				核心开发团队，排名不分先后
 			</template>
 		</VPTeamPageTitle>
 		<VPTeamMembers
@@ -55,7 +55,7 @@ function shuffleArray(array) {
 				<span style='font-size: 26px'>社区贡献</span>
 			</template>
 			<template #lead>
-				参与开发的贡献者，排名不分先后
+				参与贡献者，排名不分先后
 			</template>
 		</VPTeamPageTitle>
 		<VPTeamMembers
