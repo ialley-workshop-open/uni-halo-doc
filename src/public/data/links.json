@@ -88,6 +88,20 @@
 			"link": "https://www.finley.top",
 			"desc": "探索技术之奥秘，记录生活之点滴。",
 			"screenshot": "https://blog.925i.cn/upload/finley_screenshot.png"
+		},
+		{
+			"name": "XiSoul Blog's",
+			"image": "https://pic.imgdb.cn/item/6672e2f5d9c307b7e9f9e1da.png",
+			"link": "https://xisoul.cn",
+			"desc": "啥都玩，可以来看看",
+			"screenshot": ""
+		},
+		{
+			"name": "小和恋爱记",
+			"image": "https://52he.cc/upload/7.webp",
+			"link": "https://52he.cc",
+			"desc": "愿我如星君如月，夜夜流光相皎洁。",
+			"screenshot": ""
 		}
 	]
 }
