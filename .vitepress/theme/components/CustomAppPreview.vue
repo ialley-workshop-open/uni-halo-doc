@@ -135,5 +135,9 @@ function handleShowConfetti(event: any) {
 		width: 100%;
 		height: 100%;
 	}
+
+	.toggle-visible-btn {
+		display: none;
+	}
 }
 </style>
