@@ -5,7 +5,7 @@ import mdItCustomAttrs from 'markdown-it-custom-attrs';
 export default defineConfig({
 	lang: 'zh-CN',
 	appearance: 'dark',
-	title: 'uni-halo（v2.0）',
+	title: 'uni-halo',
 	description:
 		'一个优雅、清新、漂亮的移动端博客应用，基于 uniapp + halo2.x API 实现一款现代化的开源博客 / CMS 系统API开发的多端应用。uni-halo小程序、uni-halo微信小程序、uni-halo博客小程序、halo小程序、halo博客小程序、halo微信小程序。',
 	head: [
@@ -157,7 +157,7 @@ export default defineConfig({
 		footer: {
 			message: '根据 AGPL-3.0 协议开源·请遵循协议',
 			copyright:
-				'Copyright © 2022-<span id="siteEndYear"></span> <a href="/" target="_self" title="uni-halo">uni-halo</a>丨AGPL-3.0丨<a href="https://www.xiaoxiaomo.cn/" target="_blank" title="小莫唐尼个人主页">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
+				'Copyright © 2022-<span id="siteEndYear"></span> <a href="/" target="_self" title="uni-halo">UNI-HALO</a>丨AGPL-3.0丨<a href="https://www.xiaoxiaomo.cn/" target="_blank" title="小莫唐尼个人主页">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
 		},
 		nav: [
 			{
