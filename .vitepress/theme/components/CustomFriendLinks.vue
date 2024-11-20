@@ -369,59 +369,25 @@ getFriendLinks();
 
 /* iPad */
 @media (max-width: 1368px) {
-	.using-examples_list {
-		&__item {
-			width: 33%;
-		}
-	}
+
 }
 
 /* phone */
 @media (max-width: 960px) {
-	.using-examples_list {
-		&__item {
-			width: 30%;
-		}
+	.link-card {
+		width: 50% !important;
 	}
 }
 
 /* phone */
 @media (max-width: 768px) {
-	.using-examples_list {
-		&__item {
-			width: 46%;
-
-			.using_image {
-				margin-bottom: 12px;
-			}
-
-			.using_name {
-				width: 100%;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-				font-size: 15px;
-			}
-		}
+	.link-card {
+		width: 100% !important;
 	}
 }
 
 /* phone */
 @media (max-width: 500px) {
-	.using-examples_list {
-		padding: 0 24px;
 
-		&__item {
-			width: 46%;
-
-			.using_image {
-				margin-bottom: 12px;
-			}
-
-			.using_name {
-				font-size: 15px;
-			}
-		}
-	}
 }
 </style>

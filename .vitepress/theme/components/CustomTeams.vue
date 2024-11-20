@@ -2,13 +2,13 @@
 import { VPTeamMembers, VPTeamPage, VPTeamPageTitle } from 'vitepress/theme';
 import { onMounted, ref } from 'vue';
 
-const members = ref([ ]);
-const contributors = ref([ ]);
+const members = ref([]);
+const contributors = ref([]);
 
 const getTeams = () => {
-	 fetch('https://uni-halo.925i.cn/data/team.json').then(res => res.json()).then(res => {
-		 contributors.value = res.contributors;
-		 members.value = res.members;
+	fetch('https://uni-halo.925i.cn/data/team.json').then(res => res.json()).then(res => {
+		contributors.value = res.contributors;
+		members.value = res.members;
 	}).catch(err => {
 		console.error('日志：获取团队信息失败，', err);
 	});
@@ -41,7 +41,7 @@ function shuffleArray(array) {
 	<VPTeamPage>
 		<VPTeamPageTitle>
 			<template #title>
-				<span style='font-size: 26px'>核心团队</span>
+				<span class='team-title'>核心团队</span>
 			</template>
 			<template #lead>
 				核心开发团队，排名不分先后
@@ -52,7 +52,7 @@ function shuffleArray(array) {
 		/>
 		<VPTeamPageTitle>
 			<template #title>
-				<span style='font-size: 26px'>社区贡献</span>
+				<span class='team-title'>社区贡献</span>
 			</template>
 			<template #lead>
 				参与贡献者，排名不分先后
@@ -64,3 +64,31 @@ function shuffleArray(array) {
 	</VPTeamPage>
 
 </template>
+
+<style scoped>
+.team-title {
+	user-select: none;
+	position: relative;
+	background: var(--vp-home-hero-name-background);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 26px;
+}
+
+.team-title:hover {
+	background: none;
+	-webkit-text-fill-color: #ffffff;
+}
+
+.team-title:hover::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: var(--vp-home-hero-image-background-image);
+	filter: blur(24px);
+	z-index: -1;
+}
+</style>

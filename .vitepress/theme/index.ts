@@ -1,5 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import "./styles/vars.css";
+import "./styles/blur.css";
 import "./custom.css";
 
 // 注册组件

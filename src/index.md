@@ -5,7 +5,7 @@ title: uni-halo(v2.0) 官方文档
 titleTemplate: 一个免费开源可多端编译的移动端博客源码丨微信小程序丨APP应用丨Halo微信小程序丨uni-halo丨uni-halo 2.0
 
 hero:
-  name: 😜uni-halo (v2.0)
+  name: uni-halo (v2.0)
   text: 免费开源可多端编译的博客
   tagline: 吾：视尔唯一·心之所向·素履而往丨已支持 Halo2.x
   image:

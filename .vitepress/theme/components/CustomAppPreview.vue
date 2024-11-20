@@ -55,7 +55,7 @@ function handleShowConfetti(event: any) {
 	z-index: 99;
 	cursor: pointer;
 	transform: translateY(-50%);
-	background-color: var(--vp-home-hero-name-color);
+	background-color: var(--vp-button-brand-bg);
 	backdrop-filter: blur(6px);
 	writing-mode: vertical-rl;
 	border-radius: 6px 0 0 6px;
@@ -65,6 +65,18 @@ function handleShowConfetti(event: any) {
 	box-sizing: border-box;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
 	user-select: none;
+}
+
+.toggle-visible-btn:hover::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: var(--vp-home-hero-image-background-image);
+	filter: blur(30px);
+	z-index: -1;
 }
 
 .custom-dialog {
