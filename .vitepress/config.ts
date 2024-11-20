@@ -95,7 +95,7 @@ export default defineConfig({
 			{
 				src: 'https://uni-halo.925i.cn/libs/notify.min.js'
 			}
-		],
+		]
 	],
 	srcDir: `${path.resolve(process.cwd())}/src`,
 	themeConfig: {
@@ -369,5 +369,8 @@ export default defineConfig({
 				'data-fancybox': 'gallery'
 			});
 		}
+	},
+	sitemap: {
+		hostname: 'https://uni-halo.925i.cn'
 	}
 });
