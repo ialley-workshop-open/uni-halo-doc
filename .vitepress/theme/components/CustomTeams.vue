@@ -91,4 +91,9 @@ function shuffleArray(array) {
 	filter: blur(24px);
 	z-index: -1;
 }
+
+
+.VPTeamPage{
+	margin-top: 0!important;
+}
 </style>

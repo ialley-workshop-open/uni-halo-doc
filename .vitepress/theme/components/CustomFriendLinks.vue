@@ -144,7 +144,7 @@ getFriendLinks();
 
 		.title {
 			font-size: 22px;
-			color: var(--vp-home-hero-name-color);
+			color: var(--vp-c-brand);
 		}
 
 		.sub-title {
@@ -218,7 +218,7 @@ getFriendLinks();
 					align-items: center;
 					gap: 0 6px;
 					text-align: left;
-					// color: var(--vp-home-hero-name-color);
+					// color: var(--vp-c-brand);
 					color: var(--vp-c-text-2);
 					width: 100%;
 
@@ -267,7 +267,7 @@ getFriendLinks();
 
 		.title {
 			font-size: 22px;
-			color: var(--vp-home-hero-name-color);
+			color: var(--vp-c-brand);
 		}
 
 		.sub-title {
@@ -346,12 +346,13 @@ getFriendLinks();
 				&_name {
 					font-size: 16px;
 					text-align: left;
-					// color: var(--vp-home-hero-name-color);
+					// color: var(--vp-c-brand);
 					color: var(--vp-c-text-2);
 					width: 100%;
 					overflow: hidden;
 					text-overflow: ellipsis;
 					white-space: nowrap;
+					margin: 0;
 				}
 
 				&_desc {
@@ -365,6 +366,10 @@ getFriendLinks();
 			}
 		}
 	}
+}
+
+a {
+	text-decoration: none;
 }
 
 /* iPad */
