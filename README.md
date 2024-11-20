@@ -1,19 +1,19 @@
 <p align="center">
     <a href="https://uni-halo.925i.cn" target="_blank" rel="noopener noreferrer">
-        <img width="100" src="https://b.925i.cn/uni_halo/uni_halo_logo.png" alt="uni-halo logo" />
+        <img width="100" src="https://uni-halo.925i.cn/logo.png" alt="uni-halo logo" />
     </a>
 </p>
 
-<p align="center"><b style="font-size: 20px;color: #10B5FB">当前仓库为文档仓库</b></p>
+<p align="center"><b style="font-size: 20px;color: #10B5FB">uni-halo 官方文档仓库</b></p>
 <br />
 <p align="center"><b>【uni-halo v2.0】</b> 基于 Halo2.X API 多端项目，值得一试。</p>
-
 <p align="center"><b style="font-size: 14px;color: #10B5FB">正式支持 Halo2.X 版本，免费开源</b></p>
 
 
 <br />
 <p align="center">
-	<a href="https://b.925i.cn">作者博客</a>
+	<a href="https://www.xiaoxiaomo.cn">作者主页</a>
+	<a href="https://blog.925i.cn">作者博客</a>
 	<a href="https://uni-halo.925i.cn">官方文档</a>
 	<a href="https://github.com/ialley-workshop-open/uni-halo">仓库地址</a>
 </p>
@@ -24,7 +24,7 @@
 
 |                支付宝												                 |                微信												                 |                QQ												                 |
 |:----------------------------------------------:|:---------------------------------------------:|:---------------------------------------------:|
-| ![支付宝赞赏](https://b.925i.cn/skm/zf_zfb_skm.png) | ![微信赞赏](https://b.925i.cn/skm/zf_wx_zsm.png)	 | ![QQ赞赏](https://b.925i.cn/skm/zf_qq_skm.png)	 |
+| ![支付宝赞赏](https://blog.925i.cn/upload/zf_zfb_skm.png) | ![微信赞赏](https://blog.925i.cn/upload/zf_wx_zsm.png)	 | ![QQ赞赏](https://blog.925i.cn/upload/zf_qq_skm.png)	 |
 
 
 ## 一、项目介绍
@@ -115,14 +115,3 @@ uni-halo 还在持续更新中，本项目欢迎您的参与，共同维护，�
 ## 🔍 开源许可
 
 uni-halo 使用 AGPL-3.0 协议开源，请遵守开源协议。
-
-<br/>
-
-## 🙋 致谢
-
-uni-halo 得益于以下优秀的技术支撑，我只是站在巨人的肩膀上捡了几根头发丝，但是非常感谢这些优秀的项目，带给了我们其他开发者和用户非常友好的体验！
-
-- [Halo：一款好用又强大的开源建站工具](https://halo.run/)
-- [uni-app：是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码可编译到多个平台](https://uniapp.dcloud.net.cn/)
-- [tm-vuetify：是一个为 uni-app 平台定制的颜值也非常高的 UI 框架](https://www.jx2d.cn/)
-- [mp-html：一个强大的小程序富文本组件](https://jin-yufeng.gitee.io/mp-html/#/)
