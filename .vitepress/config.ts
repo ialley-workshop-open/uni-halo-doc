@@ -89,7 +89,13 @@ export default defineConfig({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 				})(window, document, "clarity", "script", "lfzkgpgvjk");
 			`
-		]
+		],
+		[
+			'script',
+			{
+				src: 'https://uni-halo.925i.cn/libs/notify.min.js'
+			}
+		],
 	],
 	srcDir: `${path.resolve(process.cwd())}/src`,
 	themeConfig: {
