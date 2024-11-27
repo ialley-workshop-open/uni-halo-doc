@@ -23,6 +23,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.10.0",
     "@nolebase/vitepress-plugin-git-changelog": "^2.10.0",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.10.0",
     "@types/node": "^18.7.18",

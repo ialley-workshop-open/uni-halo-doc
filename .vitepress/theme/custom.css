@@ -156,3 +156,7 @@
 	filter: blur(24px);
 	z-index: -1;
 }
+
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+	margin-right: 0;
+}

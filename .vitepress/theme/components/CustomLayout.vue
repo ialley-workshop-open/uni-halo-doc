@@ -28,7 +28,6 @@
 				<div class='action'><a aria-label='返回主页' class='link' href='/'> 返回主页 </a></div>
 			</div>
 		</template>
-
 		<template #layout-top>
 			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='handleClose'>
 				<template #body>
@@ -69,7 +68,6 @@
 			</CustomDialog>
 			<CustomAppPreview></CustomAppPreview>
 		</template>
-
 		<template #sidebar-nav-after>
 			<div v-if='ads.asideNavAfter.length!==0' class='recommend-container sidebar-nav-ads'>
 				<p class='item-title'>站长推荐：腾讯云特惠热卖产品</p>
@@ -82,6 +80,12 @@
 			</div>
 		</template>
 
+		<template #nav-bar-content-after>
+			<slot name="nav-bar-content-after" />
+		</template>
+		<template #nav-screen-content-after>
+			<slot name="nav-screen-content-after" />
+		</template>
 	</Layout>
 </template>
 
