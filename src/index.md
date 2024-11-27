@@ -7,7 +7,7 @@ titleTemplate: 一个免费开源可多端编译的移动端博客源码丨微�
 hero:
   name: UNI-HALO
   text: 免费开源可多端编译的博客 (v2.0)
-  tagline: 视尔唯一丨心之所向丨素履而往丨已支持 Halo2.x
+  tagline: 旨在：视尔唯一，心之所向丨Halo 移动端应用丨不止小程序
   image:
     src: /logo.png
     alt: uni-halo
