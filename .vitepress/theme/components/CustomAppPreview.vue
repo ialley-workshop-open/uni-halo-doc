@@ -1,7 +1,7 @@
 <template>
 	<div class='toggle-visible-btn' @click='handleToggleVisible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
-		<div class='app-qrcode'>
+		<div class='app-qrcode' :class='{"visible":visible}'>
 			<img class='app-qrcode-img' src='https://blog.925i.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
 			<h3 class='app-qrcode-title'>手机扫码预览H5版</h3>
 		</div>
@@ -138,11 +138,18 @@ function handleShowConfetti(event: any) {
 	overflow: hidden;
 	width: 220px;
 	padding: 16px;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+	display: none;
+	opacity: 0;
+}
+
+.app-qrcode.visible {
+	display: flex;
+	animation: qrcodeAni 1s ease-in-out forwards;
+	animation-delay: 2s;
 }
 
 .app-qrcode-img {
@@ -178,6 +185,15 @@ function handleShowConfetti(event: any) {
 
 	.toggle-visible-btn {
 		display: none;
+	}
+}
+
+@keyframes qrcodeAni {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 </style>
