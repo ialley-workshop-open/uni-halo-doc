@@ -1,8 +1,13 @@
 <template>
 	<div class='toggle-visible-btn' @click='handleToggleVisible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
+		<div class='app-qrcode'>
+			<img class='app-qrcode-img' src='https://blog.925i.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
+			<h3 class='app-qrcode-title'>手机扫码预览H5版</h3>
+		</div>
 		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.925i.cn/uni-halo' frameborder='0'></iframe>
 	</div>
+
 </template>
 
 <script lang='ts' setup>
@@ -80,7 +85,6 @@ function handleShowConfetti(event: any) {
 }
 
 .custom-dialog {
-	width: 330px;
 	height: 650px;
 	position: fixed;
 	z-index: 99;
@@ -89,12 +93,11 @@ function handleShowConfetti(event: any) {
 	font-size: 16px;
 	margin: 0;
 	box-sizing: border-box;
-	overflow-y: auto;
-	background-image: url("/images/iPhone13.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	border-radius: 30px;
-	padding: 48px 13px 36px;
+	display: flex;
+	align-items: flex-end;
+	gap: 0 12px;
+	padding-left: 12px;
+	padding-bottom: 12px;
 }
 
 .custom-dialog.right {
@@ -110,10 +113,15 @@ function handleShowConfetti(event: any) {
 }
 
 .app-iframe {
-	width: 100%;
+	width: 330px;
 	height: 100%;
 	overflow: hidden;
-	border-radius: 0 3px 3px 0;
+	overflow-y: auto;
+	background-image: url("/images/iPhone13.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-radius: 30px;
+	padding: 48px 13px 36px;
 }
 
 .custom-dialog.animation-bottom {
@@ -122,6 +130,26 @@ function handleShowConfetti(event: any) {
 
 .custom-dialog.animation-right {
 	animation: dialogAniRight 0.2s ease-in-out forwards;
+}
+
+.app-qrcode {
+	background-color: #ffffff;
+	border-radius: 12px;
+	overflow: hidden;
+	width: 220px;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-qrcode-img {
+	cursor: pointer;
+}
+
+.app-qrcode-title {
 }
 
 @keyframes dialogAniRight {
