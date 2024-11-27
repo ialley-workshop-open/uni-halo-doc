@@ -18,6 +18,12 @@ import {
 } from '@nolebase/vitepress-plugin-git-changelog/client'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 
+import {
+	NolebaseInlineLinkPreviewPlugin,
+} from '@nolebase/vitepress-plugin-inline-link-preview/client'
+import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
+import { InjectionKey } from '@nolebase/vitepress-plugin-inline-link-preview/client'
+
 export default {...DefaultTheme,
 	Layout:CustomLayout,
   enhanceApp({ app }) {
@@ -28,5 +34,11 @@ export default {...DefaultTheme,
 		app.component("CustomFriendLinks",CustomFriendLinks)
 		app.component("CustomTeams",CustomTeams)
 		app.use(NolebaseGitChangelogPlugin)
+		app.use(NolebaseInlineLinkPreviewPlugin)
+
+		app.provide(InjectionKey, {
+			// 配置...
+		})
+
 	}
 };

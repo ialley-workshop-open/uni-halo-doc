@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@nolebase/vitepress-plugin-git-changelog": "^2.10.0",
+    "@nolebase/vitepress-plugin-inline-link-preview": "^2.10.0",
     "@types/node": "^18.7.18",
     "eslint": "^8.23.1",
     "less": "^4.1.3",

@@ -9,6 +9,18 @@ export default defineConfig({
 		}),
 		GitChangelogMarkdownSection()
 	],
+	optimizeDeps: {
+		exclude: [
+			'@nolebase/vitepress-plugin-inline-link-preview/client',
+			'vitepress'
+		],
+	},
+	ssr: {
+		noExternal: [
+			// 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
+			'@nolebase/vitepress-plugin-inline-link-preview',
+		],
+	},
 	server: {
 		host: '0.0.0.0',
 		open: true

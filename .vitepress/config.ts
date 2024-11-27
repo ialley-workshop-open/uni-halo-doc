@@ -5,7 +5,9 @@ import {
 	GitChangelog,
 	GitChangelogMarkdownSection,
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
-
+import {
+	InlineLinkPreviewElementTransform
+} from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 
 export default defineConfig({
 	vite: {
@@ -16,6 +18,17 @@ export default defineConfig({
 			}),
 			GitChangelogMarkdownSection(),
 		],
+		optimizeDeps: {
+			exclude: [
+				'@nolebase/vitepress-plugin-inline-link-preview/client',
+			],
+		},
+		ssr: {
+			noExternal: [
+				// 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
+				'@nolebase/vitepress-plugin-inline-link-preview',
+			],
+		},
 	},
 	lang: 'zh-CN',
 	appearance: 'dark',
@@ -382,6 +395,7 @@ export default defineConfig({
 			md.use(mdItCustomAttrs, 'image', {
 				'data-fancybox': 'gallery'
 			});
+			md.use(InlineLinkPreviewElementTransform)
 		}
 	},
 	sitemap: {
