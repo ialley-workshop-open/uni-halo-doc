@@ -2,7 +2,7 @@
   "name": "uni-halo-doc",
   "version": "0.0.1",
   "description": "uni-halo v2丨移动端博客应用说明文档",
-	"type": "module",
+  "type": "module",
   "author": {
     "name": "小莫唐尼",
     "email": "1431128779@qq.com",
@@ -23,6 +23,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@nolebase/vitepress-plugin-git-changelog": "^2.10.0",
     "@types/node": "^18.7.18",
     "eslint": "^8.23.1",
     "less": "^4.1.3",

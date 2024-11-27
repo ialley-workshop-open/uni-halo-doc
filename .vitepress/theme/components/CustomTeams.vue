@@ -62,7 +62,6 @@ function shuffleArray(array) {
 			:members='contributors'
 		/>
 	</VPTeamPage>
-
 </template>
 
 <style scoped>
@@ -93,7 +92,18 @@ function shuffleArray(array) {
 }
 
 
-.VPTeamPage{
-	margin-top: 0!important;
+.VPTeamPage {
+	margin-top: 0 !important;
+}
+
+</style>
+
+<style>
+
+/* 需要隐藏贡献记录,团队页面 */
+.VPPage {
+	#贡献者, #页面历史, .vp-nolebase-git-changelog, .vp-nolebase-git-changelog {
+		display: none !important;
+	}
 }
 </style>

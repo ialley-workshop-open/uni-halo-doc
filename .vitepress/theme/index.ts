@@ -13,6 +13,11 @@ import CustomDialog from "./components/CustomDialog.vue";
 import CustomFriendLinks from "./components/CustomFriendLinks.vue";
 import CustomTeams from "./components/CustomTeams.vue";
 
+import {
+	NolebaseGitChangelogPlugin
+} from '@nolebase/vitepress-plugin-git-changelog/client'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+
 export default {...DefaultTheme,
 	Layout:CustomLayout,
   enhanceApp({ app }) {
@@ -22,5 +27,6 @@ export default {...DefaultTheme,
 		app.component("CustomDialog",CustomDialog)
 		app.component("CustomFriendLinks",CustomFriendLinks)
 		app.component("CustomTeams",CustomTeams)
-  }
+		app.use(NolebaseGitChangelogPlugin)
+	}
 };

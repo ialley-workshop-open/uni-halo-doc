@@ -1,8 +1,22 @@
 import { defineConfig } from 'vitepress';
 import path from 'path';
 import mdItCustomAttrs from 'markdown-it-custom-attrs';
+import {
+	GitChangelog,
+	GitChangelogMarkdownSection,
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
+
 
 export default defineConfig({
+	vite: {
+		plugins: [
+			GitChangelog({
+				// 填写在此处填写您的仓库链接
+				repoURL: () => 'https://github.com/nolebase/integrations',
+			}),
+			GitChangelogMarkdownSection(),
+		],
+	},
 	lang: 'zh-CN',
 	appearance: 'dark',
 	title: 'uni-halo',
