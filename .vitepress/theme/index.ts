@@ -55,7 +55,10 @@ const theme: ThemeConfig = {
 		});
 		app.use(NolebaseEnhancedReadabilitiesPlugin);
 		app.provide(ReadabilitiesInjectionKey, {
-			// 配置...
+			spotlight: {
+				defaultToggle: true
+			}
+			// 其他配置...
 		});
 	}
 };
