@@ -132,10 +132,10 @@ export default defineConfig({
 	srcDir: `${path.resolve(process.cwd())}/src`,
 	themeConfig: {
 		logo: '/logo.png',
-		editLink: {
-			text: '为此页提供修改建议',
-			pattern: 'https://github.com/ialley-workshop-open/uni-halo-doc/tree/main/:path'
-		},
+		// editLink: {
+		// 	text: '为此页提供修改建议',
+		// 	pattern: 'https://github.com/ialley-workshop-open/uni-halo-doc/tree/main/:path'
+		// },
 		socialLinks: [
 			{
 				icon: 'github',
