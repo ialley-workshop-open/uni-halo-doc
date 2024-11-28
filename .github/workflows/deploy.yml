@@ -14,6 +14,8 @@ jobs:
       # 安装 pnpm
       - name: 安装 pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: 配置镜像源
         run: pnpm config set registry https://registry.npmmirror.com
