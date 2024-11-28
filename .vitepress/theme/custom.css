@@ -130,6 +130,11 @@
 		right: initial;
 		transform: translate(-50%, -50%);
 	}
+	.VPHomeHero .image-bg {
+		left: 50%;
+		right: initial;
+		transform: translate(-50%, -50%);
+	}
 }
 
 @media (min-width: 768px) {

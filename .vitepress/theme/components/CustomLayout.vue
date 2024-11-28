@@ -86,6 +86,12 @@
 		<template #nav-screen-content-after>
 			<slot name="nav-screen-content-after" />
 		</template>
+		<template #nav-bar-title-after>
+			<span class='app-version'>2.0.6</span>
+		</template>
+		<template #home-hero-info-after>
+			<CustomHomeStars></CustomHomeStars>
+		</template>
 	</Layout>
 </template>
 
@@ -95,6 +101,7 @@ import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import XiaoButton from './ui/XiaoButton.vue';
 import CustomAppPreview from './CustomAppPreview.vue';
+import CustomHomeStars from './CustomHomeStars.vue';
 
 const { Layout } = DefaultTheme;
 const data = useData();
@@ -464,4 +471,18 @@ function handleShowNotify() {
 		}
 	}
 }
+
+.app-version{
+	height: 20px;
+	display: inline-flex;
+	align-items: center;
+	color: var(--vp-c-brand);
+	font-size: 10px;
+	margin-left: 4px;
+	background-color: azure;
+	padding: 0 4px;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
 </style>
