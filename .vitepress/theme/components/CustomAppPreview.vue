@@ -148,8 +148,8 @@ function handleShowConfetti(event: any) {
 
 .app-qrcode.visible {
 	display: flex;
-	animation: qrcodeAni 1s ease-in-out forwards;
-	animation-delay: 2s;
+	animation: qrcodeAni 0.5s ease-in-out forwards;
+	animation-delay: 1.5s;
 }
 
 .app-qrcode-img {

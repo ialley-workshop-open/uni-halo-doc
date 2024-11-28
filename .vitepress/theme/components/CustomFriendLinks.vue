@@ -50,12 +50,35 @@
 
 	<div class='others'>
 		<div class='head'>
-			<h3 class='title'>🥳 其他友链（{{ others.length }}）</h3>
+			<h3 class='title'>🥳 站长博主（{{ friends.length }}）</h3>
 			<p class='sub-title'>技术、博客、生活等其他站点</p>
 		</div>
 		<div class='body'>
-			<div v-if='others.length!==0' class='links'>
-				<div class='link-card' v-for='(item,index) in others' :key='index'>
+			<div v-if='friends.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in friends' :key='index'>
+					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
+						<div class='link-card-cover'>
+							<img class='link-card-cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
+						</div>
+						<div class='link-card-info'>
+							<h4 class='link-card-info_name'>{{ item.name }}</h4>
+							<p class='link-card-info_desc clamp'>{{ item.desc }}</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div v-else class='empty'>暂无数据，欢迎加入本站友链</div>
+		</div>
+	</div>
+
+	<div class='others'>
+		<div class='head'>
+			<h3 class='title'>🥳 开源项目（{{ openSources.length }}）</h3>
+			<p class='sub-title'>项目使用技术和优秀的开源项目推荐</p>
+		</div>
+		<div class='body'>
+			<div v-if='openSources.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in openSources' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
 						<div class='link-card-cover'>
 							<img class='link-card-cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
@@ -77,13 +100,15 @@ import { ref } from 'vue';
 
 const donate = ref([]);
 const recommends = ref([]);
-const others = ref([]);
+const friends = ref([]);
+const openSources = ref([]);
 
 const getFriendLinks = () => {
 	fetch('https://uni-halo.925i.cn/data/links.json').then(res => res.json()).then(res => {
 		donate.value = res.donate;
 		recommends.value = res.recommends;
-		others.value = res.others;
+		friends.value = res.friends;
+		openSources.value = res.openSources;
 	}).catch(err => {
 		console.error('日志：获取友链失败，', err);
 	});

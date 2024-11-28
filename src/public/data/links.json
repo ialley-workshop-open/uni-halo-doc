@@ -40,34 +40,7 @@
 			"screenshot": "https://uni-halo.925i.cn/screenshot.png"
 		}
 	],
-	"others": [
-		{
-			"name": "Halo",
-			"image": "https://www.halo.run/upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png",
-			"link": "https://www.halo.run/",
-			"desc": "强大易用的开源建站工具。",
-			"screenshot": "https://blog.925i.cn/upload/halo_screenshot.png"
-		},	{
-			"name": "uni-app",
-			"image": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/uni.png",
-			"link": "https://uniapp.dcloud.net.cn/",
-			"desc": "一个使用 Vue.js 开发所有前端应用的框架。",
-			"screenshot": ""
-		},
-		{
-			"name": "tm-vuetify",
-			"image": "https://jx2d.cn/images/logo_min.png",
-			"link": "https://jx2d.cn/",
-			"desc": "UniApp 跨端UI组件库。",
-			"screenshot": ""
-		},
-		{
-			"name": "mp-html",
-			"image": "https://github.com/jin-yufeng/mp-html/blob/master/docs/assets/logo/logo.png?raw=true",
-			"link": "https://github.com/jin-yufeng/mp-html",
-			"desc": "一个强大的小程序富文本组件。",
-			"screenshot": ""
-		},
+	"friends": [
 		{
 			"name": "秋叶资源",
 			"image": "http://touch.qybhl.top/i/2024/08/19/66c2cb8f03040.png",
@@ -101,6 +74,43 @@
 			"image": "https://52he.cc/upload/7.webp",
 			"link": "https://52he.cc",
 			"desc": "愿我如星君如月，夜夜流光相皎洁。",
+			"screenshot": ""
+		}
+	],
+	"openSources": [
+		{
+			"name": "Halo",
+			"image": "https://www.halo.run/upload/2021/03/Adaptive256-463ca9b92e2d40268431018c07735842.png",
+			"link": "https://www.halo.run/",
+			"desc": "强大易用的开源建站工具。",
+			"screenshot": "https://blog.925i.cn/upload/halo_screenshot.png"
+		},
+		{
+			"name": "uni-app",
+			"image": "https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/uni.png",
+			"link": "https://uniapp.dcloud.net.cn/",
+			"desc": "一个使用 Vue.js 开发所有前端应用的框架。",
+			"screenshot": ""
+		},
+		{
+			"name": "unibest",
+			"image": "https://unibest.tech/logo.svg",
+			"link": "https://unibest.tech/",
+			"desc": "最好的 uniapp 开发框架。",
+			"screenshot": ""
+		},
+		{
+			"name": "tm-vuetify",
+			"image": "https://jx2d.cn/images/logo_min.png",
+			"link": "https://jx2d.cn/",
+			"desc": "UniApp 跨端UI组件库。",
+			"screenshot": ""
+		},
+		{
+			"name": "mp-html",
+			"image": "https://github.com/jin-yufeng/mp-html/blob/master/docs/assets/logo/logo.png?raw=true",
+			"link": "https://github.com/jin-yufeng/mp-html",
+			"desc": "一个强大的小程序富文本组件。",
 			"screenshot": ""
 		}
 	]
