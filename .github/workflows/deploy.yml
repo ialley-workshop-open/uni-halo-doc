@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      # 安装 pnpm
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 配置镜像源
+        run: pnpm config set registry https://registry.npmmirror.com
+
       # 拉取代码
       - name: 拉取代码
         uses: actions/checkout@v2
@@ -18,6 +25,9 @@ jobs:
           persist-credentials: false
 
       # 1、生成静态文件
+      - name: 安装依赖
+        run: pnpm install
+
       - name: 构建项目
         run: pnpm && pnpm build
 
