@@ -31,7 +31,7 @@ jobs:
         run: pnpm install
 
       - name: 构建项目
-        run: pnpm && pnpm build
+        run: pnpm build
 
       # 2、上传到服务器
       - name: 上传到服务器
