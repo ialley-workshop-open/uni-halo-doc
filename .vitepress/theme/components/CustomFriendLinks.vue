@@ -1,12 +1,12 @@
 <template>
 	<div class='recommends'>
 		<div class='head'>
-			<h3 class='title'>🥳 赞助打赏（{{ donate.length }}）</h3>
-			<p class='sub-title'>给本项目捐助和赞助的博主，排名不分前后</p>
+			<h3 class='title'>🥳 {{ linkData.donates.title }}（{{ linkData.donates.list.length }}）</h3>
+			<p class='sub-title'>{{ linkData.donates.description }}</p>
 		</div>
 		<div class='body'>
-			<div v-if='donate.length!==0' class='links'>
-				<div class='link-card' v-for='(item,index) in donate' :key='index'>
+			<div v-if='linkData.donates.list.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in linkData.donates.list ' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
 						<div class='link-card-cover'>
 							<img class='link-card-cover_image cover_image' :src='item.screenshot' :alt='item.name' data-fancybox='gallery' />
@@ -25,12 +25,12 @@
 	</div>
 	<div class='recommends'>
 		<div class='head'>
-			<h3 class='title'>🥳 开发贡献（{{ recommends.length }}）</h3>
-			<p class='sub-title'>参与项目贡献的开发者，排名不分前后</p>
+			<h3 class='title'>🥳 {{ linkData.contributions.title }}（{{ linkData.contributions.list.length }}）</h3>
+			<p class='sub-title'>{{ linkData.contributions.description }}</p>
 		</div>
 		<div class='body'>
-			<div v-if='recommends.length!==0' class='links'>
-				<div class='link-card' v-for='(item,index) in recommends' :key='index'>
+			<div v-if='linkData.contributions.list.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in linkData.contributions.list' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
 						<div class='link-card-cover'>
 							<img class='link-card-cover_image cover_image' :src='item.screenshot' :alt='item.name' data-fancybox='gallery' />
@@ -50,12 +50,12 @@
 
 	<div class='others'>
 		<div class='head'>
-			<h3 class='title'>🥳 站长博主（{{ friends.length }}）</h3>
-			<p class='sub-title'>技术、博客、生活等其他站点</p>
+			<h3 class='title'>🥳 {{ linkData.friends.title }}（{{ linkData.friends.list.length }}）</h3>
+			<p class='sub-title'>{{ linkData.friends.description }}</p>
 		</div>
 		<div class='body'>
-			<div v-if='friends.length!==0' class='links'>
-				<div class='link-card' v-for='(item,index) in friends' :key='index'>
+			<div v-if='linkData.friends.list.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in linkData.friends.list' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
 						<div class='link-card-cover'>
 							<img class='link-card-cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
@@ -73,12 +73,12 @@
 
 	<div class='others'>
 		<div class='head'>
-			<h3 class='title'>🥳 开源项目（{{ openSources.length }}）</h3>
-			<p class='sub-title'>项目使用技术和优秀的开源项目推荐</p>
+			<h3 class='title'>🥳 {{ linkData.openSources.title }}（{{ linkData.openSources.list.length }}）</h3>
+			<p class='sub-title'>{{ linkData.openSources.description }}</p>
 		</div>
 		<div class='body'>
-			<div v-if='openSources.length!==0' class='links'>
-				<div class='link-card' v-for='(item,index) in openSources' :key='index'>
+			<div v-if='linkData.openSources.list.length!==0' class='links'>
+				<div class='link-card' v-for='(item,index) in linkData.openSources.list' :key='index'>
 					<a class='link-card-content' :href='item.link' :title='item.name' target='_blank'>
 						<div class='link-card-cover'>
 							<img class='link-card-cover_image' :src='item.image' :alt='item.name' data-fancybox='gallery' />
@@ -96,19 +96,35 @@
 </template>
 
 <script setup lang='ts'>
-import { ref } from 'vue';
+import { reactive } from 'vue';
 
-const donate = ref([]);
-const recommends = ref([]);
-const friends = ref([]);
-const openSources = ref([]);
+const linkData = reactive({
+	donates: {
+		title: '赞助打赏',
+		description: '给本项目捐助和赞赏的博主，排名不分前后',
+		list: []
+	},
+	contributions: {
+		title: '开发贡献',
+		description: '参与项目贡献的开发者，排名不分前后',
+		list: []
+	},
+	friends: {
+		title: '站长博主',
+		description: '技术、博客、生活等其他站点',
+		list: []
+	},
+	openSources: {
+		title: '开源项目',
+		description: '项目使用技术和优秀的开源项目推荐',
+		list: []
+	}
+});
+
 
 const getFriendLinks = () => {
 	fetch('https://uni-halo.925i.cn/data/links.json').then(res => res.json()).then(res => {
-		donate.value = res.donate;
-		recommends.value = res.recommends;
-		friends.value = res.friends;
-		openSources.value = res.openSources;
+		Object.assign(linkData, res);
 	}).catch(err => {
 		console.error('日志：获取友链失败，', err);
 	});
