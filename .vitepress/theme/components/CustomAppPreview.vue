@@ -2,10 +2,10 @@
 	<div class='toggle-visible-btn' @click='handleToggleVisible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
 		<div class='app-qrcode' :class='{"visible":visible}'>
-			<img class='app-qrcode-img' src='https://blog.925i.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
+			<img class='app-qrcode-img' src='https://blog.xiaoxiaomo.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
 			<h3 class='app-qrcode-title'>手机扫码预览H5版</h3>
 		</div>
-		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.925i.cn/uni-halo' frameborder='0'></iframe>
+		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.xiaoxiaomo.cn/uni-halo' frameborder='0'></iframe>
 	</div>
 
 </template>

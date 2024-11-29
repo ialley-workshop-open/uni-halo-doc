@@ -12,7 +12,7 @@
 
 微信扫描以下二维码或者微信搜索小程序【小莫唐尼】即可预览
 
-![在线体验](https://blog.925i.cn/upload/xiaochengxu.gif)
+![在线体验](https://blog.xiaoxiaomo.cn/upload/xiaochengxu.gif)
 
 ## 功能清单
 
@@ -35,7 +35,7 @@
 
 QQ 交流群：632969367
 
-![QQ交流群](https://blog.925i.cn/upload/qun.png)
+![QQ交流群](https://blog.xiaoxiaomo.cn/upload/qun.png)
 
 ## 开源协议
 

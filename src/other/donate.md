@@ -8,7 +8,7 @@
 
 |                       支付宝                       |                       微信                        |                        QQ                         |
 | :------------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------------: |
-| ![logo2.png](https://blog.925i.cn/upload/zf_zfb_skm.png) | ![logo2.png](https://blog.925i.cn/upload/zf_wx_zsm.png) | ![logo2.png](https://blog.925i.cn/upload/zf_qq_skm.png) |
+| ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_zfb_skm.png) | ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_wx_zsm.png) | ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_qq_skm.png) |
 
 [//]: # ()
 [//]: # (## 赞助记录)

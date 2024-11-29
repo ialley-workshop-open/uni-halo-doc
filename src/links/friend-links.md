@@ -15,9 +15,9 @@
 
 - 站点名称：小莫唐尼
 - 站点类型：技术丨生活（任选一）
-- 站点头像：https://blog.925i.cn/upload/avatar.jpg
-- 站点截图：https://blog.925i.cn/uplaod/xiao_screenshot.png
-- 站点链接：https://blog.925i.cn/
+- 站点头像：https://blog.xiaoxiaomo.cn/upload/avatar.jpg
+- 站点截图：https://blog.xiaoxiaomo.cn/uplaod/xiao_screenshot.png
+- 站点链接：https://blog.xiaoxiaomo.cn/
 - 站点描述：一个爱凑热闹，喜欢捣鼓前端的博主。
 
 ## 本站信息

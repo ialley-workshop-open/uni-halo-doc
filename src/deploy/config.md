@@ -101,27 +101,27 @@ export default HaloTokenConfig;
 
 ### 2.1 插件信息
 
-![预览](https://blog.925i.cn/upload/uni-halo-p-1.png)
+![预览](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-1.png)
 
 ### 2.2 基本配置
 
-![基本配置](https://blog.925i.cn/upload/uni-halo-p-2.png)
+![基本配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-2.png)
 
 ### 2.3 应用配置
 
-![应用配置](https://blog.925i.cn/upload/uni-halo-p-3.png)
+![应用配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-3.png)
 
 ### 2.4 页面配置
 
-![页面配置](https://blog.925i.cn/upload/uni-halo-p-4.png)
+![页面配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-4.png)
 
 ### 2.5 我的配置
 
-![我的配置](https://blog.925i.cn/upload/uni-halo-p-5.png)
+![我的配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-5.png)
 
 ### 2.6 图片配置
 
-![图片配置](https://blog.925i.cn/upload/uni-halo-p-6.png)
+![图片配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-6.png)
 
 ### 2.7 恋爱配置
 
@@ -129,7 +129,7 @@ export default HaloTokenConfig;
 
 #### 2.7.1 预览
 
-![恋爱配置](https://blog.925i.cn/upload/uni-halo-p-7.png)
+![恋爱配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-7.png)
 
 #### 2.7.2 获取相册标识
 
@@ -149,5 +149,5 @@ export default HaloTokenConfig;
 
 ### 2.8 插件配置
 
-![插件配置](https://blog.925i.cn/upload/uni-halo-p-8.png)
+![插件配置](https://blog.xiaoxiaomo.cn/upload/uni-halo-p-8.png)
 
