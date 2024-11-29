@@ -12,7 +12,7 @@
 const HaloTokenConfig = Object.freeze({
 
 		// 基础请求域名：你的Halo博客基础域名
-		BASE_API: 'https://demo.halo.run',
+		BASE_API: 'https://blog.xiaoxiaomo.cn',
 
 		// 通用系统token
 		systemToken: ``,

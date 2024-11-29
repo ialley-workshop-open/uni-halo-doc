@@ -1,39 +1,34 @@
 import { defineConfig } from 'vitepress';
 import path from 'path';
 import mdItCustomAttrs from 'markdown-it-custom-attrs';
-import {
-	GitChangelog,
-	GitChangelogMarkdownSection,
-} from '@nolebase/vitepress-plugin-git-changelog/vite'
-import {
-	InlineLinkPreviewElementTransform
-} from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite';
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
 
 export default defineConfig({
 	vite: {
 		plugins: [
 			GitChangelog({
 				// 填写在此处填写您的仓库链接
-				repoURL: () => 'https://github.com/nolebase/integrations',
+				repoURL: () => 'https://github.com/nolebase/integrations'
 			}),
-			GitChangelogMarkdownSection(),
+			GitChangelogMarkdownSection()
 		],
 		optimizeDeps: {
 			exclude: [
 				'@nolebase/vitepress-plugin-inline-link-preview/client',
 				'@nolebase/vitepress-plugin-enhanced-readabilities/client',
 				'vitepress',
-				'@nolebase/ui',
-			],
+				'@nolebase/ui'
+			]
 		},
 		ssr: {
 			noExternal: [
 				// 如果还有别的依赖需要添加的话，并排填写和配置到这里即可
 				'@nolebase/vitepress-plugin-inline-link-preview',
 				'@nolebase/vitepress-plugin-enhanced-readabilities',
-				'@nolebase/ui',
-			],
-		},
+				'@nolebase/ui'
+			]
+		}
 	},
 	lang: 'zh-CN',
 	appearance: 'dark',
@@ -395,12 +390,17 @@ export default defineConfig({
 	//   }
 	// }
 	markdown: {
+		//行号显示
+		lineNumbers: true,
+		image: {
+			lazyLoading: true
+		},
 		config: md => {
 			// use more markdown-it plugins!
 			md.use(mdItCustomAttrs, 'image', {
 				'data-fancybox': 'gallery'
 			});
-			md.use(InlineLinkPreviewElementTransform)
+			md.use(InlineLinkPreviewElementTransform);
 		}
 	},
 	sitemap: {

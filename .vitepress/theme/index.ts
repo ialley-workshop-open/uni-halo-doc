@@ -1,9 +1,8 @@
 import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import type { Theme as ThemeConfig } from 'vitepress';
-import './styles/vars.css';
-import './styles/blur.css';
-import './custom.css';
+import './styles/index.css';
+
 
 // 注册组件
 import CustomFooter from './components/CustomFooter.vue';
