@@ -11,6 +11,16 @@
 - 3、我的网站内容符合中国大陆法律法规；
 - 4、通过站长QQ `1431128779` 发送申请。
 
+## 本站信息
+
+- 站点名称：uni-halo
+- 站点类型：技术
+- 站点头像：https://uni-halo.925i.cn/logo.png
+- 站点截图：https://uni-halo.925i.cn/screenshot.png
+- 站点链接：https://uni-halo.925i.cn/
+- 站点描述：开源免费 Halo 博客小程序，支持多端编译。
+
+
 ## 申请模板
 
 - 站点名称：小莫唐尼
@@ -20,14 +30,6 @@
 - 站点链接：https://blog.xiaoxiaomo.cn/
 - 站点描述：一个爱凑热闹，喜欢捣鼓前端的博主。
 
-## 本站信息
-
-- 站点名称：uni-halo
-- 站点类型：技术
-- 站点头像：https://uni-halo.925i.cn/logo.png
-- 站点截图：https://uni-halo.925i.cn/screenshot.png
-- 站点链接：https://uni-halo.925i.cn/
-- 站点描述：开源免费 Halo 博客小程序，支持多端编译。
 
 ## 友链免责声明
 

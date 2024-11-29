@@ -240,7 +240,7 @@ export default defineConfig({
 					},
 					{
 						text: '作者博客',
-						link: 'https://blog.925i.cn'
+						link: 'https://blog.xiaoxiaomo.cn'
 					},
 					{
 						text: '巷子工坊',

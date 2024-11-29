@@ -11,7 +11,7 @@ uni-halo v2.0  已经支持通过插件（[UniHalo 配置](https://github.com/ia
 ## 一、相关地址
 
 - 作者主页：[https://www.xiaoxiaomo.cn](https://www.xiaoxiaomo.cn)
-- 作者博客：[https://blog.925i.cn](https://blog.925i.cn)
+- 作者博客：[https://blog.xiaoxiaomo.cn](https://blog.xiaoxiaomo.cn)
 - 官方文档：[https://uni-halo.925i.cn](https://uni-halo.925i.cn)
 - 代码仓库：[https://github.com/ialley-workshop-open/uni-halo](https://github.com/ialley-workshop-open/uni-halo)
 - 插件地址：[https://github.com/ialley-workshop-open/plugin-uni-halo](https://github.com/ialley-workshop-open/uni-halo)
