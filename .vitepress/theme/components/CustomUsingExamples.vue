@@ -32,7 +32,7 @@ const usingExamples = ref([
 	{
 		name: '小莫唐尼',
 		image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png',
-		link: 'https://b.925i.cn/',
+		link: 'https://blog.xiaoxiaomo.cn/',
 		nickname: '小莫唐尼'
 	},
 	{
