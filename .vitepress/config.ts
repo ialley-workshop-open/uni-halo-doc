@@ -226,10 +226,6 @@ export default defineConfig({
 				text: '相关链接',
 				items: [
 					{
-						text: 'v1.0 版本',
-						link: 'https://uni-halo.925i.cn/v1'
-					},
-					{
 						text: '作者主页',
 						link: 'https://www.xiaoxiaomo.cn/'
 					},
