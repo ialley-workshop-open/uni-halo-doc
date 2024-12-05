@@ -1,9 +1,15 @@
 <template>
 	<div class='toggle-visible-btn' @click='handleToggleVisible'>{{ visible ? '收起预览' : '在线预览' }}</div>
 	<div v-if='visible' class='custom-dialog' :class='[computedAniPosition]'>
-		<div class='app-qrcode' :class='{"visible":visible}'>
-			<img class='app-qrcode-img' src='https://blog.xiaoxiaomo.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
-			<h3 class='app-qrcode-title'>手机扫码预览H5版</h3>
+		<div class='app-qrcode-container' :class='{"visible":visible}'>
+			<div class='app-qrcode'>
+				<img class='app-qrcode-img' src='https://blog.xiaoxiaomo.cn/upload/mp_qrcode.jpg' alt='微信小程序二维码' data-fancybox='gallery' />
+				<h3 class='app-qrcode-title'>微信扫码预览小程序</h3>
+			</div>
+			<div class='app-qrcode'>
+				<img class='app-qrcode-img' src='https://blog.xiaoxiaomo.cn/upload/app-h5-qrcode.png' alt='H5二维码' data-fancybox='gallery' />
+				<h3 class='app-qrcode-title'>手机扫码预览H5版</h3>
+			</div>
 		</div>
 		<iframe sandbox='allow-scripts allow-same-origin' class='app-iframe' src='https://blog.xiaoxiaomo.cn/uni-halo' frameborder='0'></iframe>
 	</div>
@@ -132,25 +138,35 @@ function handleShowConfetti(event: any) {
 	animation: dialogAniRight 0.2s ease-in-out forwards;
 }
 
+.app-qrcode-container {
+	height: 100%;
+	display: none;
+	opacity: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 24px 0;
+}
+
+.app-qrcode-container.visible {
+	display: flex;
+	animation: qrcodeAni 0.5s ease-in-out forwards;
+	animation-delay: 1.5s;
+}
+
 .app-qrcode {
 	background-color: #ffffff;
 	border-radius: 12px;
 	overflow: hidden;
 	width: 220px;
 	padding: 16px;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
-	display: none;
-	opacity: 0;
 }
 
-.app-qrcode.visible {
-	display: flex;
-	animation: qrcodeAni 0.5s ease-in-out forwards;
-	animation-delay: 1.5s;
-}
 
 .app-qrcode-img {
 	cursor: pointer;

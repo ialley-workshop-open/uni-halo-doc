@@ -8,6 +8,15 @@
 			"from": "腾讯云",
 			"visible": true,
 			"expire": "2024-11-30 23:59:59"
+		},
+		{
+			"cover": "/ads/lxware/halo_1panel.png",
+			"title": " Halo & 1Panel 专业版",
+			"description": "强大易用的建站和运维工具，订阅专业版解锁更多功能和服务 </br> 输入专属优惠码【<span style='color:#FF4C07;'>HJfS5bBK</span>】享受低至 <span style='color:#3B91EA;font-weight: bold;'>8折</span> 优惠！ </br> <span style='color:#3B91EA;text-decoration: underline;'>点击跳转购买页面！</span>",
+			"link": "https://www.lxware.cn?code=HJfS5bBK",
+			"from": "凌霞软件",
+			"visible": true,
+			"expire": "2099-11-30 23:59:59"
 		}
 	],
 	"asideNavAfter": [
@@ -37,6 +46,24 @@
 			"from": "腾讯云",
 			"visible": true,
 			"expire": "2024-11-30 23:59:59"
+		},
+		{
+			"cover": "/ads/lxware/halo_1panel_info.png",
+			"title": " Halo & 1Panel 专业版",
+			"description": "强大易用的开源建站工具，付费订阅专业版解锁更多功能和服务 </br> 点击跳转，输入专属优惠码【HJfS5bBK】享受 8.8 折优惠！ </br> <span style='color:#3B91EA;text-decoration: underline;'>点击跳转购买页面！</span>",
+			"link": "https://www.lxware.cn?code=HJfS5bBK",
+			"from": "凌霞软件",
+			"visible": true,
+			"expire": "2099-11-30 23:59:59"
+		},
+		{
+			"cover": "/ads/lxware/halo_1panel_qrcode.png",
+			"title": " Halo & 1Panel 专业版",
+			"description": "强大易用的开源建站工具，付费订阅专业版解锁更多功能和服务 </br> 点击跳转，输入专属优惠码【HJfS5bBK】享受 8.8 折优惠！ </br> <span style='color:#3B91EA;text-decoration: underline;'>点击跳转购买页面！</span>",
+			"link": "",
+			"from": "凌霞软件",
+			"visible": true,
+			"expire": "2099-11-30 23:59:59"
 		}
 	]
 }

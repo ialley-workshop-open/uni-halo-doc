@@ -70,21 +70,23 @@
 		</template>
 		<template #sidebar-nav-after>
 			<div v-if='ads.asideNavAfter.length!==0' class='recommend-container sidebar-nav-ads'>
-				<p class='item-title'>站长推荐：腾讯云特惠热卖产品</p>
+				<p class='item-title'>站长推荐：点击图片查看详情</p>
 				<template v-for='ad in ads.asideNavAfter'>
-					<a :href='ad.link' :title='ad.title' target='_blank'>
+					<a v-if='ad.link' :href='ad.link' :title='ad.title' target='_blank'>
 						<img :alt='ad.title' class='ad-image border no-padding'
 								 :src='ad.cover' />
 					</a>
+					<img v-else :alt='ad.title' class='ad-image border no-padding'
+							 :src='ad.cover' data-fancybox='gallery' />
 				</template>
 			</div>
 		</template>
 
 		<template #nav-bar-content-after>
-			<slot name="nav-bar-content-after" />
+			<slot name='nav-bar-content-after' />
 		</template>
 		<template #nav-screen-content-after>
-			<slot name="nav-screen-content-after" />
+			<slot name='nav-screen-content-after' />
 		</template>
 		<template #nav-bar-title-after>
 			<span class='app-version'>2.0.6</span>
@@ -298,7 +300,7 @@ function handleShowNotify() {
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		position: absolute;
-		left: 0;
+		left: -6px;
 		top: 50%;
 		transform: translateY(-55%);
 		animation: hot 2s linear infinite;
@@ -459,6 +461,7 @@ function handleShowNotify() {
 		width: 120px;
 		height: 120px;
 		border-radius: 6px;
+		object-fit: cover;
 	}
 
 	&-text {
@@ -472,7 +475,7 @@ function handleShowNotify() {
 	}
 }
 
-.app-version{
+.app-version {
 	height: 20px;
 	display: inline-flex;
 	align-items: center;
