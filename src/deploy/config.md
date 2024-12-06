@@ -5,7 +5,8 @@
 ## 1. Token 配置
 
 ### 1.1 文件说明
-在项目根目录下找到 `token.config.template.js` 修改为 `token.config.js` 文件，文件内容如下：
+- 在项目根目录下找到 `token.config.template.js` 修改为 `token.config.js` 文件；
+- 文件内容如下：
 
 ```javascript
 /** 配置后台管理员token */
@@ -14,15 +15,18 @@ const HaloTokenConfig = Object.freeze({
 		// 基础请求域名：你的Halo博客基础域名
 		BASE_API: 'https://blog.xiaoxiaomo.cn',
 
-		// 通用系统token
+		// 通过 Halo后台系统创建的token
 		systemToken: ``,
-		// 匿名用户token（暂时用不到）
+
+		// 匿名用户token（暂时用不到，不需要填写）
 		anonymousToken: ``
 
 });
 
 export default HaloTokenConfig;
 ```
+
+<br />
 
 ### 1.2 权限说明
 
@@ -32,20 +36,23 @@ export default HaloTokenConfig;
 
 - 评论组件：[https://www.halo.run/store/apps/app-YXyaD](https://www.halo.run/store/apps/app-YXyaD)
 - 搜索组件：[https://www.halo.run/store/apps/app-DlacW](https://www.halo.run/store/apps/app-DlacW)
-- 链接查看：[https://www.halo.run/store/apps/app-hfbQg](https://www.halo.run/store/apps/app-hfbQg)
+- 链接管理：[https://www.halo.run/store/apps/app-hfbQg](https://www.halo.run/store/apps/app-hfbQg)
 - 图库管理：[https://www.halo.run/store/apps/app-BmQJW](https://www.halo.run/store/apps/app-BmQJW)
 - 瞬间插件：[https://www.halo.run/store/apps/app-SnwWD](https://www.halo.run/store/apps/app-SnwWD)
 
 #### 1.2.2 权限列表
 
-systemToken 需要的权限如下：
+`systemToken` 需要的权限如下：
 
-- 插件查看
-- 文章查看
-- 评论查看
-- 链接查看
-- 图库查看
-- 瞬间查看
+| 权限名称 | 使用说明     | 对应插件                                              |
+|------|----------|---------------------------------------------------|
+| 插件查看   | 无        | Halo内置                                            |
+| 文章查看   | 无        | Halo内置                                            |
+| 评论查看   | 对应文章评论功能 | [评论组件](https://www.halo.run/store/apps/app-YXyaD) |
+| 链接查看   | 对应友情链接功能 | [链接管理](https://www.halo.run/store/apps/app-hfbQg) |
+| 图库查看   | 对应图库功能   | [图库管理](https://www.halo.run/store/apps/app-hfbQg) |
+| 瞬间查看   | 对应瞬间功能   | [瞬间](https://www.halo.run/store/apps/app-hfbQg)   |
+
 
 ### 1.3 Token使用
 
@@ -57,9 +64,11 @@ systemToken 需要的权限如下：
 
 #### 1.3.2 配置Token
 
-复制生成的Token，粘贴到`uni-halo` 应用中的 `config/token.cnfig.js --- systemToken`中，如下图
+- 复制生成的Token
+- 粘贴到 `uni-halo` 应用中的 `config/token.cnfig.js` 中的 `systemToken` 字段中
+- 如下代码配置：
 
-```javascript
+```javascript [config/token.cnfig.js]
 
 /** 配置后台管理员token */
 const HaloTokenConfig = Object.freeze({
@@ -74,8 +83,13 @@ const HaloTokenConfig = Object.freeze({
 export default HaloTokenConfig;
 ```
 
+::: details 配置 Token 相关截图
+
 ![https://img.925i.cn/file/a171bded818ebe06d848f.png](https://img.925i.cn/file/a171bded818ebe06d848f.png)
 ![https://img.925i.cn/file/20d35b84f16cb9199feb9.png](https://img.925i.cn/file/20d35b84f16cb9199feb9.png)
+:::
+
+<br />
 
 #### 1.3.3 配置API
 

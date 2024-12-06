@@ -96,7 +96,7 @@
 ## 四、使用交流
 
 - 提交 issues：[Github Issues](https://github.com/ialley-workshop-open/uni-halo/issues)
-	丨 [Gitee Issues](https://gitee.com/ialley-workshop-open/uni-halo/issues)
+	丨 [Gitee Issues](https://github.com/ialley-workshop-open/uni-halo/issues)
 - 微信交流群：由于微信交流群时效性太短，所以有需要的话可以先加入QQ群，再邀请进微信群
 - QQ 交流群：632969367
 

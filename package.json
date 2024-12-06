@@ -6,15 +6,15 @@
   "author": {
     "name": "小莫唐尼",
     "email": "1431128779@qq.com",
-    "url": "https://gitee.com/XiaoMoDonnie"
+    "url": "https://github.com/XiaoMo-Donald"
   },
   "license": "MIT",
-  "homepage": "https://gitee.com/ialley-workshop-open/uni-halo-doc",
+  "homepage": "https://github.com/ialley-workshop-open/uni-halo-doc",
   "repository": {
-    "url": "https://gitee.com/ialley-workshop-open/uni-halo-doc.git"
+    "url": "https://github.com/ialley-workshop-open/uni-halo-doc.git"
   },
   "bugs": {
-    "url": "https://gitee.com/ialley-workshop-open/uni-halo/issues"
+    "url": "https://github.com/ialley-workshop-open/uni-halo-doc/issues"
   },
   "scripts": {
     "dev": "vitepress dev",

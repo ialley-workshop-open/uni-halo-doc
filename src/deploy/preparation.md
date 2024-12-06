@@ -18,7 +18,7 @@
 
 申请地址：[https://dev.dcloud.net.cn/](https://dev.dcloud.net.cn/)
 
-该账号用于登录 [`HBuilder X`](https://www.dcloud.io/hbuilderx.html) 开发工具和编译 [`uni-halo`](https://gitee.com/ialley-workshop-open/uni-halo) 项目
+该账号用于登录 [`HBuilder X`](https://www.dcloud.io/hbuilderx.html) 开发工具和编译 [`uni-halo`](https://github.com/ialley-workshop-open/uni-halo) 项目
 
 ::: tip 重要提示
 

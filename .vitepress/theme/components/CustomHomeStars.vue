@@ -6,11 +6,11 @@
 				src='https://img.shields.io/github/stars/ialley-workshop-open/uni-halo?logo=github&color=%234d80f0&link=https://github.com/ialley-workshop-open/uni-halo'
 			/>
 		</a>
-		<a href='https://gitee.com/ialley-workshop-open/uni-halo/stargazers' target='_blank' title='Github forks'>
+		<a href='https://github.com/ialley-workshop-open/uni-halo/stargazers' target='_blank' title='Github forks'>
 			<img alt='GitHub forks' src='https://img.shields.io/github/forks/ialley-workshop-open/uni-halo'>
 		</a>
-		<a href='https://gitee.com/ialley-workshop-open/uni-halo/stargazers' target='_blank' title='Gitee stars'>
-			<img src='https://gitee.com/ialley-workshop-open/uni-halo/badge/star.svg?theme=gray' alt='star' />
+		<a href='https://github.com/ialley-workshop-open/uni-halo/stargazers' target='_blank' title='Gitee stars'>
+			<img src='https://github.com/ialley-workshop-open/uni-halo/badge/star.svg?theme=gray' alt='star' />
 		</a>
 		<a href='https://github.com/ialley-workshop-open/uni-halo/releases' target='_blank' title='Github Release'>
 			<img alt='GitHub Release' src='https://img.shields.io/github/v/release/ialley-workshop-open/uni-halo'>
