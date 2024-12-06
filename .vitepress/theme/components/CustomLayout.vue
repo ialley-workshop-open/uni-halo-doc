@@ -250,23 +250,25 @@ function handleShowNotify() {
 		return;
 	}
 	nextTick(async () => {
-		await sleep(5000);
-
+		const notifyRes = await fetch('/data/notify.json').then(res => res.json());
+		await sleep(notifyRes.sleep);
 		// @ts-ignore
 		const notify = new Notify({
-			title: '消息通知',
-			body: 'uni-halo2.x 已支持H5在线体验，点击文档右侧【在线预览】即可弹出预览界面。',
-			badge: 'https://uni-halo.925i.cn/logo.png',
-			icon: 'https://uni-halo.925i.cn/logo.png',
-			image: 'https://uni-halo.925i.cn/images/uni-halo2.x.jpg',
-			link: 'https://www.halo.run/store/apps/app-ryemX',
-			requireInteraction: !localStorage.getItem('NOTIFY_SHOW'),
-			autoClose: false
+			...{
+				requireInteraction: !localStorage.getItem('NOTIFY_SHOW'),
+				onclick: () => {
+					if (notifyRes.link) {
+						window.open(notifyRes.link, '_blank');
+					}
+				}
+			},
+			...notifyRes
 		});
-
-		notify.show();
-		sessionStorage.setItem('NOTIFY_SHOW', 'visible');
-		localStorage.setItem('NOTIFY_SHOW', 'visible');
+		if (notifyRes.enable) {
+			notify.show();
+			sessionStorage.setItem('NOTIFY_SHOW', 'visible');
+			localStorage.setItem('NOTIFY_SHOW', 'visible');
+		}
 	});
 }
 
