@@ -1,5 +1,5 @@
 <template>
-	<div class='using-examples'>
+	<div class='using-examples' v-if='usingExamples.length!==0'>
 		<div class='using-examples_head'>
 			<h1 class='using-examples_head__title'>使用案例</h1>
 			<p class='using-examples_head__subtitle'>
@@ -28,56 +28,14 @@
 <script setup lang='ts'>
 import { ref } from 'vue';
 
-const usingExamples = ref([
-	{
-		name: '小莫唐尼',
-		image: 'https://img.925i.cn/file/9938903c5c66ccc943034.png',
-		link: 'https://blog.xiaoxiaomo.cn/',
-		nickname: '小莫唐尼'
-	},
-	{
-		name: '小志IT知识库',
-		image: 'https://img.925i.cn/file/afd433249706eae10882f.png',
-		link: 'javascript:void(0);',
-		nickname: '小志'
-	},
-	{
-		name: '小陈子的站点',
-		image: 'https://img.925i.cn/file/288e41d4abdfd2fc736c8.png',
-		link: 'javascript:void(0);',
-		nickname: '小陈子'
-	},
-	{
-		name: '鲨鱼辣椒的Blog',
-		image: 'https://img.925i.cn/file/18f946732b29926e9d2ab.png',
-		link: 'javascript:void(0);',
-		nickname: '鲨鱼辣椒'
-	},
-	{
-		name: '柳意梧情博客',
-		image: 'https://img.925i.cn/file/7c7f9e7badc43cea5d976.png',
-		link: 'javascript:void(0);',
-		nickname: 'liuyiwuqing'
-	},
-	{
-		name: '芈亓的Blog',
-		image: 'https://img.925i.cn/file/8c3613566a8ef1f301320.png',
-		link: 'javascript:void(0);',
-		nickname: '芈亓'
-	},
-	{
-		name: '皮皮猪',
-		image: 'https://img.925i.cn/file/a133a7a80bea4fcc980d0.png',
-		link: 'javascript:void(0);',
-		nickname: '皮皮猪'
-	},
-	{
-		name: '听闻のBlog',
-		image: 'https://img.925i.cn/file/60a5f58845e8bb8f2532e.png',
-		link: 'javascript:void(0);',
-		nickname: '听闻'
-	}
-]);
+const usingExamples = ref([]);
+
+const getExamples = () => {
+	fetch('/data/examples.json').then((res) => res.json()).then((res) => {
+		usingExamples.value = res;
+	}).catch((err) => console.error(err));
+};
+getExamples();
 </script>
 
 <style scoped lang='less'>
