@@ -59,19 +59,19 @@ export default defineConfig({
 			'link',
 			{
 				rel: 'stylesheet',
-				href: 'https://fastly.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css'
+				href: './libs/canvas-confetti/fancybox.css'
 			}
 		],
 		[
 			'script',
 			{
-				src: 'https://fastly.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js'
+				src: './libs/canvas-confetti/fancybox.umd.js'
 			}
 		],
 		[
 			'script',
 			{
-				src: 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js'
+				src: './libs/canvas-confetti/confetti.browser.min.js'
 			}
 		],
 		[
@@ -121,7 +121,7 @@ export default defineConfig({
 		[
 			'script',
 			{
-				src: 'https://uni-halo.925i.cn/libs/notify.min.js'
+				src: './libs/notify.min.js'
 			}
 		]
 	],
