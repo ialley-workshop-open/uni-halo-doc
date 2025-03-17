@@ -91,7 +91,7 @@ function handleShowConfetti(event: any) {
 }
 
 .custom-dialog {
-	height: 650px;
+	height: 80vh;
 	position: fixed;
 	z-index: 99;
 	overflow: hidden;
@@ -119,7 +119,7 @@ function handleShowConfetti(event: any) {
 }
 
 .app-iframe {
-	width: 330px;
+	width: 360px;
 	height: 100%;
 	overflow: hidden;
 	overflow-y: auto;
