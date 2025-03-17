@@ -1,5 +1,5 @@
 <template>
-	<div :class='calcButtonClass' class='xiao-button'>
+	<div :class='calcButtonClass' class='xiao-button' :style='calcButtonStyle'>
 		<slot>{{ title }}</slot>
 	</div>
 </template>
@@ -23,16 +23,36 @@ const props = defineProps({
 	useAnimation: {
 		type: Boolean,
 		default: false
+	},
+	bgColor: {
+		type: String,
+		default: ''
+	},
+	color: {
+		type: String,
+		default: ''
 	}
 });
 
 const calcButtonClass = computed(() => {
-	let _classList = []
+	let classList = [];
 	if (props.useAnimation) {
-		_classList.push('animation')
+		classList.push('animation');
 	}
-	return _classList.concat([props.type, props.size]);
+	return classList.concat([props.type, props.size]);
 });
+
+const calcButtonStyle = computed(() => {
+	let styles = {};
+	if (props.bgColor) {
+		styles['background-color'] = props.bgColor;
+	}
+	if (props.color) {
+		styles['color'] = props.color;
+	}
+	return styles;
+});
+
 </script>
 
 <style scoped>

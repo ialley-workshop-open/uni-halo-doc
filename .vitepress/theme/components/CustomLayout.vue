@@ -49,7 +49,8 @@
 							</div>
 						</div>
 						<template v-if='ads.dialog.length!==0'>
-							<a v-for='(ad,index) in ads.dialog' :key='index' :href='ad.link' :title='ad.title' target='_blank'>
+							<a v-for='(ad,index) in ads.dialog.filter(x=>x.types.includes("text-image"))' :key='index' :href='ad.link' :title='ad.title'
+								 target='_blank'>
 								<div class='recommend-app-item ad'>
 									<img :alt='ad.title' class='recommend-app-cover ad' :src='ad.cover' />
 									<div class='recommend-app-text ad'>
@@ -58,6 +59,25 @@
 									</div>
 								</div>
 							</a>
+							<div v-for='(ad,index) in ads.dialog.filter(x=>x.types.includes("image"))' :key='index'>
+								<div class='recommend-app-item ad' >
+									<div class='recommend-app-text ad' style='width:100%;padding-left: 0'>
+										<div :style='{
+											display: "flex",
+											justifyContent: "space-between",
+											marginBottom: "10px",
+										}'>
+											<strong style='font-size: 18px'>{{ ad.title }}</strong>
+											<a :href='ad.link' target='_blank' :title='ad.title'>
+												<XiaoButton size='mini' type='primary' title='点击查看详情'  ></XiaoButton>
+											</a>
+										</div>
+										<img :alt='ad.title' class='recommend-app-cover ad' :style='{
+											width:"100%",height:ad.coverHeight,
+										}' :src='ad.cover' data-fancybox='gallery' />
+									</div>
+								</div>
+							</div>
 						</template>
 					</div>
 				</template>
@@ -232,7 +252,7 @@ const ads = ref({
 });
 
 function getAds() {
-	fetch('https://uni-halo.925i.cn/data/ads.json').then(res => res.json()).then(res => {
+	fetch('/data/ads.json').then(res => res.json()).then(res => {
 		ads.value = res;
 		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
 		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
