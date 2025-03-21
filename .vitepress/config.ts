@@ -205,6 +205,10 @@ export default defineConfig({
 				link: 'https://www.uhalo.pro/'
 			},
 			{
+				text: '1.0版本',
+				link: 'https://uni-halo.925i.cn/v1'
+			},
+			{
 				text: '团队',
 				link: '/team/team',
 				activeMatch: '/team/'
