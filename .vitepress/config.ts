@@ -155,10 +155,6 @@ export default defineConfig({
 		},
 		nav: [
 			{
-				text: 'UHalo PRO',
-				link: 'https://uhalo.925i.cn/'
-			},
-			{
 				text: '2.0版本',
 				link: 'https://uni-halo.925i.cn/'
 			},
@@ -179,51 +175,6 @@ export default defineConfig({
 				text: '常见问题',
 				link: '/problem/questions',
 				activeMatch: '/questions/'
-			},
-			{
-				text: '相关链接',
-				items: [
-					{
-						text: 'UHalo PRO',
-						link: 'https://uhalo.925i.cn/'
-					},
-					{
-						text: 'uni-halo 2.0',
-						link: 'https://uni-halo.925i.cn/'
-					},
-					{
-						text: '作者主页',
-						link: 'https://www.925i.cn'
-					},
-					{
-						text: '作者博客',
-						link: 'https://b.925i.cn'
-					},
-					{
-						text: 'Gitee',
-						link: 'https://gitee.com/ialley-workshop-open/uni-halo'
-					},
-					{
-						text: 'Github',
-						link: 'https://github.com/ialley-workshop-open/uni-halo'
-					},
-					{
-						text: 'uni-app',
-						link: 'https://uniapp.dcloud.net.cn'
-					},
-					{
-						text: 'Halo',
-						link: 'https://halo.run'
-					},
-					{
-						text: 'mp-html',
-						link: 'https://jin-yufeng.gitee.io/mp-html/#/'
-					}
-				]
-			},
-			{
-				text: '赞赏项目',
-				link: '/other/donate'
 			}
 		],
 		sidebar: {
