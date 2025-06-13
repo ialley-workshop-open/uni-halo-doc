@@ -18,6 +18,7 @@
 
 <script lang='ts' setup>
 import { computed, ref } from 'vue';
+import { checkPropertyInWindow } from '../../../src/utils';
 
 const visible = ref(false);
 const isInitVisible = ref(true);
@@ -40,7 +41,7 @@ function handleToggleVisible(event: any) {
 function handleShowConfetti(event: any) {
 	if (!isInitVisible.value) return;
 	// @ts-ignore
-	if (confetti) {
+	if (checkPropertyInWindow("confetti")) {
 		// @ts-ignore
 		confetti({
 			zIndex: 9999,

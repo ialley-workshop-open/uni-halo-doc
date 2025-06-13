@@ -124,9 +124,8 @@ import DefaultTheme from 'vitepress/theme';
 import XiaoButton from './ui/XiaoButton.vue';
 import CustomAppPreview from './CustomAppPreview.vue';
 import CustomHomeStars from './CustomHomeStars.vue';
-
-import adJSON from '../../../src/public/data/ads.json';
-import notifyJSON from '../../../src/public/data/notify.json';
+import { checkPropertyInWindow } from '../../../src/utils';
+import { AppConfigs } from '../../../src/config';
 
 const { Layout } = DefaultTheme;
 const data = useData();
@@ -186,13 +185,13 @@ onMounted(() => {
 });
 
 function handleShowConfetti(event: any) {
-	// @ts-ignore
-	if (!confetti) return;
-	// @ts-ignore
-	confetti({
-		zIndex: 9999, particleCount: 50,
-		origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
-	});
+	if (checkPropertyInWindow('confetti')) {
+		// @ts-ignore
+		confetti({
+			zIndex: 9999, particleCount: 50,
+			origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
+		});
+	}
 }
 
 function handleShowGlobalConfetti() {
@@ -214,12 +213,13 @@ function handleShowGlobalConfetti() {
 		}
 
 		let particleCount = 50 * (timeLeft / duration);
-		// @ts-ignore
-		if (!confetti) return;
-		// @ts-ignore
-		confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-		// @ts-ignore
-		confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+
+		if (checkPropertyInWindow('confetti')) {
+			// @ts-ignore
+			confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+			// @ts-ignore
+			confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+		}
 	}, 250);
 }
 
@@ -260,9 +260,11 @@ const ads = ref({
 
 
 function getAds() {
-	ads.value = adJSON;
-	ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
-	ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
+	fetch(AppConfigs.getBaseUrl() + '/data/ads.json').then(res => res.json()).then(res => {
+		ads.value = res;
+		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
+		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
+	}).catch(err => console.log(err));
 }
 
 getAds();
@@ -274,26 +276,27 @@ function sleep(time: number) {
 function handleShowNotify() {
 
 	// @ts-ignore
-	if (!Notify) return;
+	if(!checkPropertyInWindow('Notify')) return;
 
 	if (sessionStorage.getItem('NOTIFY_SHOW')) {
 		return;
 	}
 	nextTick(async () => {
-		await sleep(notifyJSON.sleep);
+		const notifyRes = await fetch(AppConfigs.getBaseUrl() + '/data/notify.json').then(res => res.json());
+		await sleep(notifyRes.sleep);
 		// @ts-ignore
 		const notify = new Notify({
 			...{
 				requireInteraction: !localStorage.getItem('NOTIFY_SHOW'),
 				onclick: () => {
-					if (notifyJSON.link) {
-						window.open(notifyJSON.link, '_blank');
+					if (notifyRes.link) {
+						window.open(notifyRes.link, '_blank');
 					}
 				}
 			},
-			...notifyJSON
+			...notifyRes
 		});
-		if (notifyJSON.enable) {
+		if (notifyRes.enable) {
 			notify.show();
 			sessionStorage.setItem('NOTIFY_SHOW', 'visible');
 			localStorage.setItem('NOTIFY_SHOW', 'visible');

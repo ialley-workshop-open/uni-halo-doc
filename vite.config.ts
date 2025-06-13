@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite';
+import path from 'path';
 
 export default defineConfig({
 	base: '/',
@@ -26,5 +27,10 @@ export default defineConfig({
 	server: {
 		host: '0.0.0.0',
 		open: true
+	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, './src'),
+		}
 	}
 });

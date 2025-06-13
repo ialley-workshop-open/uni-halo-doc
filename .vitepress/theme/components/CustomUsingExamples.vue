@@ -27,12 +27,14 @@
 
 <script setup lang='ts'>
 import { ref } from 'vue';
-import examplesJSON from '../../../src/public/data/examples.json';
+import { AppConfigs } from '../../../src/config';
 
 const usingExamples = ref([]);
 
 const getExamples = () => {
-	usingExamples.value = examplesJSON;
+	fetch(AppConfigs.getBaseUrl() + '/data/examples.json').then((res) => res.json()).then((res) => {
+		usingExamples.value = res;
+	}).catch((err) => console.error(err));
 };
 getExamples();
 </script>

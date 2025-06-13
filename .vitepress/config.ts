@@ -4,7 +4,6 @@ import mdItCustomAttrs from 'markdown-it-custom-attrs';
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite';
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
 
-
 export default defineConfig({
 	vite: {
 		plugins: [
