@@ -60,7 +60,7 @@
 								</div>
 							</a>
 							<div v-for='(ad,index) in ads.dialog.filter(x=>x.types.includes("image"))' :key='index'>
-								<div class='recommend-app-item ad' >
+								<div class='recommend-app-item ad'>
 									<div class='recommend-app-text ad' style='width:100%;padding-left: 0'>
 										<div :style='{
 											display: "flex",
@@ -69,7 +69,7 @@
 										}'>
 											<strong style='font-size: 18px'>{{ ad.title }}</strong>
 											<a :href='ad.link' target='_blank' :title='ad.title'>
-												<XiaoButton size='mini' type='primary' title='点击查看详情'  ></XiaoButton>
+												<XiaoButton size='mini' type='primary' title='点击查看详情'></XiaoButton>
 											</a>
 										</div>
 										<img :alt='ad.title' class='recommend-app-cover ad' :style='{
@@ -124,6 +124,9 @@ import DefaultTheme from 'vitepress/theme';
 import XiaoButton from './ui/XiaoButton.vue';
 import CustomAppPreview from './CustomAppPreview.vue';
 import CustomHomeStars from './CustomHomeStars.vue';
+
+import adJSON from '../../../src/public/data/ads.json';
+import notifyJSON from '../../../src/public/data/notify.json';
 
 const { Layout } = DefaultTheme;
 const data = useData();
@@ -184,6 +187,8 @@ onMounted(() => {
 
 function handleShowConfetti(event: any) {
 	// @ts-ignore
+	if (!confetti) return;
+	// @ts-ignore
 	confetti({
 		zIndex: 9999, particleCount: 50,
 		origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
@@ -209,6 +214,8 @@ function handleShowGlobalConfetti() {
 		}
 
 		let particleCount = 50 * (timeLeft / duration);
+		// @ts-ignore
+		if (!confetti) return;
 		// @ts-ignore
 		confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
 		// @ts-ignore
@@ -251,12 +258,11 @@ const ads = ref({
 	asideNavAfter: []
 });
 
+
 function getAds() {
-	fetch('/data/ads.json').then(res => res.json()).then(res => {
-		ads.value = res;
-		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
-		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
-	}).catch(err => console.log(err));
+	ads.value = adJSON;
+	ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
+	ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
 }
 
 getAds();
@@ -266,25 +272,28 @@ function sleep(time: number) {
 }
 
 function handleShowNotify() {
+
+	// @ts-ignore
+	if (!Notify) return;
+
 	if (sessionStorage.getItem('NOTIFY_SHOW')) {
 		return;
 	}
 	nextTick(async () => {
-		const notifyRes = await fetch('/data/notify.json').then(res => res.json());
-		await sleep(notifyRes.sleep);
+		await sleep(notifyJSON.sleep);
 		// @ts-ignore
 		const notify = new Notify({
 			...{
 				requireInteraction: !localStorage.getItem('NOTIFY_SHOW'),
 				onclick: () => {
-					if (notifyRes.link) {
-						window.open(notifyRes.link, '_blank');
+					if (notifyJSON.link) {
+						window.open(notifyJSON.link, '_blank');
 					}
 				}
 			},
-			...notifyRes
+			...notifyJSON
 		});
-		if (notifyRes.enable) {
+		if (notifyJSON.enable) {
 			notify.show();
 			sessionStorage.setItem('NOTIFY_SHOW', 'visible');
 			localStorage.setItem('NOTIFY_SHOW', 'visible');

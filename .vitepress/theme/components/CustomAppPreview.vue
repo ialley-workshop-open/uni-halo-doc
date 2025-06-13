@@ -40,13 +40,16 @@ function handleToggleVisible(event: any) {
 function handleShowConfetti(event: any) {
 	if (!isInitVisible.value) return;
 	// @ts-ignore
-	confetti({
-		zIndex: 9999,
-		particleCount: 100,
-		angle: 180,
-		spread: 75,
-		origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
-	});
+	if (confetti) {
+		// @ts-ignore
+		confetti({
+			zIndex: 9999,
+			particleCount: 100,
+			angle: 180,
+			spread: 75,
+			origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
+		});
+	}
 	setTimeout(() => {
 		isInitVisible.value = false;
 	}, isInitVisible.value ? 500 : 0);

@@ -97,6 +97,7 @@
 
 <script setup lang='ts'>
 import { reactive } from 'vue';
+import linksJSON from '../../../src/public/data/links.json';
 
 const linkData = reactive({
 	donates: {
@@ -121,13 +122,8 @@ const linkData = reactive({
 	}
 });
 
-
 const getFriendLinks = () => {
-	fetch('https://uni-halo.925i.cn/data/links.json').then(res => res.json()).then(res => {
-		Object.assign(linkData, res);
-	}).catch(err => {
-		console.error('日志：获取友链失败，', err);
-	});
+	Object.assign(linkData, linksJSON);
 };
 
 getFriendLinks();

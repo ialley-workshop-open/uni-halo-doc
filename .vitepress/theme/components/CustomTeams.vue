@@ -1,17 +1,14 @@
 <script setup lang='ts'>
 import { VPTeamMembers, VPTeamPage, VPTeamPageTitle } from 'vitepress/theme';
 import { onMounted, ref } from 'vue';
+import teamJSON from '../../../src/public/data/team.json';
 
 const members = ref([]);
 const contributors = ref([]);
 
 const getTeams = () => {
-	fetch('https://uni-halo.925i.cn/data/team.json').then(res => res.json()).then(res => {
-		contributors.value = res.contributors;
-		members.value = res.members;
-	}).catch(err => {
-		console.error('日志：获取团队信息失败，', err);
-	});
+	contributors.value = teamJSON.contributors;
+	members.value = teamJSON.members;
 };
 
 onMounted(() => {
