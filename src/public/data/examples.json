@@ -40,5 +40,15 @@
 		"image": "https://img.925i.cn/file/60a5f58845e8bb8f2532e.png",
 		"link": "javascript:void(0);",
 		"nickname": "听闻"
-	}
+	},{
+	"name": "梦荟楼的后花园",
+	"image": "/images/xiaochengxu/menghuilou.jpg",
+	"link": "https://oniya.cn",
+	"nickname": "梦荟楼"
+},{
+	"name": " 白雾茫茫丶",
+	"image": "/images/xiaochengxu/baiwumangmang.jpg",
+	"link": "https://baiwumm.com",
+	"nickname": " 白雾茫茫丶"
+}
 ]

@@ -13,13 +13,13 @@
 				:key='index'
 				:title='item.name'
 			>
-				<a :href='item.link' target='_blank'>
+				<div class='using-examples_list__item_link' :title='item.name' @click='handleToLink(item)'>
 					<div class='using_image'>
 						<img :src='item.image' :alt='item.name' data-fancybox='gallery' />
 					</div>
 					<div class='using_name'>{{ item.name }}</div>
 					<div class='using_nickname'>（站长：{{ item.nickname }}）</div>
-				</a>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -37,6 +37,12 @@ const getExamples = () => {
 	}).catch((err) => console.error(err));
 };
 getExamples();
+
+
+const handleToLink = (link: any) => {
+	if (!link.link.startsWith('http')) return;
+	window.open(link.link);
+};
 </script>
 
 <style scoped lang='less'>
@@ -96,16 +102,14 @@ getExamples();
 			padding: 24px;
 			border-radius: 12px;
 
-			> a {
-				text-decoration: none;
+			&_link:hover {
+				pointer: cursor;
+				text-decoration: underline;
+				text-decoration-color: #00a0f4;
 			}
 
 			&:hover {
 				transform: translateY(-4px);
-
-				> a {
-					text-decoration: underline;
-				}
 			}
 
 			.using_image {
