@@ -109,7 +109,7 @@
 			<slot name='nav-screen-content-after' />
 		</template>
 		<template #nav-bar-title-after>
-			<span class='app-version'>2.0.6</span>
+			<span class='app-version'>2.0.8</span>
 		</template>
 		<template #home-hero-info-after>
 			<CustomHomeStars></CustomHomeStars>

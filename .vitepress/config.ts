@@ -199,10 +199,10 @@ export default defineConfig({
 				'Copyright © 2022-<span id="siteEndYear"></span> <a href="/" target="_self" title="uni-halo">UNI-HALO</a>丨AGPL-3.0丨<a href="https://www.xiaoxiaomo.cn/" target="_blank" title="小莫唐尼个人主页">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
 		},
 		nav: [
-			{
-				text: 'UHalo PRO',
-				link: 'https://www.uhalo.pro/'
-			},
+			// {
+			// 	text: 'UHalo PRO',
+			// 	link: 'https://www.uhalo.pro/'
+			// },
 			{
 				text: '1.0版本',
 				link: 'https://uni-halo.925i.cn/v1'
@@ -243,10 +243,10 @@ export default defineConfig({
 						text: '作者博客',
 						link: 'https://blog.xiaoxiaomo.cn'
 					},
-					{
-						text: '巷子工坊',
-						link: 'https://ialley.uhalo.pro/'
-					},
+					// {
+					// 	text: '巷子工坊',
+					// 	link: 'https://ialley.uhalo.pro/'
+					// },
 					{
 						text: '配置插件',
 						link: 'https://github.com/ialley-workshop-open/plugin-uni-halo'
@@ -303,24 +303,20 @@ export default defineConfig({
 							link: '/deploy/intro'
 						},
 						{
-							text: '准备工作',
-							link: '/deploy/preparation'
-						},
-						{
-							text: '运行项目',
-							link: '/deploy/run'
-						},
-						{
 							text: '插件配置',
 							link: '/deploy/config'
 						},
 						{
-							text: '调试预览',
-							link: '/deploy/preview'
+							text: '准备工作',
+							link: '/deploy/preparation'
 						},
 						{
 							text: '发布小程序',
 							link: '/deploy/wx-release'
+						},
+						{
+							text: '完全流程',
+							link: '/deploy/full-content'
 						}
 						// {
 						// 	text: '应用发布（APP）',
