@@ -8,8 +8,8 @@ const contributors = ref([]);
 
 const getTeams = () => {
 	fetch(AppConfigs.getBaseUrl() + '/data/team.json').then(res => res.json()).then(res => {
-		contributors.value = res.contributors;
-		members.value = res.members;
+		contributors.value = res.contributors.filter(item=>item.visible);
+		members.value = res.members.filter(item => item.visible);
 	}).catch(err => {
 		console.error('日志：获取团队信息失败，', err);
 	});
