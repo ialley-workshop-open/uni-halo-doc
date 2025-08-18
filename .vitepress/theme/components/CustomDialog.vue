@@ -3,7 +3,7 @@
 	<div v-if='data.show' class='custom-dialog animation'>
 		<div class='custom-dialog-header center'>
 			<div class='title'>{{ props.title }}</div>
-			<span class='close' title='关闭' @click='handleConfirm'>+</span>
+			<span v-if='props.useClose' class='close' title='关闭' @click='handleConfirm'>+</span>
 		</div>
 		<div class='custom-dialog-body'>
 			<slot name='body'></slot>
@@ -29,6 +29,10 @@ const props = defineProps({
 	title: {
 		type: String,
 		default: '系统通知'
+	},
+	useClose:{
+		type: Boolean,
+		default: true
 	}
 });
 

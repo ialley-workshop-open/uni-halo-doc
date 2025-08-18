@@ -87,6 +87,39 @@
 				</template>
 			</CustomDialog>
 			<CustomAppPreview></CustomAppPreview>
+			<CustomDialog v-if='validKnowTokenDialog.show' :use-close='false' title='重要提示'>
+				<template #body>
+					<div class='valid-token'>
+						<div class='valid-token-content'>
+							<div style='font-weight: bold;margin-bottom: 6px;font-size: 15px;'>亲爱的 uni-halo 用户：</div>
+							<p>感谢您使用 uni-halo（以下称：本应用），为了保障您的 Halo博客 账号安全，我们需要提示您一些重要的内容。</p>
+							<p>由于最新版本的 uni-halo 已经通过 UniHalo配置插件设置 TOKEN，部分使用本应用的用户会创建一个带有较高权限的 TOKEN，可能会遇到 TOKEN
+								泄露的风险， 在您使用本应用之前时，请务必阅读并同意以下内容。</p>
+							<ul class='valid-token-content-list'>
+								<li>1. 您的 TOKEN 是您在使用 uni-halo 程序的时候，部分接口请求需要的凭证。</li>
+								<li>2. 您的 TOKEN 在提供给 uni-halo 的时候，会通过明文方式在 uni-halo 的 配置接口中返回。</li>
+								<li>3. 为了保障您的账号安全，uni-halo 推荐您创建token给 uni-halo 使用的时候，不要给全部的权限。</li>
+								<li>4. 我会详细阅读 uni-halo 小程序的使用文档，确保我不会创建带有其他权限的 TOKEN。</li>
+								<li>5. 我已经知晓 TOKEN 在 uni-halo 中使用的安全性，并自己承担不按照要求配置带来的泄露风险。</li>
+							</ul>
+						</div>
+						<div class='valid-input-wrapper'>
+							<div class='valid-input-wrapper-label'>
+								请在下方输入框中输入：<span class='valid-input-wrapper-tip'>{{ validKnowTokenDialog.validText }}</span>
+							</div>
+							<input class='valid-input-wrapper-input' v-model='validKnowTokenDialog.validTextValue' type='text' placeholder='请输入提示内容以确认'
+										 @input='onValidTokenInput' />
+							<div v-if='!validKnowTokenDialog.valid.ok' class='valid-input-error'>
+								{{ validKnowTokenDialog.valid.msg }}
+							</div>
+						</div>
+					</div>
+				</template>
+				<template #footer>
+					<XiaoButton :use-animation='true' size='mini' title='我已经知晓，TOKEN 泄露的风险' type='primary'
+											@click='handleConformValidKnowTokenDialog'></XiaoButton>
+				</template>
+			</CustomDialog>
 		</template>
 		<template #sidebar-nav-after>
 			<div v-if='ads.asideNavAfter.length!==0' class='recommend-container sidebar-nav-ads'>
@@ -118,7 +151,7 @@
 </template>
 
 <script lang='ts' setup>
-import { nextTick, onMounted, ref } from 'vue';
+import { nextTick, onMounted, reactive, ref } from 'vue';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import XiaoButton from './ui/XiaoButton.vue';
@@ -156,6 +189,10 @@ const checkShow = () => {
 	} else {
 		dialogShow.value = true;
 	}
+
+	if (!dialogShow.value) {
+		handleCheckShowValidKnowTokenDialog();
+	}
 };
 const checkShowOnce = () => {
 	let dialogInfo = sessionStorage.getItem(DIALOG_KEY);
@@ -163,6 +200,9 @@ const checkShowOnce = () => {
 		dialogShow.value = false;
 	} else {
 		dialogShow.value = true;
+	}
+	if (!dialogShow.value) {
+		handleCheckShowValidKnowTokenDialog();
 	}
 };
 
@@ -243,6 +283,8 @@ function handleConfirm(e: any, dialogInfo: unknown) {
 	handleShowConfetti(e);
 	setTimeout(() => {
 		dialogShow.value = false;
+
+		handleCheckShowValidKnowTokenDialog();
 	}, 100);
 }
 
@@ -276,7 +318,7 @@ function sleep(time: number) {
 function handleShowNotify() {
 
 	// @ts-ignore
-	if(!checkPropertyInWindow('Notify')) return;
+	if (!checkPropertyInWindow('Notify') || window.Notify == undefined) return;
 
 	if (sessionStorage.getItem('NOTIFY_SHOW')) {
 		return;
@@ -303,6 +345,61 @@ function handleShowNotify() {
 		}
 	});
 }
+
+
+const validKnowTokenDialog = reactive({
+	show: false,
+	validText: '我已知晓TOKEN的泄露风险，并同意使用uni-halo应用',
+	validTextValue: '',
+	valid: {
+		ok: true,
+		msg: ''
+	}
+});
+
+const onValidTokenInput = () => {
+	validKnowTokenDialog.valid.ok = true;
+	validKnowTokenDialog.valid.msg = '';
+};
+
+const handleCheckShowValidKnowTokenDialog = () => {
+	if (localStorage.getItem('uni_halo_VALID_KNOW_TOKEN')) return;
+	validKnowTokenDialog.show = true;
+};
+
+const handleConformValidKnowTokenDialog = () => {
+	if (!validKnowTokenDialog.validTextValue || validKnowTokenDialog.validTextValue !== validKnowTokenDialog.validText) {
+		validKnowTokenDialog.valid = {
+			ok: false,
+			msg: '提示：请输入提示内容以确认您已知晓 TOKEN 的泄露风险'
+		};
+		return;
+	}
+	validKnowTokenDialog.valid.ok = true;
+	validKnowTokenDialog.show = false;
+	localStorage.setItem('uni_halo_VALID_KNOW_TOKEN', 'visible');
+	alert('您已知晓 TOKEN 的泄露风险,后续将不再提示，感谢您的使用');
+
+	// @ts-ignore
+	if (checkPropertyInWindow('Notify') && window.Notify != undefined) {
+		nextTick(async () => {
+			// @ts-ignore
+			const notify = new Notify({
+				title: '消息通知',
+				body: '您已知晓 TOKEN 的泄露风险,后续将不再提示，感谢您的使用',
+				enable: true,
+				badge: 'https://uni-halo.925i.cn/logo.png',
+				icon: 'https://uni-halo.925i.cn/logo.png',
+				autoClose: true,
+				sleep: 5000,
+				requireInteraction: false
+			});
+			if (notify) {
+				notify.show();
+			}
+		});
+	}
+};
 
 </script>
 
@@ -522,4 +619,72 @@ function handleShowNotify() {
 	font-weight: 700;
 }
 
+
+.valid-token {
+	max-width: 680px;
+	font-size: 14px;
+	line-height: 2em;
+}
+
+.valid-token-content {
+	font-size: 14px;
+	//font-weight: bold;
+}
+.valid-token-content p{
+	text-indent: 2em;
+}
+.valid-token-content-list {
+	margin-top: 12px;
+	box-sizing: border-box;
+	list-style: none;
+	padding: 12px;
+	border: 1px solid red;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: normal;
+	color: red;
+	background-color: rgba(255, 0, 0, 0.035);
+}
+
+.valid-input-wrapper {
+	margin-top: 22px;
+}
+
+.valid-input-wrapper-label {
+	box-sizing: border-box;
+	padding: 12px;
+	border: 1px solid green;
+	border-radius: 6px;
+	font-size: 14px;
+	font-weight: normal;
+	color: green;
+	background-color: rgba(0, 255, 0, 0.035);
+}
+
+.valid-input-wrapper-tip {
+	padding-bottom: 3px;
+	border-bottom: 2px dashed red;
+}
+
+.valid-input-wrapper-input {
+	width: 100%;
+	margin-top: 6px;
+	border-radius: 6px;
+	border: 1px solid #333;
+	padding: 3px 12px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+}
+
+.valid-input-wrapper-input::placeholder {
+	color: #666;
+}
+
+.valid-input-error {
+	margin-top: 2px;
+	color: red;
+	font-size: 12px;
+	font-weight: normal;
+}
 </style>
