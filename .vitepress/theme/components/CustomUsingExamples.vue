@@ -5,6 +5,10 @@
 			<p class='using-examples_head__subtitle'>
 				免费开源，以下站长都在使用
 			</p>
+			<div>
+				<a class='btn-submit-example' href='https://github.com/ialley-workshop-open/uni-halo/issues/23' target='_blank'
+					 title='提交我的案例'>提交我的案例</a>
+			</div>
 		</div>
 		<ul class='using-examples_list'>
 			<li
@@ -87,7 +91,7 @@ const handleToLink = (link: any) => {
 		gap: 16px;
 
 		&__item {
-			margin-top: 0!important;
+			margin-top: 0 !important;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
@@ -147,6 +151,27 @@ const handleToLink = (link: any) => {
 				white-space: nowrap;
 			}
 		}
+	}
+}
+
+.btn-submit-example {
+	cursor: pointer;
+	background-color: var(--vp-button-brand-bg);
+	backdrop-filter: blur(6px);
+	border-radius: 36px;
+	color: #ffffff;
+	font-size: 14px;
+	padding: 6px 12px;
+	box-sizing: border-box;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+	user-select: none;
+	text-decoration: none;
+	transition: all 0.35s ease-in-out;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+
+	&:hover {
+		color: var(--vp-button-brand-hover);
+		background-color: var(--vp-button-brand-hover-bg);
 	}
 }
 
