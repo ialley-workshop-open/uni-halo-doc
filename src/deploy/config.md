@@ -14,6 +14,7 @@
 - 链接管理：https://www.halo.run/store/apps/app-hfbQg
 - 图库管理：https://www.halo.run/store/apps/app-BmQJW
 - 瞬间插件：https://www.halo.run/store/apps/app-SnwWD
+- 投票管理：https://www.halo.run/store/apps/app-veyvzyhv
 
 以上的插件，可以直接访问地址去安装（推荐部署好你自己的 `Halo` 应用后，在应用后的插件中进行搜索安装）相关插件截图，如下：
 
@@ -61,7 +62,11 @@
 
 ![PixPin_2025-08-15_18-59-28.png](https://blog.xiaoxiaomo.cn/upload/PixPin_2025-08-15_18-59-28.png)
 
+#### 4.1.7 投票管理
 
+用于提供投票功能, 可以在文章中添加投票功能, 并可以在投票管理中查看投票结果。
+
+![PixPin_2025-08-24_21-27-45.png](https://blog.xiaoxiaomo.cn/upload/PixPin_2025-08-24_21-27-45.png)
 
 ### 4.2 配置插件
 

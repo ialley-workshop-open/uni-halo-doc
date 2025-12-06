@@ -3,7 +3,7 @@ import {
   toValue,
   tryOnScopeDispose,
   unrefElement
-} from "./chunk-J6Q2UJBU.js";
+} from "./chunk-WQBVXQVA.js";
 import {
   computed,
   ref,
@@ -1041,7 +1041,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
   return trap;
 };
 
-// node_modules/.pnpm/@vueuse+integrations@11.2.0_focus-trap@7.6.2_vue@3.5.13_typescript@4.8.4_/node_modules/@vueuse/integrations/useFocusTrap.mjs
+// node_modules/.pnpm/@vueuse+integrations@11.2.0_26f62da36c3f31f90aced73ed837130a/node_modules/@vueuse/integrations/useFocusTrap.mjs
 function useFocusTrap(target, options = {}) {
   let trap;
   const { immediate, ...focusTrapOptions } = options;

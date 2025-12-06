@@ -57,7 +57,7 @@ var l = defineComponent({
   }
 });
 
-// node_modules/.pnpm/vitepress-plugin-comment-with-giscus@1.1.15_vue@3.5.13_typescript@4.8.4_/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js
+// node_modules/.pnpm/vitepress-plugin-comment-wi_073fa45bf8141427cb41720bf5f445b8/node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js
 var setGiscus = (props, frontmatter, defaultEnable = true) => {
   var _a;
   const defaultProps = {
