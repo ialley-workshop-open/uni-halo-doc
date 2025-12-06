@@ -82,15 +82,13 @@ const handleToLink = (link: any) => {
 		width: 100%;
 		list-style: none;
 		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 16px;
 
 		&__item {
-			width: 23.8%;
-			// width: 18.8%;
+			margin-top: 0!important;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -155,30 +153,22 @@ const handleToLink = (link: any) => {
 /* iPad */
 @media (max-width: 1368px) {
 	.using-examples_list {
-		padding: 0 24px;
 
-		&__item {
-			width: 23.9%;
-		}
 	}
 }
 
 /* phone */
 @media (max-width: 960px) {
 	.using-examples_list {
-		&__item {
-			width: 30%;
-		}
+
 	}
 }
 
 /* phone */
 @media (max-width: 768px) {
 	.using-examples_list {
-		padding: 0 24px;
 
 		&__item {
-			width: 46%;
 
 			.using_image {
 				margin-bottom: 12px;
@@ -198,10 +188,8 @@ const handleToLink = (link: any) => {
 /* phone */
 @media (max-width: 500px) {
 	.using-examples_list {
-		padding: 0 24px;
 
 		&__item {
-			width: 46%;
 
 			.using_image {
 				margin-bottom: 12px;

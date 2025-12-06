@@ -55,8 +55,14 @@
 	},
 	{
 		"name": "Dominic Blog",
-		"image": "https://private-user-images.githubusercontent.com/76522991/523037068-5300b5bd-2b28-4a2c-ae71-ec7c1c7b65aa.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQ5OTI0NTksIm5iZiI6MTc2NDk5MjE1OSwicGF0aCI6Ii83NjUyMjk5MS81MjMwMzcwNjgtNTMwMGI1YmQtMmIyOC00YTJjLWFlNzEtZWM3YzFjN2I2NWFhLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEyMDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMjA2VDAzMzU1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFjOTVjMGExN2E4YWM5YWYzMjdjNGIzODRmOGIyNmE2ZGY0NjcwZGU4Yzk3NjdiZDAxYzQ5NzcwZWRhZDY5MjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.TyHFn4_ldUGE7_P9JD-cpMDYB6styUEPa1Jn-gv7t_E",
+		"image": "/images/xiaochengxu/dominic.png",
 		"link": "https://www.dominickk.top/",
 		"nickname": "Dominic"
+	},
+	{
+		"name": "yusuble特效",
+		"image": "/images/xiaochengxu/yusuble.png",
+		"link": "",
+		"nickname": "yusuble"
 	}
 ]
