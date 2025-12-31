@@ -13,6 +13,7 @@ import CustomIframe from './components/CustomIframe.vue';
 import CustomDialog from './components/CustomDialog.vue';
 import CustomFriendLinks from './components/CustomFriendLinks.vue';
 import CustomTeams from './components/CustomTeams.vue';
+import CustomAppTopBanner from './components/CustomAppTopBanner.vue';
 
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client';
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css';
@@ -42,6 +43,7 @@ const theme: ThemeConfig = {
 		});
 	},
 	enhanceApp({ app }) {
+		app.component('CustomAppTopBanner', CustomAppTopBanner);
 		app.component('CustomFooter', CustomFooter);
 		app.component('CustomUsingExamples', CustomUsingExamples);
 		app.component('CustomIframe', CustomIframe);

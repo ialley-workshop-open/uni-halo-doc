@@ -29,7 +29,8 @@
 			</div>
 		</template>
 		<template #layout-top>
-			<CustomDialog v-if='dialogShow' title='站长推荐' @on-close='handleClose'>
+			<CustomAppTopBanner></CustomAppTopBanner>
+			<CustomDialog v-if='dialogShow' title='站长推荐' :zIndex='100' @on-close='handleClose'>
 				<template #body>
 					<div class='recommend-app'>
 						<div v-if='false' class='recommend-app-item pink'>
@@ -87,7 +88,7 @@
 				</template>
 			</CustomDialog>
 			<CustomAppPreview></CustomAppPreview>
-			<CustomDialog v-if='validKnowTokenDialog.show' :use-close='false' title='重要提示'>
+			<CustomDialog v-if='validKnowTokenDialog.show' :use-close='false' :zIndex='100' title='重要提示'>
 				<template #body>
 					<div class='valid-token'>
 						<div class='valid-token-content'>
@@ -154,11 +155,13 @@
 import { nextTick, onMounted, reactive, ref } from 'vue';
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
+import { checkPropertyInWindow } from '../../../src/utils';
+import { AppConfigs } from '../../../src/config';
 import XiaoButton from './ui/XiaoButton.vue';
 import CustomAppPreview from './CustomAppPreview.vue';
 import CustomHomeStars from './CustomHomeStars.vue';
-import { checkPropertyInWindow } from '../../../src/utils';
-import { AppConfigs } from '../../../src/config';
+import CustomAppTopBanner from './CustomAppTopBanner.vue';
+
 
 const { Layout } = DefaultTheme;
 const data = useData();
@@ -212,7 +215,6 @@ onMounted(() => {
 	} else {
 		setTimeout(checkShow, 500);
 	}
-	handleShowGlobalConfetti();
 
 	// 	设置网页底部的年份
 	const currentYear = new Date().getFullYear();
@@ -222,17 +224,18 @@ onMounted(() => {
 	}
 
 	handleShowNotify();
+	handleShowGlobalConfetti();
 });
 
-function handleShowConfetti(event: any) {
-	if (checkPropertyInWindow('confetti')) {
-		// @ts-ignore
-		confetti({
-			zIndex: 9999, particleCount: 50,
-			origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
-		});
-	}
-}
+// function handleShowConfetti(event: any) {
+// 	if (checkPropertyInWindow('confetti')) {
+// 		// @ts-ignore
+// 		confetti({
+// 			zIndex: 9999, particleCount: 50,
+// 			origin: { x: event.clientX / window.innerWidth, y: event.clientY / window.innerHeight }
+// 		});
+// 	}
+// }
 
 function handleShowGlobalConfetti() {
 	if (sessionStorage.getItem(CONFETTI_GLOBAL_KEY)) return;
@@ -280,7 +283,7 @@ function handleConfirm(e: any, dialogInfo: unknown) {
 	} else {
 		handleSaveDialogInfo(dialogInfo);
 	}
-	handleShowConfetti(e);
+	// handleShowConfetti(e);
 	setTimeout(() => {
 		dialogShow.value = false;
 
@@ -289,7 +292,7 @@ function handleConfirm(e: any, dialogInfo: unknown) {
 }
 
 function handleClose(e: any) {
-	handleShowConfetti(e);
+	// handleShowConfetti(e);
 	setTimeout(() => {
 		dialogShow.value = false;
 		handleCheckShowValidKnowTokenDialog();
@@ -631,9 +634,11 @@ const handleConformValidKnowTokenDialog = () => {
 	font-size: 14px;
 	//font-weight: bold;
 }
-.valid-token-content p{
+
+.valid-token-content p {
 	text-indent: 2em;
 }
+
 .valid-token-content-list {
 	margin-top: 12px;
 	box-sizing: border-box;

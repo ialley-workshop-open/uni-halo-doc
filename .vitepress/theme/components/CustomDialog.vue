@@ -1,6 +1,10 @@
 <template>
-	<div v-if='data.show' class='custom-dialog-mask'></div>
-	<div v-if='data.show' class='custom-dialog animation'>
+	<div v-if='data.show' class='custom-dialog-mask' :style='{
+		zIndex: props.zIndex,
+	}'></div>
+	<div v-if='data.show' class='custom-dialog animation' :style='{
+		zIndex: props.zIndex + 1,
+	}'>
 		<div class='custom-dialog-header center'>
 			<div class='title'>{{ props.title }}</div>
 			<span v-if='props.useClose' class='close' title='关闭' @click='handleConfirm'>+</span>
@@ -18,7 +22,7 @@
 </template>
 
 <script lang='ts' setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import XiaoButton from './ui/XiaoButton.vue';
 
 type DataType = {
@@ -30,9 +34,13 @@ const props = defineProps({
 		type: String,
 		default: '系统通知'
 	},
-	useClose:{
+	useClose: {
 		type: Boolean,
 		default: true
+	},
+	zIndex: {
+		type: Number,
+		default: 98
 	}
 });
 
@@ -40,7 +48,7 @@ const data = ref<DataType>({
 	show: true
 });
 
-const handleConfirm = (e:any) => {
+const handleConfirm = (e: any) => {
 	emit('on-close', e);
 };
 
@@ -71,8 +79,9 @@ const handleConfirm = (e:any) => {
 
 .custom-dialog.animation {
 	transform: translate(-50%, -50%) scale(0);
-	animation: dialogAni 0.4s ease-in-out forwards,shake 0.35s 1s ease-in-out forwards;
+	animation: dialogAni 0.4s ease-in-out forwards, shake 0.35s 1s ease-in-out forwards;
 }
+
 @keyframes dialogAni {
 	0% {
 		transform: translate(-50%, -50%) scale(0);
@@ -88,7 +97,7 @@ const handleConfirm = (e:any) => {
 	}
 
 	25% {
-		transform:translate(-50%, -50%) scale(1)rotateZ(3deg);
+		transform: translate(-50%, -50%) scale(1) rotateZ(3deg);
 	}
 
 	50% {
@@ -103,6 +112,7 @@ const handleConfirm = (e:any) => {
 		transform: translate(-50%, -50%) scale(1) rotateZ(0deg);
 	}
 }
+
 .custom-dialog-header {
 	position: relative;
 	box-sizing: border-box;
