@@ -125,6 +125,7 @@ const linkData = reactive({
 const getFriendLinks = () => {
 	fetch(AppConfigs.getBaseUrl() + '/data/links.json').then(res => res.json()).then(res => {
 		Object.assign(linkData, res);
+		linkData.openSources.list = linkData.openSources.list.filter((item: any) => item.visible);
 	}).catch(err => {
 		console.error('日志：获取友链失败，', err);
 	});
