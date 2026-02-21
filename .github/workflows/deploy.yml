@@ -49,3 +49,6 @@ jobs:
           publish_branch: gh-pages
           # 清除 gh-pages 分支旧文件
           force_orphan: true
+          # 指定 git 仓库配置
+          git_config: |
+            init.defaultBranch = main
