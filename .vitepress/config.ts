@@ -5,7 +5,7 @@ import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-p
 import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it';
 
 export default defineConfig({
-	base:'/uni-halo-doc/',
+	base:'/',
 	vite: {
 		plugins: [
 			GitChangelog({
