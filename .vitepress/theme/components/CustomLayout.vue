@@ -306,7 +306,7 @@ const ads = ref({
 
 
 function getAds() {
-	fetch(AppConfigs.getBaseUrl() + '/data/ads.json').then(res => res.json()).then(res => {
+	fetch(AppConfigs.getStaticBaseUrl() + '/data/ads.json').then(res => res.json()).then(res => {
 		ads.value = res;
 		ads.value.dialog = ads.value.dialog.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
 		ads.value.asideNavAfter = ads.value.asideNavAfter.filter(x => x.visible && new Date(x.expire).getTime() >= new Date().getTime());
@@ -328,7 +328,7 @@ function handleShowNotify() {
 		return;
 	}
 	nextTick(async () => {
-		const notifyRes = await fetch(AppConfigs.getBaseUrl() + '/data/notify.json').then(res => res.json());
+		const notifyRes = await fetch(AppConfigs.getStaticBaseUrl() + '/data/notify.json').then(res => res.json());
 		await sleep(notifyRes.sleep);
 		// @ts-ignore
 		const notify = new Notify({

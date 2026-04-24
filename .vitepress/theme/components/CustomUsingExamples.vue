@@ -36,7 +36,7 @@ import { AppConfigs } from '../../../src/config';
 const usingExamples = ref([]);
 
 const getExamples = () => {
-	fetch(AppConfigs.getBaseUrl() + '/data/examples.json').then((res) => res.json()).then((res) => {
+	fetch(AppConfigs.getStaticBaseUrl() + '/data/examples.json').then((res) => res.json()).then((res) => {
 		usingExamples.value = res;
 	}).catch((err) => console.error(err));
 };

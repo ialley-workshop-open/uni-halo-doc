@@ -9,5 +9,14 @@ export const AppConfigs = {
 		} else {
 			return 'https://uni-halo.925i.cn';
 		}
+	},
+	/**
+	 * 获取静态资源的地址
+	 * */
+	getStaticBaseUrl() {
+		if (import.meta.env.DEV) {
+			return '';
+		}
+		return 'https://gcore.jsdelivr.net/gh/uni-halo/uni-halo-static-resources/docs';
 	}
 };

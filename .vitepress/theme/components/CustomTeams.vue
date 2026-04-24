@@ -7,7 +7,7 @@ const members = ref([]);
 const contributors = ref([]);
 
 const getTeams = () => {
-	fetch(AppConfigs.getBaseUrl() + '/data/team.json').then(res => res.json()).then(res => {
+	fetch(AppConfigs.getStaticBaseUrl() + '/data/team.json').then(res => res.json()).then(res => {
 		contributors.value = res.contributors.filter(item=>item.visible);
 		members.value = res.members.filter(item => item.visible);
 	}).catch(err => {
