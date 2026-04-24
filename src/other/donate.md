@@ -6,9 +6,9 @@
 
 😘 为了项目能够持续发展，可以根据您的喜好支持一下本项目哦~
 
-|                       支付宝                       |                       微信                        |                        QQ                         |
-| :------------------------------------------------: | :-----------------------------------------------: | :-----------------------------------------------: |
-| ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_zfb_skm.png) | ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_wx_zsm.png) | ![logo2.png](https://blog.xiaoxiaomo.cn/upload/zf_qq_skm.png) |
+|                                                 支付宝                                                 |                                                微信                                                 |                                                QQ                                                 |
+|:---------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------:|
+| ![支付宝赞助](https://gcore.jsdelivr.net/gh/uni-halo/uni-halo-static-resources/author/ZFBRewardCode.png) | ![微信赞助](https://gcore.jsdelivr.net/gh/uni-halo/uni-halo-static-resources/author/WXRewardCode.png) | ![QQ赞助](https://gcore.jsdelivr.net/gh/uni-halo/uni-halo-static-resources/author/QQRewardCode.png) |
 
 [//]: # ()
 [//]: # (## 赞助记录)
