@@ -17,6 +17,6 @@ export const AppConfigs = {
 		if (import.meta.env.DEV) {
 			return '';
 		}
-		return 'https://gcore.jsdelivr.net/gh/uni-halo/uni-halo-static-resources/docs';
+		return 'https://gcore.jsdelivr.net/gh/ialley-workshop-open/uni-halo-doc/src/public/data'
 	}
 };
