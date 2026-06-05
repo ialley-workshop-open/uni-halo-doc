@@ -1,21 +1,21 @@
 <template>
 	<Layout>
 		<template #aside-outline-after>
-			<div class='recommend-container'>
+			<div  class='recommend-container'>
 				<p class='item-title'>在线体验</p>
 				<p class='item-desc'>uni-halo 小程序版本演示</p>
-				<img alt='小莫唐尼（小程序体验）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/a0c1a95b49b5db7f78248.png' />
+				<img alt='小莫唐尼' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/a0c1a95b49b5db7f78248.png' />
 				<img alt='官方交流群（QQ）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/b83b9e79695779c4344f3.png' />
-				<p class='item-title' style='margin-top: 24px;'>图图小绘（壁纸表情小程序）</p>
-				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个文案图库表情包小程序</p>
-				<div v-if='false' class='ad-image border'>
-					<img alt='图图小绘（微信小程序）' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />
-				</div>
-				<img alt='图图小绘（微信小程序）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/d316c4724f2dd3cac685c.jpg' />
-				<p class='item-title' style='margin-top: 24px;'>秒懂文案馆（微信公众号）</p>
-				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个内容丰富的微信公众号</p>
-				<img alt='秒懂文案馆（微信公众号）' class='ad-image border no-padding' data-fancybox='gallery'
-						 src='/mdwag.png' />
+<!--				<p class='item-title' style='margin-top: 24px;'>图图小绘（壁纸表情小程序）</p>-->
+<!--				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个文案图库表情包小程序</p>-->
+<!--				<div v-if='false' class='ad-image border'>-->
+<!--					<img alt='图图小绘（微信小程序）' data-fancybox='gallery' src='https://img.925i.cn/file/6fadeb1cb095944954a59.jpg' />-->
+<!--				</div>-->
+<!--				<img  alt='图图小绘（微信小程序）' class='ad-image' data-fancybox='gallery' src='https://img.925i.cn/file/d316c4724f2dd3cac685c.jpg' />-->
+<!--				<p class='item-title' style='margin-top: 24px;'>秒懂文案馆（微信公众号）</p>-->
+<!--				<p v-if='false' class='item-desc' style='margin-bottom: -6px;'>一个内容丰富的微信公众号</p>-->
+<!--				<img alt='秒懂文案馆（微信公众号）' class='ad-image border no-padding' data-fancybox='gallery'-->
+<!--						 src='/mdwag.png' />-->
 			</div>
 		</template>
 		<template #not-found>
@@ -42,7 +42,7 @@
 								<p> 精心分享聊天、朋友圈以及个性签名等类型文案！</p>
 							</div>
 						</div>
-						<div class='recommend-app-item pink'>
+						<div v-if='false' class='recommend-app-item pink'>
 							<img alt='秒懂文案馆' class='recommend-app-cover' data-fancybox='gallery' src='/mdwag_qrcode.jpg' />
 							<div class='recommend-app-text'>
 								<p><strong style='font-size: 18px'>《秒懂文案馆》</strong>- 微信公众号文案！</p>
@@ -104,7 +104,12 @@
 								<li>5. 我已经知晓 TOKEN 在 uni-halo 中使用的安全性，并自己承担不按照要求配置带来的泄露风险。</li>
 							</ul>
 						</div>
-						<div class='valid-input-wrapper'>
+						<div v-if='!isUseVaildInput' class='valid-input-wrapper'>
+							<div class='valid-input-wrapper-label'>
+								<span class='valid-input-wrapper-tip'>{{ validKnowTokenDialog.validText }}</span>
+							</div>
+						</div>
+						<div v-else class='valid-input-wrapper'>
 							<div class='valid-input-wrapper-label'>
 								请在下方输入框中输入：<span class='valid-input-wrapper-tip'>{{ validKnowTokenDialog.validText }}</span>
 							</div>
@@ -167,6 +172,7 @@ const { Layout } = DefaultTheme;
 const data = useData();
 
 const dialogShow = ref(false);
+const isUseVaildInput = ref(false);
 
 function handleComputedDiffHour(time1: any, time2: any) {
 	const _time1 = new Date(time1).getTime();
@@ -372,17 +378,20 @@ const handleCheckShowValidKnowTokenDialog = () => {
 };
 
 const handleConformValidKnowTokenDialog = () => {
-	if (!validKnowTokenDialog.validTextValue || validKnowTokenDialog.validTextValue !== validKnowTokenDialog.validText) {
-		validKnowTokenDialog.valid = {
-			ok: false,
-			msg: '提示：请输入提示内容以确认您已知晓 TOKEN 的泄露风险'
-		};
-		return;
+	if(isUseVaildInput.value){
+		if (!validKnowTokenDialog.validTextValue || validKnowTokenDialog.validTextValue !== validKnowTokenDialog.validText) {
+			validKnowTokenDialog.valid = {
+				ok: false,
+				msg: '提示：请输入提示内容以确认您已知晓 TOKEN 的泄露风险'
+			};
+			return;
+		}
+		alert('您已知晓 TOKEN 的泄露风险,后续将不再提示，感谢您的使用');
 	}
 	validKnowTokenDialog.valid.ok = true;
 	validKnowTokenDialog.show = false;
 	localStorage.setItem('uni_halo_VALID_KNOW_TOKEN', 'visible');
-	alert('您已知晓 TOKEN 的泄露风险,后续将不再提示，感谢您的使用');
+
 
 	// @ts-ignore
 	if (checkPropertyInWindow('Notify') && window.Notify != undefined) {

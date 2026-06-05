@@ -200,28 +200,19 @@ export default defineConfig({
 				'Copyright © 2022-<span id="siteEndYear"></span> <a href="/" target="_self" title="uni-halo">UNI-HALO</a>丨AGPL-3.0丨<a href="https://www.xiaoxiaomo.cn/" target="_blank" title="小莫唐尼个人主页">小莫唐尼</a>丨<a target="_blank" title="51la网站统计" href="https://v6.51.la/s/GPZ3G9xLtawiqLD"><img class="s-51la-image" src="https://sdk.51.la/icon/1-1.png"></a>'
 		},
 		nav: [
-			// {
-			// 	text: 'UHalo PRO',
-			// 	link: 'https://www.uhalo.pro/'
-			// },
 			{
-				text: '1.0版本',
-				link: 'https://uni-halo.925i.cn/v1'
-			},
-			{
-				text: '团队',
-				link: '/team/team',
-				activeMatch: '/team/'
-			},
-			{
-				text: '设计指南',
-				link: '/design/intro',
-				activeMatch: '/design/'
+				text: '🔥Halo & 1Panel 专业版优惠',
+				link: 'https://www.lxware.cn/?code=HJfS5bBK'
 			},
 			{
 				text: '部署指南',
 				link: '/deploy/intro',
 				activeMatch: '/deploy/'
+			},
+			{
+				text: '设计指南',
+				link: '/design/intro',
+				activeMatch: '/design/'
 			},
 			{
 				text: '常见问题',
@@ -244,10 +235,6 @@ export default defineConfig({
 						text: '作者博客',
 						link: 'https://blog.xiaoxiaomo.cn'
 					},
-					// {
-					// 	text: '巷子工坊',
-					// 	link: 'https://ialley.uhalo.pro/'
-					// },
 					{
 						text: '配置插件',
 						link: 'https://github.com/ialley-workshop-open/plugin-uni-halo'
@@ -263,7 +250,7 @@ export default defineConfig({
 				]
 			},
 			{
-				text: '赞赏项目',
+				text: '赞助打赏',
 				link: '/other/donate'
 			}
 		],

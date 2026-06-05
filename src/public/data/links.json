@@ -101,6 +101,13 @@
 				"link": "https://blog.shanriver.top",
 				"desc": "与你共享经验",
 				"screenshot": "https://blog.shanriver.top/wp-content/uploads/2025/06/wechat_2025-06-10_092225_799.png"
+			},
+			{
+				"name": "小易撩挨踢",
+				"image": "https://www.yijunzhao.cn/upload/logo.png",
+				"link": "https://www.yijunzhao.cn",
+				"desc": "专注 Java、SpringBoot、AI 开发，分享实战教程、开源框架与技术选型，助力开发者高效成长。",
+				"screenshot": "https://www.yijunzhao.cn/upload/yijunzhao_screenshot.png"
 			}
 		]
 	},
